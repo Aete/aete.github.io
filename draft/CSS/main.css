@@ -1,0 +1,99 @@
+body{
+    margin-left : 10px;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1{
+    font-size : 3em;
+    font-weight : 300;
+    margin-bottom:0.2em;
+}
+
+
+h2{
+    font-size : 2.5em;
+    font-weight : 700;
+    margin : 0.2em;
+}
+
+
+h3{
+    font-size : 2.3em;
+    font-weight : 700;
+}
+
+
+p{
+    font-size : 1.2em;
+    font-weight : 400;
+    margin : 0.2em;
+}
+
+
+img {
+    max-width : 100%;
+}
+
+
+/* header */
+
+header{
+    display :flex;
+    flex-wrap: wrap;
+    padding-bottom : 1em;
+    margin-bottom : 1em;
+}
+
+
+.head-icon{
+    width : 30%;
+    padding-top : 20px;
+}
+
+
+.head-title {
+    width: 70%;
+    margin-top : 75px;
+    text-align: right;
+    vertical-align : bottom;
+}
+
+
+.head-title-p{
+    font-size : 1.5em;
+}
+
+/* nav menu */
+.nav_menu{
+    width : 100%;
+    border-top : 1px solid dimgray;
+    border-bottom : 1px solid dimgray;
+    padding : 10px;
+    display:flex;
+    flex-wrap : wrap;
+}
+.nav_content{
+    width : 25%;
+    font-weight : 400;
+    font-size : 1em;
+    text-align : center;
+}
+
+/* main */
+.works-container{
+    display:flex;
+    flex-wrap : wrap;
+}
+
+
+.works-title{
+    font-weight: 700;
+    margin-bottom: 20px;
+    }
+
+
+.works-individual{
+    text-align : center;
+}
