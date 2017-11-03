@@ -5,10 +5,14 @@ body{
 }
 
 
-h1{
+#home{
     font-size : 3em;
     font-weight : 700;
-    margin-bottom:0.2em;
+    margin-bottom:0
+    width: 70%;
+    text-align: left;
+    color : dodgerblue;
+    text-decoration: none;
 }
 
 
@@ -42,18 +46,14 @@ img {
 header{
     display :flex;
     flex-wrap: wrap;
-    padding-bottom : 1em;
-    margin-bottom : 1em;
+    margin-top : 2em;
+    margin-bottom : 1.5em;
 }
 
 
 
 
-.head-title {
-    width: 70%;
-    text-align: left;
-    vertical-align : bottom;
-}
+
 
 
 .head-title-p{
