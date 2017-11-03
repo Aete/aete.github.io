@@ -1,13 +1,13 @@
 body{
     margin-left : 10px;
     margin-right: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 
 h1{
     font-size : 3em;
-    font-weight : 300;
+    font-weight : 700;
     margin-bottom:0.2em;
 }
 
@@ -47,16 +47,11 @@ header{
 }
 
 
-.head-icon{
-    width : 30%;
-    padding-top : 20px;
-}
 
 
 .head-title {
     width: 70%;
-    margin-top : 75px;
-    text-align: right;
+    text-align: left;
     vertical-align : bottom;
 }
 
