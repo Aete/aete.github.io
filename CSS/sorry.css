@@ -2,7 +2,7 @@ body{
     background-color: dodgerblue;
     font-family: "Lato", sans-serif;
     color : white;
-    margin : 20% 20% 20% 20%;
+    margin : 20% 0 20% 10%;
 }
 
 h1{
@@ -12,6 +12,19 @@ h1{
 }
 
 p{
-    font-size : 1.5em;
+    font-size : 1.2em;
     margin : 0.5em 0em 0.5em 0em;
+}
+
+#link{
+    width : 150px;
+    border : 2px solid white;
+    margin-top :70px;
+}
+
+#see{
+
+    font-size : 1em;
+    font-weight: 700;
+    margin : 10px 10px 10px 10px
 }
