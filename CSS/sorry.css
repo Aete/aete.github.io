@@ -1,6 +1,5 @@
 body{
     background-color: dodgerblue;
-    height : 100%;
     font-family: "Lato", sans-serif;
     color : white;
     display : flex;
@@ -17,7 +16,7 @@ h1{
 
 p{
     font-size : 1.2em;
-    margin : 0.5em 0em 0.5em 0em;
+    margin : 0.5em 0 0.5em 0;
 }
 
 #link{
