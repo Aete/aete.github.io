@@ -2,7 +2,11 @@ body{
     background-color: dodgerblue;
     font-family: "Lato", sans-serif;
     color : white;
+<<<<<<< HEAD
     margin : 20% 0 20% 10%;
+=======
+    margin : 20% 10% 20% 10%;
+>>>>>>> 2115d4c4a9563c9096769c0b801c0e27367e63c0
 }
 
 h1{
@@ -12,6 +16,7 @@ h1{
 }
 
 p{
+<<<<<<< HEAD
     font-size : 1.2em;
     margin : 0.5em 0em 0.5em 0em;
 }
@@ -28,3 +33,8 @@ p{
     font-weight: 700;
     margin : 10px 10px 10px 10px
 }
+=======
+    font-size : 1em;
+    margin : 0.5em 0em 0.5em 0em;
+}
+>>>>>>> 2115d4c4a9563c9096769c0b801c0e27367e63c0
