@@ -24,4 +24,10 @@ $(document).ready(function(){
     }, function(){
         $(this).css("color", "black");
     });
+    $("#nav_button").hover(function(){
+        $(this).css("color", "dodgerblue");
+        $(this).css("cursor", "pointer");
+    }, function(){
+        $(this).css("color", "black");
+    });
 });

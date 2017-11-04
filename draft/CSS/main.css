@@ -19,13 +19,6 @@ h3{
 }
 
 
-p{
-    font-size : 1.2em;
-    font-weight : 400;
-    margin : 0.2em;
-}
-
-
 img {
     max-width : 100%;
 }
@@ -33,6 +26,7 @@ img {
 .container{
     display : flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* this is header part, I will write my name and navigations */
@@ -41,7 +35,6 @@ img {
     padding : 1.5vh 2vw 0.5vh 2vw;
     margin-top : 1em;
     margin-bottom: 1.5em;
-    justify-content: space-between;
     height : 6vh;
 }
 
@@ -56,19 +49,30 @@ img {
 
 
 nav{
-    width : 50vw;
+    padding : 4vh 2vw 0.5vh 2vw;
+    margin-top : 1em;
+    margin-bottom: 1.5em;
     display:flex;
     justify-content : flex-end;
-    padding-top : 1em;
+
 }
 
 .nav_content{
-    width : 10vw;
-    font-weight : 700;
-    font-size : 1em;
+    width : 12vw;
+    font-size : 1.2em;
+    font-weight : 400;
     text-align : center;
     color : black;
     text-decoration: none;
+}
+
+#nav_button{
+    width : 10vw;
+    text-align : center;
+    text-decoration: none;
+    margin-top : 0;
+    margin-bottom : 0;
+    padding-top : 0;
 }
 
 
@@ -84,16 +88,17 @@ nav{
 #quote{
     width : 80vw;
     font-family: 'Vollkorn', serif;
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: center;
 }
 
 #ernest{
     margin-top: 1em;
-    font-size: 1em;
+    font-size: 0.7em;
 }
 
 #foot{
+    font-family: 'Vollkorn', serif;
     font-weight: 400;
     align-items: center;
     justify-content : center;
@@ -101,5 +106,4 @@ nav{
     color : rgb(180,180,180);
     display : flex;
     text-align : center;
-
 }
