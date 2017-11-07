@@ -99,6 +99,22 @@ nav{
     margin-top: 1em;
     font-size: 0.7em;
 }
+#main_header{
+    width : 100%;
+    height : 18%;
+    display : flex;
+    align-items : center;
+    margin-bottom: 1%;
+    padding-left : 1em;
+    color : black;
+}
+
+.button{
+    font-family: fontello;
+    margin-right : 0.5em;
+    font-size : 3em;
+    display : block;
+}
 
 #foot{
     font-family: "Lato", sans-serif;
