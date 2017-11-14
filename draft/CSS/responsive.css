@@ -21,11 +21,18 @@
     #nav_button{
         display : none;
     }
+    #nav_menu{
+        display : none;
+    }
 }
 
 @media screen and (max-width : 750px){
+    body{
+        overflow:hidden;
+    }
     nav {
-        padding: 1vh 2vw 0.5vh 2vw;
+        padding: 1vh 0 0.5vh 0;
+        margin-top:0;
     }
     #design, #data, #paper, #about {
         display : none;
@@ -36,6 +43,7 @@
         display : block;
     }
 }
+
 @media screen and (max-width : 550px){
     #top{
         padding : 1.5vh 2vw 0.5vh 2vw;

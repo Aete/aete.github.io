@@ -24,7 +24,9 @@ li{
     padding-left : 1em;
     font-size : 1em;
 }
-
+a:hover{
+    cursor: pointer;
+}
 
 img {
     max-width : 100%;
@@ -85,6 +87,41 @@ nav{
 }
 
 
+#nav_menu{
+    width : 62vw;
+    height : 100vh;
+    position : absolute;
+    background-color : rgb(255,255,255);
+    top: 1vh;
+    left: 800px;
+    display : flex;
+    flex-direction: column;
+    transition :all 0.5s linear;;
+    padding-right : 5vw;
+    padding-left: 5vw;
+}
+#nav_menu a{
+    width : 100%;
+    padding-top : 1.5em;
+    height : 7%;
+    border-bottom: 0.5px solid dimgray;
+    color : black;
+    font-size : 1.2em;
+    font-weight : 700;
+    text-decoration: none;
+    display : inline;
+    text-align: center;
+}
+
+#nav_menu a:first-child{
+    padding-top : 0.2em;
+    padding-bottom: 0.4em;
+    font-family : fontello;
+    font-size : 2.5em;
+    text-align: right;
+    font-weight : 400;
+}
+
 /* this is main part, I will write down some nice quotes*/
 #main{
     border-top : 1.5px solid black;
@@ -102,6 +139,7 @@ nav{
 }
 
 #quote{
+    margin-top: 2em;
     width : 80vw;
     font-family: 'Vollkorn', serif;
     font-size: 2.5em;

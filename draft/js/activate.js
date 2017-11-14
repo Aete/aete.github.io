@@ -33,10 +33,11 @@ $(document).ready(function() {
         $(this).css("border-top", "3px solid white");
         $(this).css("font-weight", "400");
     });
-    $("#nav_button").hover(function () {
-        $(this).css("color", "#00BCD4");
-    }, function () {
-        $(this).css("color", "black");
+    $("#nav_button").click(function () {
+        $("#nav_menu").css("left", "31vw");
+    });
+    $("#nav_menu").first().click(function () {
+        $("#nav_menu").css("left", "800px");
     });
     $(".button").hover(function () {
         $(this).css("color", "dimgray");
