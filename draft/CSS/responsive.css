@@ -27,8 +27,19 @@
 }
 
 @media screen and (max-width : 750px){
+    #top{
+        padding : 0.5vh 2vw 0.5vh 2vw;
+        margin-top : 0.5em;
+        margin-bottom: 0.5em;
+        height : 5vh;
+    }
+
+    #home{
+        font-size : 1.8em;
+    }
+
     nav {
-        padding: 1vh 0 0.5vh 0;
+        padding: 0.5vh 0 0.5vh 0;
         margin-top:0;
     }
 
@@ -43,23 +54,21 @@
 
     #nav_button{
         font-family: fontello;
-        font-size : 3em;
+        font-size : 2em;
         display : block;
     }
 }
 
 @media screen and (max-width : 550px){
     #top{
-        padding : 1.5vh 2vw 0.5vh 2vw;
-        margin-top : 0.5em;
-        margin-bottom: 0.5em;
         height : 3vh;
     }
     #home{
-        font-size : 1.8em;
+        font-size : 1.5em;
     }
+
     nav {
-        padding: 2vh 2vw 0.5vh 2vw;
+        padding: 1.5vh 2vw 0.5vh 2vw;
         margin-bottom: 0.5em;
         margin-top : 0vh;
     }
@@ -73,9 +82,4 @@
         height : 83vh;
     }
 
-}
-
-
-
-@media screen and (max-width : 420px){
 }

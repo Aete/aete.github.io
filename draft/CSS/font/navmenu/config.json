@@ -17,6 +17,12 @@
       "css": "cancel",
       "code": 59392,
       "src": "entypo"
+    },
+    {
+      "uid": "7e89c12b577c31bc91bfb61bb597f01f",
+      "css": "down-dir",
+      "code": 59393,
+      "src": "entypo"
     }
   ]
 }

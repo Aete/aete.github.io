@@ -1,47 +1,36 @@
 $(document).ready(function() {
-    /* action with mouse hovering*/
-    $("#home").hover(function () {
-        $(this).css("color", "#00BCD4");
+    /* This is related to header part*/
+    $("#design").hover(function () {
+        $(this).css("color", "#EF5350");
+        $(this).css("transition", "0.3s linear");
     }, function () {
         $(this).css("color", "black");
     });
-    $("#design").hover(function () {
-        $(this).css("border-top", "3px solid #F44336");
-        $(this).css("font-weight", "700");
-    }, function () {
-        $(this).css("border-top", "3px solid white");
-        $(this).css("font-weight", "400");
-    });
     $("#data").hover(function () {
-        $(this).css("border-top", "3px solid #4CAF50");
-        $(this).css("font-weight", "700");
+        $(this).css("color", "#4CAF50");
+        $(this).css("transition", "0.3s linear");
     }, function () {
-        $(this).css("border-top", "3px solid white");
-        $(this).css("font-weight", "400");
+        $(this).css("color", "black");
     });
     $("#paper").hover(function () {
-        $(this).css("border-top", "3px solid #9C27B0");
-        $(this).css("font-weight", "700");
+        $(this).css("color", "#9C27B0");
+        $(this).css("transition", "0.3s linear");
     }, function () {
-        $(this).css("border-top", "3px solid white");
-        $(this).css("font-weight", "400");
+        $(this).css("color", "black");
     });
     $("#about").hover(function () {
-        $(this).css("border-top", "3px solid #00BCD4");
-        $(this).css("font-weight", "700");
+        $(this).css("color", "royalblue");
+        $(this).css("transition", "0.3s linear");
     }, function () {
-        $(this).css("border-top", "3px solid white");
-        $(this).css("font-weight", "400");
+        $(this).css("color", "black");
     });
+    /* this is related to navigation bar*/
     $("#nav_button").click(function () {
-        $("#nav_menu").css("left", "31vw");
+        $("#nav_menu").css("left", "54vw");
+        $("#nav_menu a").css("animation","move 1.2s");
     });
     $("#nav_menu").first().click(function () {
         $("#nav_menu").css("left", "800px");
-    });
-    $(".button").hover(function () {
-        $(this).css("color", "dimgray");
-    }, function () {
-        $(this).css("color", "black");
+        $("#nav_menu a").css("animation","moveback 2s");
     });
 });
