@@ -27,16 +27,20 @@
 }
 
 @media screen and (max-width : 750px){
-    body{
-        overflow:hidden;
-    }
     nav {
         padding: 1vh 0 0.5vh 0;
         margin-top:0;
     }
+
+    #header{
+        width : 100%;
+        overflow:hidden;
+    }
+
     #design, #data, #paper, #about {
         display : none;
     }
+
     #nav_button{
         font-family: fontello;
         font-size : 3em;

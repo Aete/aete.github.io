@@ -90,16 +90,17 @@ nav{
 #nav_menu{
     width : 62vw;
     height : 100vh;
-    position : absolute;
+    position : fixed;
     background-color : rgb(255,255,255);
     top: 1vh;
     left: 800px;
     display : flex;
     flex-direction: column;
     transition :all 0.5s linear;;
-    padding-right : 5vw;
-    padding-left: 5vw;
+    padding-right : 2vw;
+    padding-left: 2vw;
 }
+
 #nav_menu a{
     width : 100%;
     padding-top : 1.5em;
