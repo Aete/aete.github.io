@@ -131,29 +131,25 @@ nav{
 
 #nav_menu a:nth-child(2):hover{
     font-weight : 700;
-    background-color : #EF5350;
-    color : white;
+    color : #EF5350;
     transition : 0.7s linear;
 }
 
 #nav_menu a:nth-child(3):hover{
     font-weight : 700;
-    background-color : #4CAF50;
-    color : white;
+    color : #4CAF50;
     transition : 0.7s linear;
 }
 
 #nav_menu a:nth-child(4):hover{
     font-weight : 700;
-    background-color : #9C27B0;
-    color : white;
+    color : #9C27B0;
     transition : 0.7s linear;
 }
 
 #nav_menu a:nth-child(5):hover{
     font-weight : 700;
-    background-color : royalblue;
-    color : white;
+    color : royalblue;
     transition : 0.7s linear;
 }
 

@@ -17,7 +17,7 @@
       <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draft/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="322">
               <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding />
             </state>
@@ -27,7 +27,7 @@
       <file leaf-file-name="design.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draft/design.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
+            <state relative-caret-position="805">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="24" />
               <folding />
             </state>
@@ -37,7 +37,7 @@
       <file leaf-file-name="paper.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draft/paper.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="805">
               <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
               <folding />
             </state>
@@ -47,7 +47,7 @@
       <file leaf-file-name="data.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draft/data.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
+            <state relative-caret-position="805">
               <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding />
             </state>
@@ -64,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activate.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activate.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draft/js/activate.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/draft/CSS/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="225" column="1" lean-forward="true" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
+            <state relative-caret-position="644">
+              <caret line="149" column="31" lean-forward="true" selection-start-line="149" selection-start-column="31" selection-end-line="149" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -87,7 +87,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draft/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
+            <state relative-caret-position="897">
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
@@ -122,8 +122,8 @@
         <option value="$PROJECT_DIR$/draft/CSS/responsive.css" />
         <option value="$PROJECT_DIR$/draft/paper.html" />
         <option value="$PROJECT_DIR$/draft/data.html" />
-        <option value="$PROJECT_DIR$/draft/CSS/main.css" />
         <option value="$PROJECT_DIR$/draft/js/activate.js" />
+        <option value="$PROJECT_DIR$/draft/CSS/main.css" />
       </list>
     </option>
   </component>
@@ -272,11 +272,12 @@
       <workItem from="1510633018392" duration="5000" />
       <workItem from="1510635151409" duration="4249000" />
       <workItem from="1510639445255" duration="2117000" />
+      <workItem from="1510641759568" duration="54000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48876000" />
+    <option name="totallyTimeSpent" value="48930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -608,7 +609,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draft/design.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
+        <state relative-caret-position="805">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="24" />
           <folding />
         </state>
@@ -616,7 +617,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draft/paper.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="805">
           <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding />
         </state>
@@ -624,7 +625,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draft/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="322">
           <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding />
         </state>
@@ -632,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draft/data.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="805">
           <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
           <folding />
         </state>
@@ -640,16 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draft/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
+        <state relative-caret-position="897">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draft/CSS/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="225" column="1" lean-forward="true" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -658,6 +651,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draft/CSS/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="149" column="31" lean-forward="true" selection-start-line="149" selection-start-column="31" selection-end-line="149" selection-end-column="31" />
           <folding />
         </state>
       </provider>
