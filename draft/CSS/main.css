@@ -6,6 +6,10 @@ body{
     justify-content: space-between;
 }
 
+h1{
+    font-size:1.5em;
+}
+
 h2{
     font-size : 1.3em;
     font-weight : 700;
@@ -22,6 +26,7 @@ li{
     padding-left : 1em;
     font-size : 1em;
 }
+
 a:hover{
     cursor: pointer;
 }
@@ -73,6 +78,7 @@ nav{
     text-align : center;
     color : black;
     text-decoration: none;
+    vertical-align: middle;
 }
 
 #nav_button{
@@ -179,8 +185,8 @@ nav{
 }
 /* this is main part, I will write down some nice quotes*/
 #main{
-    border-top : 1.5px solid black;
-    border-bottom : 1.5px solid black;
+    border-top : 1px solid black;
+    border-bottom : 1px solid black;
     justify-content : center;
     align-items: center;
     height : 80vh;
@@ -215,16 +221,57 @@ nav{
     padding-left : 0.7em;
     padding-right: 0.7em;
     color : black;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
-#each_part_header h2:hover{
+/*drop_down design*/
+#drop_down_con{
+    position: relative;
+    display: inline-block;
+}
+#drop_down_con:hover .drop{
+    display : block;
+}
+
+.drop_down:hover {
     cursor: pointer;
 }
 
-#each_part_header h2:last-child{
+.drop_down:hover .drop{
+    cursor: pointer;
+    display:block;
+}
+
+
+.drop_down{
     font-family: fontello;
-    margin:1.2em 1em 1em 0.5em;
-    font-size:1.5em;
+    font-size : 1.2em;
+    width : 3em;
+    text-align : right;
+    margin-top:0;
+    margin-bottom: 0;
+}
+.drop{
+    display : none;
+    position: absolute;
+    background-color: rgba(255,255,255,0.5);
+    width : 100%;
+    z-index : 1;
+    vertical-align: middle;
+}
+.drop h1{
+    display : block;
+    color : white;
+    font-family:  "Lato", sans-serif;;
+    font-weight: 400;
+    font-size : 1em;
+    color : dimgray;
+    padding : 0 0.3em 0.3em 0.3em;
+    border-bottom: 1px solid dimgray;
+}
+.drop h1:hover{
+    font-weight: 700;
+    color : black;
+    cursor : pointer;
 }
 
 #each_part_body{
