@@ -103,6 +103,7 @@ nav{
     transition :all 0.5s linear;;
     padding-right : 2vw;
     padding-left: 2vw;
+    z-index : 2;
 }
 
 #nav_menu a{
