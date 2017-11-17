@@ -1,3 +1,4 @@
+var dropclick = 0;
 $(document).ready(function() {
     /* This is related to header part*/
     $("#design").hover(function () {
@@ -24,6 +25,7 @@ $(document).ready(function() {
     }, function () {
         $(this).css("color", "black");
     });
+
     /* this is related to navigation bar*/
     $("#nav_button").click(function () {
         $("#nav_menu").css("left", "54vw");
@@ -33,4 +35,21 @@ $(document).ready(function() {
         $("#nav_menu").css("left", "800px");
         $("#nav_menu a").css("animation","moveback 2s");
     });
+
+    /* this is related to drop-down menu*/
+    $("#drop_down_con").click(function () {
+        drop_opener();
+    });
+
+    // this is function to open and close drop down menu
+    var drop_opener = function(){
+        if(dropclick===0){
+            $(".drop").css("display", "block");
+            dropclick = 1;
+        }
+        else{
+            $(".drop").css("display", "none");
+            dropclick = 0;
+        }
+    };
 });

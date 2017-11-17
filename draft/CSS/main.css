@@ -229,19 +229,10 @@ nav{
     position: relative;
     display: inline-block;
 }
-#drop_down_con:hover .drop{
-    display : block;
-}
 
 .drop_down:hover {
     cursor: pointer;
 }
-
-.drop_down:hover .drop{
-    cursor: pointer;
-    display:block;
-}
-
 
 .drop_down{
     font-family: fontello;
