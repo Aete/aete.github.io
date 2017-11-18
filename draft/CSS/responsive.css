@@ -27,13 +27,6 @@
 }
 
 @media screen and (max-width : 750px){
-    #top{
-        padding : 0.5vh 0.7em 0.5vh 0.7em;
-        margin-top : 0.5em;
-        margin-bottom: 0.5em;
-        height : 5vh;
-    }
-
     #home{
         font-size : 1.8em;
     }
@@ -42,12 +35,17 @@
         padding: 0.5vh 0 0.5vh 0;
         margin-top:0;
     }
-
     #header{
+        height : 60px;
         width : 100%;
         overflow:hidden;
     }
-
+    #main{
+        height : calc(100vh - 100px);
+    }
+    #each_part{
+        height : calc(100vh - 100px);
+  }
     #design, #data, #paper, #about {
         display : none;
     }
@@ -60,26 +58,17 @@
 }
 
 @media screen and (max-width : 550px){
-    #top{
-        height : 3vh;
+    #header{
+        height : 50px;
     }
     #home{
         font-size : 1.5em;
     }
 
-    nav {
-        padding: 1.5vh 2vw 0.5vh 2vw;
-        margin-bottom: 0.5em;
-        margin-top : 0vh;
-    }
     #quote {
-        font-size: 1.5em;
+        font-size: 27px;
     }
     #ernest {
-        font-size: 0.7em;
+        font-size: 18px;
     }
-    #main{
-        height : 83vh;
-    }
-
 }

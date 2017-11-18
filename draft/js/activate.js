@@ -1,30 +1,29 @@
 var dropclick = 0;
+var designColor = "#EF5350";
+var dataColor = "#4CAF50";
+var paperColor = "#9C27B0";
+var aboutColor = "royalblue";
+
 $(document).ready(function() {
     /* This is related to header part*/
-    $("#design").hover(function () {
-        $(this).css("color", "#EF5350");
+    $(".nav_content").hover(function () {
+        if($(this).attr('id')==='design'){
+            $(this).css("color", designColor);
+        }
+        else if($(this).attr('id')==='data'){
+            $(this).css("color", dataColor);
+        }
+        else if($(this).attr('id')==='paper'){
+            $(this).css("color", paperColor);
+        }
+        else{
+            $(this).css("color", aboutColor);
+        }
         $(this).css("transition", "0.3s linear");
     }, function () {
         $(this).css("color", "black");
     });
-    $("#data").hover(function () {
-        $(this).css("color", "#4CAF50");
-        $(this).css("transition", "0.3s linear");
-    }, function () {
-        $(this).css("color", "black");
-    });
-    $("#paper").hover(function () {
-        $(this).css("color", "#9C27B0");
-        $(this).css("transition", "0.3s linear");
-    }, function () {
-        $(this).css("color", "black");
-    });
-    $("#about").hover(function () {
-        $(this).css("color", "royalblue");
-        $(this).css("transition", "0.3s linear");
-    }, function () {
-        $(this).css("color", "black");
-    });
+
 
     /* this is related to navigation bar*/
     $("#nav_button").click(function () {
