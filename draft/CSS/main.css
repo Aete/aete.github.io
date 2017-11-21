@@ -11,9 +11,18 @@ h1{
     font-size:1.5rem;
 }
 
+#main h1{
+    font-size : 2rem;
+    font-weight: 400;
+}
+
 h2{
     font-size : 1.3rem;
     font-weight : 700;
+}
+
+#main h3{
+    font-weight: 400;
 }
 
 ol{
@@ -181,7 +190,9 @@ nav{
 #main{
     border-top : 1px solid black;
     justify-content : center;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
 }
 
 #each_part{
@@ -191,20 +202,24 @@ nav{
 }
 
 #quote{
-    width : 80vw;
+    width : auto;
     font-family: 'Vollkorn', serif;
     font-size: 2.2rem;
-    text-align: center;
-    padding : 2em 2em 2em 2em;
+    padding : 3rem 3rem 3rem 3rem;
     align-items : center;
 }
 
 #quote p{
-    margin-bottom: 1rem;
+    margin: 1rem 0 1rem 0;
 }
 
 #ernest{
     font-size: 1.5rem;
+}
+
+.front{
+    display:none;
+    width : auto;
 }
 
 #each_part_header{
