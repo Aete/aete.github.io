@@ -109,8 +109,8 @@ nav{
     display : flex;
     flex-direction: column;
     transition :all 0.5s linear;;
-    padding-right : 2vw;
-    padding-left: 2vw;
+    padding-right : 15px;
+    padding-left: 15px;
     z-index : 2;
 }
 
@@ -129,6 +129,7 @@ nav{
 
 #nav_menu a:first-child{
     padding-top : 0.2em;
+    padding-bottom: 0.4em;
     font-family : fontello;
     font-size : 1.5em;
     text-align: right;
