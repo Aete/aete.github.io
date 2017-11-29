@@ -6,7 +6,12 @@
     }
 }
 
-
+@media screen and (max-width : 800px){
+    #test{
+        width : 200px;
+        height : 200px;
+    }
+}
 
 
 @media screen and (min-width : 749px){
@@ -19,74 +24,46 @@
     #main, #each_part{
         height : calc(100vh - 120px);
     }
-    #prj_front{
-        position : absolute;
-        left : 0;
-    }
-    #idea_front{
-        float:left;
-        position : absolute;
-        left : 100%;
-    }
-    #about_front{
-        float:left;
-        position : absolute;
-        left : -100%;
-    }
 }
 
-@media screen and (max-width : 750px){
-    #home{
-        font-size : 1.5em;
+@media screen and (max-width : 750px) {
+    #home {
+        font-size: 1.5em;
     }
 
     nav {
         padding: 0.5vh 0 0.5vh 0;
-        margin-top:0;
+        margin-top: 0;
     }
 
-    #header{
-        height : 50px;
-        width : 100%;
-        overflow:hidden;
+    #header {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
     }
 
     #project, #idea, #about {
-        display : none;
+        display: none;
     }
 
-    #nav_button{
+    #nav_button {
         font-family: fontello;
-        font-size : 2em;
-        display : block;
+        font-size: 2em;
+        display: block;
+    }
+    #main_body{
+        width : 100%;
+        display : flex;
     }
 
-    .front{
-        display:flex;
-        height : 5rem;
-        padding : 2rem 0 2rem 0;
-        border-top: 1px solid dimgray;
+    #test{
+        max-width: none;
+        width : 100vw;
+        height : 200px;
+        margin : 0 7px 15px 7px;
     }
-
-    .arrow{
-        display : none;
-    }
-
-    #main h1{
-        display : inline;
-        font-size : 1.5rem;
-        font-weight: 700;
-        margin : 0.7rem 0 0.5rem 0;
-    }
-
-    #main h3{
-        font-family: 'Vollkorn', serif;
-        font-size : 1rem;
-        font-weight: 400;
-        margin : 0 0 1rem 0;
-    }
-
 }
+
 
 @media screen and (max-width : 500px){
     .front{
@@ -96,7 +73,6 @@
     .explain h3{
         display : none;
     }
-
 }
 
 @media screen and (max-width : 320px){
