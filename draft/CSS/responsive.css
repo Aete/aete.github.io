@@ -56,7 +56,7 @@
         display : flex;
     }
 
-    #test{
+    .square{
         max-width: none;
         width : 100vw;
         height : 200px;
