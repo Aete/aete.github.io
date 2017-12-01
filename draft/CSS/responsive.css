@@ -6,19 +6,11 @@
     }
 }
 
-@media screen and (max-width : 800px){
-    #test{
-        width : 200px;
-        height : 200px;
-    }
-}
-
-
 @media screen and (min-width : 749px){
     #nav_button{
         display : none;
     }
-    #nav_menu{
+    .nav_menu{
         display : none;
     }
     #main, #each_part{
@@ -42,7 +34,7 @@
         overflow: hidden;
     }
 
-    #project, #idea, #about {
+    .nav_content {
         display: none;
     }
 
@@ -50,6 +42,8 @@
         font-family: fontello;
         font-size: 2em;
         display: block;
+        text-align : right;
+        padding-right:0.5rem;
     }
     #main_body{
         width : 100%;
@@ -58,9 +52,10 @@
 
     .square{
         max-width: none;
-        width : 100vw;
+        width : 100%;
         height : 200px;
-        margin : 0 7px 15px 7px;
+        margin : 0 0.3rem 15px 0.3rem;
+        padding : 0;
     }
 }
 
@@ -72,6 +67,13 @@
 
     .explain h3{
         display : none;
+    }
+
+    #main_header{
+        display : none;
+    }
+    #main_body{
+        margin-top : 0.5rem;
     }
 }
 
