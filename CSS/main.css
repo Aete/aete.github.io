@@ -8,14 +8,14 @@ body{
 }
 
 .profile{
-    font-size : 6rem;
+    font-size : 6.5rem;
     font-weight: 500;
     margin-top : 0;
     margin-bottom: 0;
 }
 
 h2{
-    font-size : 2rem;
+    font-size : 1.5rem;
     font-weight: 700;
     margin-top : 0;
     margin-bottom: 0;
@@ -35,8 +35,6 @@ li{
 
 a{
     text-decoration: none;
-}
-a:hover{
     cursor: pointer;
 }
 
@@ -98,8 +96,6 @@ nav{
     margin-bottom : 0;
     padding-top : 0;
 }
-
-
 
 
 /* this is related to animation in navigation bar*/
@@ -193,11 +189,19 @@ option{
     width : 100%;
     height : calc(100vh - 80px - 1rem);
     align-content : flex-start;
-    justify-items:normal;
-    padding : 0 0.8rem 0 0.5rem;
-
+    justify-content: space-between;
+    flex-wrap : wrap;
+    padding : 0 0.7rem 0 0.7rem;
 }
 
+.sub_body{
+    max-width : 900px;
+    width : 100%;
+    height : calc(100vh - 80px - 1rem);
+    background-color: white;
+    z-index : 3;
+    display:none;
+}
 
 .button{
     font-family: fontello;
@@ -210,13 +214,29 @@ option{
     max-height: 200px;
     width : 22vw;
     height : 22vw;
-    border : 1px solid dimgray;
+    border : 1px solid lightgray;
     margin-bottom : 30px;
     transition: visibility 0s, opacity 1s linear;
     visibility: visible;
     display :flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor : pointer;
+}
+
+.title{
+    position : relative;
+    display:none;
+}
+
+.logo{
+    width : 55%;
+}
+
+#placeholder{
+    height : 0;
+    border : none;
 }
 
 

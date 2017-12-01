@@ -38,6 +38,7 @@ $(".nav_menu_box").click(function () {
         category1 = "profile";
     }
     squareSelector();
+    $(".sub_body").css("display","none");
     $(".nav_menu").css("left", "800px");
     $(".nav_menu a").css("animation","moveback 0.7s");
 });
@@ -57,11 +58,13 @@ $(".nav_content").click(function(){
         category1 = "profile";
     }
     squareSelector();
+    $(".sub_body").css("display","none");
 });
 
 $("#home").click(function(){
     category1="all";
     squareSelector();
+    $(".sub_body").css("display","none");
 });
 
 $("#category").change(function(){
@@ -78,6 +81,7 @@ $("#category").change(function(){
         category1 = "all"
     }
     squareSelector();
+    $(".sub_body").css("display","none");
 });
 
 var squareSelector = function(){
@@ -134,9 +138,20 @@ var subSelector = function(){
     }
 };
 
+// this is related to square animation
 
+$(".square").hover(function () {
+    $(this).children(".title").css("display","inline");
+    $(this).children(".logo").css("display","none");
+}, function () {
+    $(this).children(".title").css("display","none");
+    $(this).children(".logo").css("display","inline");
+});
 
-
+var sub_body = 0;
+$(".square").click(function(){
+    $(".sub_body").css("display","flex");
+});
 
 
 

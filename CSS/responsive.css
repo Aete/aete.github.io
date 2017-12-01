@@ -106,6 +106,9 @@
         height : 200px;
         margin : 0 0.5vw 15px 0.5vw;
     }
+    .logo{
+        width : 30%;
+    }
 }
 
 @media screen and (max-width : 500px){
@@ -123,6 +126,7 @@
     #main_body{
         margin-top : 0.5rem;
     }
+
 }
 
 @media screen and (max-width : 320px){
