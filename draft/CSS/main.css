@@ -104,38 +104,7 @@ nav{
 }
 
 
-.nav_menu{
-    width : 200px;
-    height : 100vh;
-    position : fixed;
-    background-color : rgba(255,255,255,0.98);
-    top: 1vh;
-    left: 800px;
-    display : flex;
-    flex-direction: column;
-    transition :all 0.5s linear;;
-    padding-right : 15px;
-    padding-left: 15px;
-    z-index : 5;
-}
 
-.nav_menu a{
-    padding-top: 10px;
-    height : 30px;
-    border-bottom: 1px solid dimgray;
-    color : black;
-    font-size : 1em;
-    font-weight : 400;
-    text-align: center;
-}
-
-.nav_menu a:first-child{
-    padding-top : 0.2em;
-    padding-bottom: 0.4em;
-    font-family : fontello;
-    font-size : 1.5em;
-    text-align: right;
-}
 
 /* this is related to animation in navigation bar*/
 @keyframes move {
