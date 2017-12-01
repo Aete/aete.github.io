@@ -46,7 +46,7 @@ img {
 
 .container{
     display : flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
@@ -193,9 +193,9 @@ option{
     width : 100%;
     height : calc(100vh - 80px - 1rem);
     align-content : flex-start;
-    justify-content: space-between;
+    justify-items:normal;
     padding : 0 0.8rem 0 0.5rem;
-    flex-wrap: wrap;
+
 }
 
 
