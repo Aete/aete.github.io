@@ -151,6 +151,9 @@ $(".square").hover(function () {
 var sub_body = 0;
 $(".square").click(function(){
     $(".sub_body").css("display","flex");
+    $("#main").animate({
+        scrollTop: 0
+    }, 1000);
 });
 
 
