@@ -78,8 +78,7 @@
         text-align: right;
     }
     #main_body{
-        width : 100%;
-        display : flex;
+        overflow-scrolling: touch
     }
 
     .square{
