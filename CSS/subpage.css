@@ -1,0 +1,14 @@
+header{
+    height : 40px;
+    border-bottom : 1px solid lightgray;
+    display : flex;
+    justify-content: space-between;
+
+}
+
+h1{
+    display : block;
+    font-size : 1.3rem;
+    font-weight: 700;
+    margin : 0 0 0 0.2rem;
+}

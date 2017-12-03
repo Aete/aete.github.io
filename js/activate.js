@@ -151,11 +151,17 @@ $(".square").hover(function () {
 var sub_body = 0;
 $(".square").click(function(){
     $(".sub_body").css("display","flex");
+    if($(this).attr("id").length){
+        $("iframe").attr("src","subpages/" + $(this).attr("id")+".html") ;
+    }
+
     $("#main").animate({
         scrollTop: 0
     }, 1000);
 });
 
 
+
+var subpagelist = ["profile"];
 
 
