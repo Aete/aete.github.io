@@ -4,6 +4,7 @@ header{
     display : flex;
     justify-content: space-between;
 
+
 }
 
 h1{
@@ -11,4 +12,9 @@ h1{
     font-size : 1.3rem;
     font-weight: 700;
     margin : 0 0 0 0.2rem;
+    font-family: "Lato", sans-serif;
+}
+
+img{
+    max-width : 100%;
 }
