@@ -142,7 +142,7 @@ var subSelector = function(){
 
 $(".square").hover(function () {
     $(this).children(".title").css("display","flex");
-    $(this).children(".logo").css("opacity","0.3");
+    $(this).children(".logo").css("opacity","0.2");
 }, function () {
     $(this).children(".title").css("display","none");
     $(this).children(".logo").css("opacity","1");

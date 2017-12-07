@@ -230,7 +230,8 @@ option{
 }
 
 .title{
-    position : absolute;
+    position : fixed;
+    top : auto;
     display:none;
     z-index:2;
     align-items: center;
