@@ -150,11 +150,14 @@ $(".square").hover(function () {
 
 var sub_body = 0;
 $(".square").click(function(){
-    $(".sub_body").css("display","flex");
-    if(typeof($(this).attr("id"))!== undefined){
+    if(typeof($(this).attr("id")) === "undefined"){
+        $(".sub_body").css("display","none");
+
+    }
+    else{
+        $(".sub_body").css("display","flex");
         $("iframe").attr("src","subpages/" + $(this).attr("id")+".html") ;
     }
-    else{$("iframe").attr("src","subpages/blank.html") ;}
     $("#main").animate({
         scrollTop: 0
     }, 1000);
