@@ -21,6 +21,13 @@ h2{
     margin-bottom: 0;
 }
 
+h3{
+    font-size : 1rem;
+    font-weight: 700;
+    margin-top : 0;
+    margin-bottom: 0;
+}
+
 ol{
     font-size : 0.8rem;
     margin-top: 0.5rem;
@@ -223,12 +230,21 @@ option{
 }
 
 .title{
-    position : relative;
+    position : absolute;
     display:none;
+    z-index:2;
+    align-items: center;
+    flex-direction: column;
 }
+
+
 
 .logo{
     width : 55%;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
 
 #placeholder{

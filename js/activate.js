@@ -141,11 +141,11 @@ var subSelector = function(){
 // this is related to square animation
 
 $(".square").hover(function () {
-    $(this).children(".title").css("display","inline");
-    $(this).children(".logo").css("display","none");
+    $(this).children(".title").css("display","flex");
+    $(this).children(".logo").css("opacity","0.3");
 }, function () {
     $(this).children(".title").css("display","none");
-    $(this).children(".logo").css("display","inline");
+    $(this).children(".logo").css("opacity","1");
 });
 
 var sub_body = 0;
