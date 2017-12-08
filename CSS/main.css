@@ -214,6 +214,7 @@ option{
 }
 
 .square{
+    position : relative;
     max-width : 200px;
     max-height: 200px;
     width : 22vw;
@@ -230,10 +231,9 @@ option{
 }
 
 .title{
-    position : fixed;
-    top : auto;
+    position : absolute;
+    top : 40%;
     display:none;
-    z-index:2;
     align-items: center;
     flex-direction: column;
 }
@@ -243,6 +243,7 @@ option{
 .logo{
     width : 55%;
     opacity: 1;
+    z-index : -1;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
