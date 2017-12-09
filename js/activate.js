@@ -124,6 +124,7 @@ var squareSelector = function(){
 var subSelector = function(){
     if(category1==="project") {
         $("#category_sub").html("<option value = 'all'>All</option>" +
+            "<option value = 'competition'>Architecture</option>" +
             "<option value = 'competition'>Competition</option>" +
             "<option value = 'others'>Others</option>");
     }
