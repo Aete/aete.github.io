@@ -140,7 +140,6 @@ nav{
 #main{
     align-items: flex-start;
     overflow-y: scroll;
-
 }
 
 #main::-webkit-scrollbar-track{
@@ -238,8 +237,6 @@ option{
     flex-direction: column;
 }
 
-
-
 .logo{
     width : 55%;
     opacity: 1;
@@ -256,7 +253,6 @@ option{
 
 
 #foot{
-    bottom : 30px;
     height : 20px;
     padding-top : 5px;
     font-family: "Lato", sans-serif;

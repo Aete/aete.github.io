@@ -7,9 +7,8 @@
 }
 
 @media screen and (min-width : 749px){
-
-    #main, #each_part{
-        height : calc(100vh - 120px);
+    #main{
+        height : calc(100vh - 110px);
     }
 }
 
@@ -28,7 +27,6 @@
         width: 100%;
         overflow: hidden;
     }
-
 
 
     #main_body{
