@@ -51,13 +51,7 @@
 }
 
 @media screen and (max-width : 550px ) {
-    .square{
-        width : 100%;
-        height : 200px;
-    }
-    .logo{
-        width : 30%;
-    }
+
     select{
         display : none;
     }
@@ -101,9 +95,20 @@
         font-size : 1.5em;
         text-align: right;
     }
+
+    a{
+        width : 100%;
+    }
 }
 
 @media screen and (max-width : 500px){
+    .square{
+        width : 100%;
+        height : 200px;
+    }
+    .logo{
+        width : 30%;
+    }
     .front{
         height : 3rem;
     }
