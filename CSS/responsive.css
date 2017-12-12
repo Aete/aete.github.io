@@ -23,7 +23,6 @@
     }
 
     #header {
-        height: 50px;
         width: 100%;
         overflow: hidden;
     }
@@ -46,11 +45,11 @@
         max-height: none;
         width : 42vw;
         height : 42vw;
-        margin : 0 0.5vw 15px 0.5vw;
+        margin : 0 0.4vw 15px 0.4vw;
     }
 }
 
-@media screen and (max-width : 550px ) {
+@media screen and (max-width : 570px ) {
 
     select{
         display : none;
@@ -96,18 +95,22 @@
         text-align: right;
     }
 
-    a{
-        width : 100%;
-    }
+
 }
 
 @media screen and (max-width : 500px){
-    .square{
-        width : 100%;
-        height : 200px;
+    a{
+        width : 40vw;
     }
     .logo{
-        width : 30%;
+        width : 50%;
+    }
+
+    .square{
+        max-height: none;
+        width : 40vw;
+        height : 40vw;
+        margin : 0 0.4vw 15px 0.4vw;
     }
     .front{
         height : 3rem;
@@ -120,16 +123,17 @@
     #main_header{
         display : none;
     }
-    #main_body{
-        margin-top : 0.5rem;
-    }
-
 }
 
-@media screen and (max-width : 320px){
-    #main{
-        border-top : 0px solid black;
+@media screen and (max-width : 400px){
+    .profile{
+        font-size : 4rem;
     }
+}
+
+
+
+@media screen and (max-width : 320px){
     #header{
         height : 40px;
     }

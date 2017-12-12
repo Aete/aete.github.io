@@ -11,6 +11,7 @@ h1{
     font-weight: 700;
     font-family: "Lato", sans-serif;
     margin : 0 0 0 0.2rem;
+    text-align : center;
 }
 
 h3{
@@ -54,4 +55,18 @@ img{
     align-items : center;
     display : flex;
     width : 49%;
+}
+
+@media screen and (max-width : 400px) {
+    h1 {
+        font-size : 1.12rem;
+        margin-top : 0.3rem;
+    }
+}
+
+
+@media screen and (max-width : 400px) {
+    h1 {
+        font-size : 0.9rem;
+    }
 }
