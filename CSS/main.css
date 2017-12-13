@@ -200,11 +200,11 @@ option{
 .sub_body{
     max-width : 900px;
     width : 100%;
-    height : calc(100vh - 80px - 1rem);
+    height : calc(100vh - 80px);
     background-color: white;
     z-index : 3;
     display:none;
-    margin-bottom : 1rem;
+    margin : 0 0.4vw 10px 0.4vw;
 }
 
 .button{
