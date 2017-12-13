@@ -204,6 +204,7 @@ option{
     background-color: white;
     z-index : 3;
     display:none;
+    margin-bottom : 1rem;
 }
 
 .button{
