@@ -22,6 +22,7 @@ $(".nav_content").hover(function () {
 $("#nav_button").click(function () {
     $(".nav_menu").css("left", "calc(100vw - 230px)");
 });
+
 $(".nav_menu").first().click(function () {
     $(".nav_menu").css("left", "800px");
     $(".nav_menu a").css("animation","moveback 0.7s");
