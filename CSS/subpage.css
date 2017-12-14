@@ -57,6 +57,11 @@ img{
     width : 49%;
 }
 
+#sublogo{
+    height : 70%; margin : 0.3rem 0.5rem 0 0;
+    }
+
+
 @media screen and (max-width : 400px) {
     h1 {
         font-size : 1.12rem;
