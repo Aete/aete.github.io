@@ -140,6 +140,7 @@ nav{
 #main{
     align-items: flex-start;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 #main::-webkit-scrollbar-track{
