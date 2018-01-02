@@ -1,23 +1,3 @@
-/* This is related to header part*/
-var projectColor = "#EF5350";
-var ideaColor = "#4CAF50";
-var profileColor = "royalblue";
-
-$(".nav_content").hover(function () {
-    if($(this).attr('id')==='project'){
-        $(this).css("color", projectColor);
-    }
-    else if($(this).attr('id')==='idea'){
-        $(this).css("color", ideaColor);
-    }
-    else{
-        $(this).css("color", profileColor);
-    }
-}, function () {
-    $(this).css("color", "black");
-});
-
-
 /* this is related to navigation bar*/
 $("#nav_button").click(function () {
     $(".nav_menu").css("left", "calc(100vw - 230px)");
@@ -141,7 +121,6 @@ var subSelector = function(){
 };
 
 // this is related to square animation
-
 $(".square").hover(function () {
     $(this).children(".title").css("display","flex");
     $(this).children(".logo").css("opacity","0.2");
