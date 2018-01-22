@@ -159,6 +159,5 @@ var sub_body_open = function(sub){
 };
 
 
-var subpagelist = ["profile"];
 
 
