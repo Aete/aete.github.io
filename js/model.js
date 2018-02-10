@@ -6,15 +6,22 @@ var subCategory = [
 ];
 
 var projectList = [
-    {"title":"The Frame", "time" : 2017, "category" : "Project"},
-    {"title":"Profile", "time" : null, "category" : "Profile"},
-    {"title":"Pengunticon", "time" : 2013, "category" : "Idea"},
-    {"title":"Writing", "time" : null, "category" : "Idea"},
-    {"title":"Tangible Urban Design Tool", "time" : null, "category" : "Idea"},
-    {"title":"Dwelling by Walling", "time" : 2017},
-    {"title" : "S, M, L, XL", "time" : 2016}
+    {"title":"The Frame", "time" : 2017, "category" : "project"},
+    {"title":"Profile", "time" : null, "category" : "profile"},
+    {"title":"Pengunticon", "time" : 2013, "category" : "idea"},
+    {"title":"Writing", "time" : null, "category" : "idea"},
+    {"title":"Data-driven City", "time" : 2013, "category" : "idea"},
+    {"title":"Dwelling by Walling", "time" : 2017, "category" : "project"},
+    {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"}
     ];
 
-for (var i = 0; i<projectList.length();i++){
-    projectList[i].imgsrc = projectList[i].title+".jpg"
+for (var i = 0; i<projectList.length;i++){
+    projectList[i].imgsrc = "image/"+projectList[i].title+".svg"
 }
+
+
+var placeholder = '<div class="square profile" id="placeholder" ></div>' +
+                   '<div class="square project" id="placeholder" ></div>' +
+                    '<div class="square idea" id="placeholder" ></div>' +
+                    '<div class="square idea" id="placeholder" ></div>' +
+                    '<div class="square idea" id="placeholder" ></div>';

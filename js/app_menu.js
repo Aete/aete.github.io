@@ -67,37 +67,20 @@ $("#category").change(function(){
 
 var squareSelector = function(){
     if(category1==="project"){
-        $(".square").css("display","none");
+        $(".sub_container").css("display","none");
         $(".project").css("display","flex");
-        $("#category").html("<option value='project'>Project</option>" +
-            "<option value = 'all'>All</option>" +
-            "<option value='idea'>Idea</option>" +
-            "<option value='profile'>Profile</option>");
     }
     else if(category1==="idea"){
-        $(".square").css("display","none");
+        $(".sub_container").css("display","none");
         $(".idea").css("display","flex");
-        $("#category").html("<option value='idea'>Idea</option>" +
-            "<option value = 'all'>All</option>" +
-            "<option value='project'>Project</option>" +
-            "<option value='profile'>Profile</option>");
     }
     else if(category1 === "profile"){
-        $(".square").css("display","none");
+        $(".sub_container").css("display","none");
         $(".profile").css("display","flex");
-        $("#category").html("<option value='profile'>Profile</option>" +
-            "<option value = 'all'>All</option>" +
-            "<option value='project'>Project</option>" +
-            "<option value='idea'>Idea</option>");
-    }
+     }
     else if(category1==="all"){
-        $(".square").css("display","flex");
-        $("#category").html(
-            "<option value = 'all'>All</option>" +
-            "<option value='project'>Project</option>" +
-            "<option value='idea'>Idea</option>"+
-            "<option value='profile'>Profile</option>");
-}
+        $(".sub_container").css("display","flex");
+    }
     subSelector();
 };
 
@@ -120,14 +103,9 @@ var subSelector = function(){
     }
 };
 
+
+// It will be moved to app_square.js
 // this is related to square animation
-$(".square").hover(function () {
-    $(this).children(".title").css("display","flex");
-    $(this).children(".logo").css("opacity","0.2");
-}, function () {
-    $(this).children(".title").css("display","none");
-    $(this).children(".logo").css("opacity","1");
-});
 
 var sub_body = 0;
 $(".square").click(function(){
@@ -143,11 +121,6 @@ $(".square").click(function(){
         scrollTop: 0
     }, 1000);
 });
-
-
-
-
-
 
 var sub_body_open = function(sub){
   if(sub===1){
