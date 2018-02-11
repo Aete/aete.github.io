@@ -10,7 +10,7 @@ var projectList = [
     {"title":"Profile", "time" : null, "category" : "profile"},
     {"title":"Pengunticon", "time" : 2013, "category" : "idea"},
     {"title":"Writing", "time" : null, "category" : "idea"},
-    {"title":"Data-driven City", "time" : 2013, "category" : "idea"},
+    {"title":"QR-Driven City", "time" : 2013, "category" : "idea"},
     {"title":"Dwelling by Walling", "time" : 2017, "category" : "project"},
     {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"}
     ];
