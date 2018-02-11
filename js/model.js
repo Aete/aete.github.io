@@ -8,7 +8,7 @@ var subCategory = [
 var projectList = [
     {"title":"The Frame", "time" : 2017, "category" : "project"},
     {"title":"Profile", "time" : null, "category" : "profile"},
-    {"title":"Pengunticon", "time" : 2013, "category" : "idea"},
+    {"title":"Pengunticon", "time" : 2013, "category" : "project"},
     {"title":"Writing", "time" : null, "category" : "idea"},
     {"title":"QR-Driven City", "time" : 2013, "category" : "idea"},
     {"title":"Dwelling by Walling", "time" : 2017, "category" : "project"},
@@ -21,7 +21,11 @@ for (var i = 0; i<projectList.length;i++){
 
 
 var placeholder = '<div class="square profile" id="placeholder" ></div>' +
+                   '<div class="square profile" id="placeholder" ></div>' +
+                  '<div class="square profile" id="placeholder" ></div>' +
                    '<div class="square project" id="placeholder" ></div>' +
+                    '<div class="square project" id="placeholder" ></div>' +
+                    '<div class="square project" id="placeholder" ></div>' +
                     '<div class="square idea" id="placeholder" ></div>' +
                     '<div class="square idea" id="placeholder" ></div>' +
                     '<div class="square idea" id="placeholder" ></div>';
