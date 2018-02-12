@@ -7,12 +7,13 @@ var subCategory = [
 
 var projectList = [
     {"title":"The Frame", "time" : 2017, "category" : "project"},
-    {"title":"Pengunticon", "time" : 2013, "category" : "project"},
+    {"title":"Profile", "time" : null, "category" : "profile"},
     {"title":"QR-Driven City", "time" : 2013, "category" : "idea"},
     {"title":"Writing", "time" : null, "category" : "idea"},
-    {"title":"Profile", "time" : null, "category" : "profile"},
+    {"title":"Pengunticon", "time" : 2013, "category" : "project"},
     {"title":"Dwelling by Walling", "time" : 2017, "category" : "project"},
     {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"}
+
     ];
 
 for (var i = 0; i<projectList.length;i++){
