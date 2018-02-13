@@ -107,29 +107,7 @@ var subSelector = function(){
 // It will be moved to app_square.js
 // this is related to square animation
 
-var sub_body = 0;
-$(".square").click(function(){
-    if(typeof($(this).attr("id")) === "undefined"){
-        sub_body=0;
-    }
-    else{
-        sub_body = 1;
-        $("iframe").attr("src","subpages/" + $(this).attr("id")+".html") ;
-    }
-    sub_body_open(sub_body);
-    $("#main").animate({
-        scrollTop: 0
-    }, 1000);
-});
 
-var sub_body_open = function(sub){
-  if(sub===1){
-      $(".sub_body").css("display","flex");
-  }
-  else{
-      $(".sub_body").css("display","none");
-  }
-};
 
 
 
