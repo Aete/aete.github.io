@@ -197,7 +197,6 @@ option{
     width : 100%;
     height : calc(100vh - 80px);
     background-color: white;
-    z-index : 3;
     display:none;
     margin : 0 0.4vw 10px 0.4vw;
 }
