@@ -21,9 +21,6 @@ var square_making = function(list){
 
 square_making(projectList);
 
-
-
-// load the sub body
 var sub_body = 0;
 $(".sub_container").click(function(){
     console.log(typeof($(this).attr("id")));
