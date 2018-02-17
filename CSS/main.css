@@ -201,6 +201,7 @@ option{
 }
 
 .sub_info{
+    border-bottom : 1px solid lightgray;
 }
 .sub_info>h3{
     font-size : 0.8rem;
@@ -208,6 +209,9 @@ option{
     margin : 0.5rem 0 0.5rem 0.6rem;
 }
 
+.description{
+    height : calc(100vh - 80px);
+}
 
 
 /* relate to the squares*/
