@@ -7,32 +7,6 @@ body{
     align-content: space-between;
 }
 
-.profile{
-    font-size : 6.5rem;
-    font-weight: 500;
-    margin-top : 0;
-    margin-bottom: 0;
-}
-
-h3{
-
-    font-size : 1.3rem;
-    font-weight: 700;
-    margin-top : 0;
-    margin-bottom: 0;
-}
-
-ol{
-    font-size : 0.8rem;
-    margin-top: 0.5rem;
-    margin-bottom : 0.2rem;
-    padding-left: 0.5rem;
-}
-
-li{
-    padding-left : 1em;
-    font-size : 1em;
-}
 
 a{
     text-decoration: none;
@@ -42,6 +16,7 @@ a{
 img {
     max-width : 100%;
 }
+
 
 .container{
     display : flex;
@@ -130,7 +105,8 @@ nav{
         width: 100%;
     }
 }
-/* this is main part, I will write down some nice quotes*/
+
+/* main part and scroll bar*/
 #main{
     align-items: flex-start;
     overflow-y: scroll;
@@ -183,6 +159,59 @@ option{
     z-index: 2;
 }
 
+
+
+/* relate to the sub_body*/
+.sub_body{
+    border : 1px solid lightgray;
+    max-width : 900px;
+    width : 100%;
+    background-color: white;
+    display:none;
+    margin : 0 0.4vw 10px 0.4vw;
+    padding : 0 0.4vw 0 0.4vw;
+    flex-direction : column;
+}
+
+.sub_title {
+    display: flex;
+    padding: 0 3px 0 3px;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    border-bottom : 1px solid lightgray;
+}
+
+.sub_title>h1{
+    margin-left : 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#close{
+    font-family: fontello;
+    font-weight : 200;
+    color : gray;
+    font-size : 1rem;
+    margin: 0.9rem 0 0 0;
+}
+
+#close:hover{
+    color : black;
+}
+
+.sub_info{
+}
+.sub_info>h3{
+    font-size : 0.8rem;
+    font-weight : 500;
+    margin : 0.5rem 0 0.5rem 0.6rem;
+}
+
+
+
+/* relate to the squares*/
+
 #main_body{
     width : 100%;
     height : calc(100vh - 80px - 1rem);
@@ -190,21 +219,6 @@ option{
     justify-content: space-between;
     flex-wrap : wrap;
     padding : 0 0.7rem 0 0.6rem;
-}
-
-.sub_body{
-    max-width : 900px;
-    width : 100%;
-    height : calc(100vh - 80px);
-    background-color: white;
-    display:none;
-    margin : 0 0.4vw 10px 0.4vw;
-}
-
-.button{
-    font-family: fontello;
-    font-size : 2.5em;
-    display : block;
 }
 
 
@@ -256,7 +270,6 @@ option{
 #foot{
     height : 20px;
     padding-top : 5px;
-    font-family: "Lato", sans-serif;
     font-weight: 400;
     align-items: center;
     justify-content : center;

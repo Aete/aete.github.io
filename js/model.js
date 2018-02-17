@@ -14,8 +14,19 @@ var projectList = [
     {"title":"Pengunticon", "time" : 2013, "category" : "project"},
     {"title":"Dwelling by Walling", "time" : 2017, "category" : "project"},
     {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"}
-
     ];
+
+
+var info_list=[
+    {"title":"The Frame", "script" : "Graduation work in SKKU", "person" : "Design excellence award (1st prize) in SKKU spring semester, 2017"},
+    {"title":"Profile", "script" : null, "person" : null},
+    {"title":"QR-Driven City", "script" : "Final Project at SKKU Design Modeling Class(Spring Semester, 2013)", "person" : "Han Seung Gyun, Jung Tae Jung, Jae Jun Hyung and Bang Jun Gyu(Department of Architecture, SKKU)"},
+    {"title":"Collaboration", "script" : "10th East Asia Urban Architecture Joint Studio 2015", "person" : "Han Seung Gyun, Lee Dong Yeong, Akira Ooka, Yuna Kinoshita"},
+    {"title":"Writing", "script" : null, "person" : null},
+    {"title":"Pengunticon", "script" : "GS Caltex Idea Competition", "person" : "Han Seung Gyun, Ryu Ho Jun, Lee Yong Mun, Kim Sang Min"},
+    {"title":"Dwelling by Walling", "script" : "Bronze Prize in Gyeonggi Architecture Fair", "person" : "Han Seung Gyun, Choi Tae Won, Kim Ji Soo"},
+    {"title":"XS, S, M, L, XL", "script" : "SKKU Design Studio(Fall Semester, 2015)", "person" : "Han Seung Gyun"}
+];
 
 for (var i = 0; i<projectList.length;i++){
     projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".svg' class='logo'>";
@@ -33,8 +44,6 @@ for (var i = 0; i<projectList.length;i++){
     }
 
 }
-
-
 
 var placeholder = '<div class="square profile" id="placeholder" ></div>' +
                    '<div class="square profile" id="placeholder" ></div>' +
