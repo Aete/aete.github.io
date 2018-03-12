@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12042c00-a974-470a-bcfa-2ad4cc2bb6b7" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,6 +103,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
+<<<<<<< HEAD
               <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding />
             </state>
@@ -110,6 +116,12 @@
             <state relative-caret-position="1748">
               <caret line="92" column="56" lean-forward="true" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
               <folding />
+=======
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="e#1688#1694#0" expanded="true" />
+              </folding>
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
             </state>
           </provider>
         </entry>
@@ -213,10 +225,18 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -234,6 +254,10 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,7 +274,10 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,11 +314,29 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html (2)">
+<<<<<<< HEAD
     <configuration name="idea.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/draft/idea.html" />
     <configuration name="index.html (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/index.html" />
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/draft/index.html" />
     <configuration name="index_test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/index_test.html" />
     <configuration name="profile.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/draft/profile.html" />
+=======
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/draft/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="profile.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/draft/profile.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index_test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/index_test.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="The Frame.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/aete.github.io/subpages/The Frame.html">
+      <method />
+    </configuration>
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -360,17 +405,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.profile.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.idea.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index_test.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index_test.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.The Frame.html" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index_test.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.profile.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.idea.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.The Frame.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index_test.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.profile.html" />
       </list>
     </recent_temporary>
   </component>
@@ -554,18 +599,31 @@
       <workItem from="1518865632151" duration="468000" />
       <workItem from="1518874020361" duration="892000" />
       <workItem from="1518874983827" duration="21000" />
+<<<<<<< HEAD
       <workItem from="1519602640531" duration="54000" />
       <workItem from="1520897555389" duration="207000" />
+=======
+      <workItem from="1519685182739" duration="77000" />
+      <workItem from="1519685298262" duration="35000" />
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="219130000" />
+=======
+    <option name="totallyTimeSpent" value="218981000" />
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12118019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -772,8 +830,15 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
+<<<<<<< HEAD
           <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding />
+=======
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#1688#1694#0" expanded="true" />
+          </folding>
+>>>>>>> 1fa8aac065d79a279197a6c1a7b3d01b07cabed4
         </state>
       </provider>
     </entry>
