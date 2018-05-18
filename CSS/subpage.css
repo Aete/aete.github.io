@@ -1,3 +1,7 @@
+body{
+    overflow-y : scroll;
+    -webkit-overflow-scrolling: touch;
+}
 header{
     height : 30px;
     border-bottom : 1px solid lightgray;
