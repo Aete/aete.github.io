@@ -7,7 +7,6 @@ var subCategory = [
 
 var projectList = [
     {"title":"The Frame", "time" : 2017, "category" : "project"},
-    {"title":"Profile", "time" : null, "category" : "profile"},
     {"title":"QR-Driven City", "time" : 2013, "category" : "idea"},
     {"title":"Collaboration", "time" : 2015, "category" : "Project"},
     {"title":"Writing", "time" : null, "category" : "idea"},
@@ -19,7 +18,6 @@ var projectList = [
 
 var info_list=[
     {"title":"The Frame", "script" : "Graduation work in SKKU", "person" : "Design excellence award (1st prize) in SKKU spring semester, 2017"},
-    {"title":"Profile", "script" : null, "person" : null},
     {"title":"QR-Driven City", "script" : "Final Project at SKKU Design Modeling Class(Spring Semester, 2013)", "person" : "Han Seung Gyun, Jung Tae Jung, Jae Jun Hyung and Bang Jun Gyu(Department of Architecture, SKKU)"},
     {"title":"Collaboration", "script" : "10th East Asia Urban Architecture Joint Studio 2015", "person" : "Han Seung Gyun, Lee Dong Yeong, Akira Ooka, Yuna Kinoshita"},
     {"title":"Writing", "script" : null, "person" : null},
