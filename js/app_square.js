@@ -10,7 +10,7 @@ var square_making = function(list){
         $(".sub_container:last-child").append(square);
         $(".square:last-child").append(list[i].imgsrc );
         if(list[i].time != null){
-            $(".sub_container:last-child").append(title.replace('%data',list[i].title+'('+list[i].time+')'));
+            $(".sub_container:last-child").append(title.replace('%data',list[i].title+'<br>('+list[i].time+')'));
         }
         else{
             $(".sub_container:last-child").append(title.replace('%data',list[i].title));
