@@ -4,6 +4,7 @@
 
 $(".sub_container").click(function(){
     var target = $(this).attr("id");
+    $(".description").empty();
     sub_body_open(1);
     sub_body_title(target,info_list);
     $("#main").animate({
@@ -13,6 +14,7 @@ $(".sub_container").click(function(){
 
 $("#close").click(function(){
     sub_body_open(0);
+    $(".description").empty();
 });
 
 var sub_body_open = function(sub){
@@ -32,7 +34,7 @@ var sub_body_title = function(target,list){
             $(".sub_title>h1").text(target);
             $(".sub_info>h3").first().text(list[i].script);
             $(".sub_info>h3").last().text(list[i].person);
-            $(".description").attr('src','subpages/'+list[i].title+'.html');
+            $(".description").append(list[i].descript);
             }
         }
 };
