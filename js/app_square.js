@@ -7,6 +7,8 @@ var square_making = function(list){
         $("#main_body").append(sub_container);
         $(".sub_container:last-child").addClass(list[i].category);
         $(".sub_container:last-child").attr('id',list[i].title);
+        console.log(list[i].title);
+        $(".sub_container:last-child").attr('onclick','location.href= '+"'"+list[i].title+".html';");
         $(".sub_container:last-child").append(square);
         $(".square:last-child").append(list[i].imgsrc );
         if(list[i].time != null){

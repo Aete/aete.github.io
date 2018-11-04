@@ -27,7 +27,6 @@ $(".nav_menu_box").click(function () {
 
 /* this is related to square selection*/
 var category1 = 0 ;
-
 $(".nav_content").click(function(){
     if($(this).attr('id')==='project'){
         category1 = "project";
@@ -51,6 +50,7 @@ $("#home").click(function(){
 $("#category").change(function(){
     if($("#category>option:selected").attr("value") ==="project"){
         category1 = "project";
+        console.log('check');
     }
     else if($("#category>option:selected").attr("value") ==="idea"){
         category1= "idea";
@@ -64,6 +64,8 @@ $("#category").change(function(){
     squareSelector();
     $(".sub_body").css("display","none");
 });
+
+
 
 var squareSelector = function(){
     if(category1==="project"){

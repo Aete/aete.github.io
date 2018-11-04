@@ -23,9 +23,6 @@ var info_list=[
     {"title":"XS, S, M, L, XL", "script" : "SKKU Design Studio(Fall Semester, 2015)", "person" : "Han Seung Gyun"}
 ];
 
-
-
-console.log(info_list[0].descript);
 for (var i = 0; i<projectList.length;i++){
     projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".svg' class='logo'>";
     if(projectList[i].title==='QR-Driven City'){

@@ -181,7 +181,6 @@ img {
         max-width : 900px;
         width : 100%;
         background-color: white;
-        display:none;
         margin : 0 0.4vw 10px 0.4vw;
         padding : 0 0.4vw 0 0.4vw;
         flex-direction : column;
@@ -228,6 +227,7 @@ img {
         max-width : 860px;
         margin-top : 15px;
         display : flex;
+        flex-direction: column;
         justify-content: center;
     }
     .map{
