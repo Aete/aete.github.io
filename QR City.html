@@ -39,18 +39,39 @@
 <div class = "container" id="main">
     <div class="sub_body">
         <div class="sub_title">
-            <h1> The Frame </h1>
+            <h1> QR City </h1>
             <a id="close" href="index.html">&#xe801&nbsp;</a>
         </div>
         <div class="sub_info">
+            <h3>Urban Design Tool using Augmented Reality</h3>
             <h3>Final Project at SKKU Design Modeling Class(Spring Semester, 2013)</h3>
-            <h3>Han Seung Gyun, Jung Tae Jung, Jae Jun Hyung and Bang Jun Gyu(Department of Architecture, SKKU)</h3>
+            <h3>Han Seung Gyun, Jung Tae Jung, Jae Jun Hyung and Bang Jun Gyu</h3>
         </div>
         <div class="description" >
-            <div class = "row">
-                <video controls src="image/Digtal%20Modeling.mp4">Your user agent does not support the HTML5 Video element.</video>
+            <div class = "row" style="justify-content: center; height:100%;">
+                <video controls src="image/QR%20City.mp4">Your user agent does not support the HTML5 Video element.</video>
             </div>
-         </div>
+            <div class="row" style="flex-direction: column">
+                <h4>Objective</h4>
+                <p>In this project, we wanted to make urban design tool that gives designer not only digital experience, but also analogue(sense of touch, tactile) experience.</p>
+                <p>Using AR technology, User checks entire shape of urban environment in digital display, and modifies by moving and changing QR markers </p>
+            </div>
+            <div class="row" style="flex-direction: column">
+                <h4>Process</h4>
+                <p>Programming Language : Processing</p>
+                <p>Github :  </p>
+                <p>QR City is simple program that detects QR markers in given image and creates buildings according to makers' position and pattern.
+                    Programming code was written in Processing, and we used OpenGL, NYAR4PSG, and GSvideo processing libraries</p>
+                <p>We set every marker(1-100) has its own building information(usage, height, and etc.). Different color(red, yellow and etc.) means different usage.
+                    The program detects the markers on the webcam and displays the unique building by calculation. </p>
+                <img src="image/qrcity1.jpg">
+            </div>
+            <div class="row" style="flex-direction: column">
+                <h4>Possibility</h4>
+                <p>We thought that ‘QR City’ could be developed as sustainable urban design tool, if there were any related data to use. For example, it could be developed </p>
+                <p></p>
+            </div>
+        </div>
 
     </div>
     <div class="container" id="main_body">
@@ -69,6 +90,6 @@
 <script src="js/template.js" ></script>
 <script src="js/app_menu.js" async defer></script>
 <script src="js/app_square.js" async defer></script>
-<script src="js/description.js" ></script>
+<script src="js/map_select.js" ></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 var projectList = [
     {"title":"Maps", "time" : 2018, "category" : "idea"},
-    {"title":"Plan Generator using DCGANs", "time" : 2018, "category" : "idea"},
-    {"title":"Timeline of Neighborhood", "time" : 2018, "category" : "idea"},
+    {"title":"Plan Generator <br> using deep learning", "time" : 2018, "category" : "idea"},
+    //{"title":"Timeline of Neighborhood", "time" : 2018, "category" : "idea"},
     {"title":"The Frame", "time" : 2017, "category" : "project"},
     {"title":"QR City", "time" : 2013, "category" : "idea"},
    // {"title":"Collaboration", "time" : 2015, "category" : "Project"},

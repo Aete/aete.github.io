@@ -179,7 +179,7 @@ img {
     .sub_body{
         border : 1px solid lightgray;
         max-width : 900px;
-        width : 100%;
+        width : 95%;
         background-color: white;
         margin : 0 0.4vw 10px 0.4vw;
         padding : 0 0.4vw 0 0.4vw;
@@ -235,13 +235,24 @@ img {
         height : calc(100vh - 220px);
     }
     video{
-        max-width : 860px;
+        max-width : 98%;
     }
     .description >.row{
         max-width : 860px;
-        max-height: 80%;
         display : flex;
         flex-wrap: wrap;
+    }
+    .row > h4{
+        margin-top : 2em;
+        margin-left : 10px;
+        margin-bottom : 0.2em;
+
+    }
+    .row > p{
+        margin-top : 0.5em;
+        margin-bottom : 0.3em;
+        margin-left : 10px;
+        display : inline;
     }
     .whole{
         margin : 0.2rem 0 0.2rem 0;
