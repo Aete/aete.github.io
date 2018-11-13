@@ -7,7 +7,7 @@ $('#mapStyle').change(function(){
         console.log('check');
     }
     else if($("#mapStyle>option:selected").attr("value") ==="2"){
-        $(".map").attr('src','subpages/bus.html');
+        $(".map").attr('src','subpages/Bus.html');
         console.log('check');
     }
     else{
