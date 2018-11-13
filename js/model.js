@@ -37,6 +37,9 @@ for (var i = 0; i<projectList.length;i++){
     else if(projectList[i].title==='Collaboration'){
         projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".png' class='logo' style='width:75%;'>";
     }
+    else if(projectList[i].title==='Maps'){
+        projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".png' class='logo' style='width:95%;'>";
+    }
 }
 
 var placeholder = '<div class="square profile" id="placeholder" ></div>' +
