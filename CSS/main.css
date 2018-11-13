@@ -241,6 +241,7 @@ img {
         max-width : 860px;
         display : flex;
         flex-wrap: wrap;
+
     }
     .row > h4{
         margin-top : 2em;
@@ -254,13 +255,13 @@ img {
         margin-left : 10px;
         display : inline;
     }
-    .whole{
+    .row>.whole{
         margin : 0.2rem 0 0.2rem 0;
         align-items : center;
         max-width : 100%;
     }
 
-    .half{
+    .row>.half{
         margin : 0.2rem 0 0.2rem 0;
         align-items : center;
         display : flex;

@@ -3,7 +3,11 @@
  */
 $('#mapStyle').change(function(){
     if($("#mapStyle>option:selected").attr("value") ==="1"){
-        $(".map").attr('src','subpages/map_on.html');
+        $(".map").attr('src','subpages/subway.html');
+        console.log('check');
+    }
+    else if($("#mapStyle>option:selected").attr("value") ==="2"){
+        $(".map").attr('src','subpages/bus.html');
         console.log('check');
     }
     else{
