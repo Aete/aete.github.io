@@ -50,7 +50,7 @@ for (var i = 0; i<projectList.length;i++){
         projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".jpg' class='logo' style='width:60%;'>";
     }
     else if(projectList[i].title==='Linkedin'){
-        projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".png' class='logo' style='width:40%;'>";
+        projectList[i].imgsrc = "<image src='image/Linkedin.png' class='logo' style='width:40%;'>";
     }
 }
 
