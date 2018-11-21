@@ -5,9 +5,12 @@ var projectList = [
     {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"},
     {"title":"Collaboration", "time" : 2015, "category" : "project"},
     {"title":"QR City", "time" : 2013, "category" : "idea"},
-    {"title":"Github", "time" : null, "category" : "profile"},
     {"title":"Maps", "time" : null, "category" : "idea"},
-    {"title":"Profile", "time" : null, "category" : "profile"}
+    {"title":"Profile", "time" : null, "category" : "profile"},
+    {"title":"Github", "time" : null, "category" : "profile"},
+    {"title":"Linkedin", "time" : null, "category" : "profile"}
+
+
     ];
 
 
@@ -45,6 +48,9 @@ for (var i = 0; i<projectList.length;i++){
     }
     else if(projectList[i].title==='Github'){
         projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".jpg' class='logo' style='width:60%;'>";
+    }
+    else if(projectList[i].title==='Linkedin'){
+        projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".png' class='logo' style='width:40%;'>";
     }
 }
 

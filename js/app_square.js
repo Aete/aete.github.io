@@ -10,7 +10,11 @@ var square_making = function(list){
         console.log(list[i].title);
         if(list[i].title === "Github"){
             console.log(1);
-            $(".sub_container:last-child").attr('onclick','location.href= "https://github.com/aete"');
+            $(".sub_container:last-child").attr('onclick', "window.open('https://github.com/aete','_blank')");
+        }
+        else if(list[i].title === "Linkedin"){
+            console.log(1);
+            $(".sub_container:last-child").attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");
         }
         else{
         $(".sub_container:last-child").attr('onclick','location.href= '+"'"+list[i].title+".html';");

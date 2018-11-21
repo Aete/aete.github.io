@@ -168,7 +168,7 @@ img {
         max-width : 900px;
         width : 100%;
         background-color: white;
-        margin : 0 0.7em 10px 0.7em;
+        margin : 0 0.7em 0 0.7em;
         flex-direction : column;
     }
     .text>p{
@@ -234,9 +234,7 @@ img {
         width : 100%;
         height : calc(100vh - 220px);
     }
-    video{
-        max-width : 98%;
-    }
+
     .description >.row{
         max-width : 860px;
         display : flex;
