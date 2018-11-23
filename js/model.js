@@ -52,6 +52,9 @@ for (var i = 0; i<projectList.length;i++){
     else if(projectList[i].title==='Linkedin'){
         projectList[i].imgsrc = "<image src='image/Linkedin.png' class='logo' style='width:40%;'>";
     }
+    else if(projectList[i].title==='Plan Generator'){
+        projectList[i].imgsrc = "<image id = 'plan' src='image/plan.gif' class='logo' style='width:95%;'>";
+    }
 }
 
 var placeholder = '<div class="square profile" id="placeholder" ></div>' +
