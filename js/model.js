@@ -14,7 +14,7 @@ var projectList = [
     ];
 
 
-var info_list=[
+/*var info_list=[
     {"title":"Maps",  "script" : null, "person" : "Han Seung Gyun"},
     {"title":"The Frame", "script" : "Graduation work in SKKU", "person" : "Design excellence award (1st prize) in SKKU spring semester, 2017"},
     {"title":"QR City", "script" : "Final Project at SKKU Design Modeling Class(Spring Semester, 2013)", "person" : "Han Seung Gyun, Jung Tae Jung, Jae Jun Hyung and Bang Jun Gyu(Department of Architecture, SKKU)"},
@@ -22,7 +22,7 @@ var info_list=[
     //{"title":"Writing", "script" : null, "person" : null},
     {"title":"Dwelling by Walling", "script" : "Bronze Prize in Gyeonggi Architecture Fair", "person" : "Han Seung Gyun, Choi Tae Won, Kim Ji Soo"},
     {"title":"XS, S, M, L, XL", "script" : "SKKU Design Studio(Fall Semester, 2015)", "person" : "Han Seung Gyun"}
-];
+]; */
 
 for (var i = 0; i<projectList.length;i++){
     if(projectList[i].title==='QR City'){

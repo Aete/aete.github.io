@@ -9,24 +9,14 @@ var square_making = function(list){
         $(".sub_container:last-child").attr('id',list[i].title);
         console.log(list[i].title);
         if(list[i].title === "Github"){
-            console.log(1);
             $(".sub_container:last-child").attr('onclick', "window.open('https://github.com/aete','_blank')");
         }
-        else if(list[i].title === "Linkedin"){
-            console.log(1);
-            $(".sub_container:last-child").attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");
-        }
-        else{
-        $(".sub_container:last-child").attr('onclick','location.href= '+"'"+list[i].title+".html';");
-        }
+        else if(list[i].title === "Linkedin"){$(".sub_container:last-child").attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");}
+        else{$(".sub_container:last-child").attr('onclick','location.href= '+"'"+list[i].title+".html';");}
         $(".sub_container:last-child").append(square);
         $(".square:last-child").append(list[i].imgsrc );
-        if(list[i].time != null){
-            $(".sub_container:last-child").append(title.replace('%data',list[i].title+'<br>('+list[i].time+')'));
-        }
-        else{
-            $(".sub_container:last-child").append(title.replace('%data',list[i].title));
-        }
+        if(list[i].time != null){$(".sub_container:last-child").append(title.replace('%data',list[i].title+'<br>('+list[i].time+')'));}
+        else{$(".sub_container:last-child").append(title.replace('%data',list[i].title));}
     }
         $("#main_body").append(placeholder);
 };
