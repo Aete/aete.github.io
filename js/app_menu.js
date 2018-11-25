@@ -106,9 +106,6 @@ var subSelector = function(){
 };
 
 
-// It will be moved to app_square.js
-// this is related to square animation
-
 
 
 

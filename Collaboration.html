@@ -14,49 +14,45 @@
 </head>
 <body>
 <div class = "container" id = "header">
-        <div id="top">
-            <a id="home" href="index.html" >Seunggyun Han</a>
+    <div id="top">
+        <a id="home" href="index.html" >Seunggyun Han</a>
+    </div>
+    <nav>
+        <select id="category">
+            <option value = "all">All</option>
+            <option value="project">Project</option>
+            <option value="idea">Idea</option>
+            <option value="profile">Profile</option>
+        </select>
+        <a id="nav_button">&#xf0c9</a>
+        <div class="nav_menu">
+            <a>&#xe801&nbsp;</a>
+            <a id="project_nav" class = "nav_menu_box">Project</a>
+            <a id="idea_nav" class = "nav_menu_box">Idea</a>
+            <a id="profile_nav" class= "nav_menu_box">Profile</a>
         </div>
-        <nav>
-            <select id="category">
-                <option value = "all">All</option>
-                <option value="project">Project</option>
-                <option value="idea">Idea</option>
-                <option value="profile">Profile</option>
-            </select>
-            <a id="nav_button">&#xf0c9</a>
-            <div class="nav_menu">
-                <a>&#xe801&nbsp;</a>
-                <a id="project_nav" class = "nav_menu_box">Project</a>
-                <a id="idea_nav" class = "nav_menu_box">Idea</a>
-                <a id="profile_nav" class= "nav_menu_box">Profile</a>
-            </div>
-        </nav>
+    </nav>
 </div>
 <div class = "container" id="main">
     <div class="sub_body">
         <div class="sub_title">
-            <h1> The Frame </h1>
+            <h1> Plan Generator </h1>
             <a id="close" href="index.html">&#xe801&nbsp;</a>
         </div>
         <div class="sub_info">
-            <h3>Graduation work in SKKU</h3>
-            <h3>Design excellence award (1st prize) in SKKU spring semester, 2017</h3>
+            <h3>Plan generating Deep learning model based on DCGANs</h3>
+            <h3>Excellent Research Award, 12th International Symposium on Architectural Interchanges in Asia, 2018</h3>
+            <h3>Github : <a href="" target="_blank" style="color:black;">https://github.com/Aete/Plan-Generator</a></h3>
+
         </div>
         <div class="description" >
-            <div class = "row">
-                <div class = "whole">
-                     <img class="whole" src = "image/theframe/theFrame1.jpg">
-                </div>
+            <div class="row" style="flex-direction: column">
+                    <h4>Overview</h4>
+                    <p>Deep learning(DCGANs) for generating small sized housing plans</p>
+                    <p style = "margin-top:0;"> As learning progressed, the neural network drew thick lines (which could be thought as walls), and it also drew rectangular spaces like rooms. However, in most of attempts, the neural nets drew only irregularly lines.  </p>
+                    <img src="image/plan/7.jpg" >
             </div>
-            <div class = "row">
-                <div class="half">
-                    <img src = "image/theframe/theFrame3.jpg">
-                </div>
-                <div class="half">
-                    <img src = "image/theframe/theFrame2.jpg">
-                </div>
-            </div>
+
         </div>
 
     </div>

@@ -4,11 +4,9 @@
 $('#mapStyle').change(function(){
     if($("#mapStyle>option:selected").attr("value") ==="1"){
         $(".map").attr('src','subpages/subway.html');
-        console.log('check');
     }
     else if($("#mapStyle>option:selected").attr("value") ==="2"){
         $(".map").attr('src','subpages/Bus.html');
-        console.log('check');
     }
     else{
         $(".map").attr('src','subpages/map_off.html');
