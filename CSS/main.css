@@ -232,6 +232,12 @@
     .map{
         width : 100%;
         height : calc(100vh - 220px);
+        margin-bottom : 10px;
+    }
+    .collabo{
+        width : 100%;
+        height : calc(100vh);
+        margin-bottom : 10px;
     }
 
     .description >.row{

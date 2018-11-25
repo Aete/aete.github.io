@@ -36,21 +36,59 @@
 <div class = "container" id="main">
     <div class="sub_body">
         <div class="sub_title">
-            <h1> Plan Generator </h1>
+            <h1> Collaboration </h1>
             <a id="close" href="index.html">&#xe801&nbsp;</a>
         </div>
         <div class="sub_info">
-            <h3>Plan generating Deep learning model based on DCGANs</h3>
-            <h3>Excellent Research Award, 12th International Symposium on Architectural Interchanges in Asia, 2018</h3>
-            <h3>Github : <a href="" target="_blank" style="color:black;">https://github.com/Aete/Plan-Generator</a></h3>
-
+            <h3>SKKU Campus renovation project</h3>
+            <h3>Seunggyun Han, Dongyeong Lee, Yuna Kinoshita, Akira Ooka </h3>
+            <h3>Design Recognition Award, 10th East Asia Urban Architecture Joint Studio, 2018</h3>
         </div>
         <div class="description" >
+            <div class="row" style="flex-direction: column;">
+                    <h4 style = " margin-top : 0;">Objective</h4>
+                    <p>Upgrading a previous campus master plan for renovating the campus as an innovation district which can attract competent researchers and entrepreneurs.</p>
+                    <p style = "margin-top:0;"> Site of the project included existing university campuses, unused botanical gardens and reservoirs.</p>
+                        </div>
             <div class="row" style="flex-direction: column">
-                    <h4>Overview</h4>
-                    <p>Deep learning(DCGANs) for generating small sized housing plans</p>
-                    <p style = "margin-top:0;"> As learning progressed, the neural network drew thick lines (which could be thought as walls), and it also drew rectangular spaces like rooms. However, in most of attempts, the neural nets drew only irregularly lines.  </p>
-                    <img src="image/plan/7.jpg" >
+                <h4>Main Concepts</h4>
+                <p><strong>"Making campus to more collaborative place"</strong></p>
+                <p style = "margin-top:0;">We identified five factors (New knowledge, Creative thinking, Large Scale research space, Money, Exchanging Program) that young researchers and entrepreneurs may be interested in and found that they are all related to collaboration.</p>
+                <img src="image/collaboration/new/1.jpg" >
+            </div>
+            <div class="row" style="flex-direction: column">
+                <h4>Strategies</h4>
+                <p><strong>1. Rearrangement Functions</strong></p>
+                <p style = "margin-top:0;"> If we gather relative departments, it is more easy to make a collaboration. And we can have several empty space which can be used various usage </p>
+                <img src="image/collaboration/new/2.jpg" >
+                <p><strong>2. Permeable Places</strong></p>
+                <p style = "margin-top:0;"> Making a new departement by collaboration of different departments, and creating permeable spaces in ground floor can make many communication </p>
+                <img src="image/collaboration/new/3.jpg" >
+                <p><strong>3. Make Connections</strong></p>
+                <p style = "margin-top:0;"> Transportation can make three different place more relatively. These connection will be make more exchanging between three place. </p>
+                <img src="image/collaboration/new/4.jpg" >
+                <p><strong>4. Make a one identity</strong></p>
+                <p style = "margin-top:0;"> We can make Sustainable(or Green) identity into  three different place  by using  ecological technology in buildings and vehicles. If People feel these three place like one, there will be more communication.. </p>
+                <img src="image/collaboration/new/5.jpg" >
+            </div>
+            <div class="row" style="flex-direction: column">
+                <h4>Masterplan and scenarios of places</h4>
+            </div>
+
+            <div class="row" style = "justify-content : flex-end;">
+                <select id="planStyle" style="margin-right:10px;margin-bottom:10px; display:flex;">
+                    <option value="1">Master plan</option>
+                    <option value="2">1. Open Campus</option>
+                    <option value="3">2. Courtyard of Engineering Buildings</option>
+                    <option value="4">3. Cafe & Restaurants</option>
+                    <option value="5">4. Sport Facilities</option>
+                    <option value="6">5. Engineering Building3</option>
+
+                </select>
+            </div>
+            <div class="row" id='plans' style="flex-direction: column;">
+
+            </div>
             </div>
 
         </div>
@@ -72,6 +110,6 @@
 <script src="js/template.js" ></script>
 <script src="js/app_menu.js" async defer></script>
 <script src="js/app_square.js" async defer></script>
-<script src="js/map_select.js" ></script>
+<script src="js/plan_select.js" ></script>
 </body>
 </html>
