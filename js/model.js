@@ -6,6 +6,7 @@ var projectList = [
     {"title":"Collaboration", "time" : 2015, "category" : "project"},
     {"title":"QR City", "time" : 2013, "category" : "idea"},
     {"title":"Maps", "time" : null, "category" : "idea"},
+    {"title":"Snowflake", "time" : null, "category" : "idea"},
     {"title":"Profile", "time" : null, "category" : "profile"},
     {"title":"Github", "time" : null, "category" : "profile"},
     {"title":"Linkedin", "time" : null, "category" : "profile"}
@@ -54,6 +55,9 @@ for (var i = 0; i<projectList.length;i++){
     }
     else if(projectList[i].title==='Plan Generator'){
         projectList[i].imgsrc = "<image id = 'plan' src='image/plan.gif' class='logo' style='width:95%;'>";
+    }
+    else if(projectList[i].title==='Snowflake'){
+        projectList[i].imgsrc = "<image id = 'plan' src='image/snowflake.png' class='logo' style='width:60%;'>";
     }
 }
 
