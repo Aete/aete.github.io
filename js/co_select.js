@@ -11,12 +11,29 @@ $('#communStyle').change(function(){
     }
     else if($("#communStyle>option:selected").attr("value") ==="4"){
         $("#cosize").attr('src','image/XS/M.png');
-        console.log(1);
     }
     else if($("#communStyle>option:selected").attr("value") ==="5"){
         $("#cosize").attr('src','image/XS/L.png');
     }
     else if($("#communStyle>option:selected").attr("value") ==="6"){
         $("#cosize").attr('src','image/XS/XL.png');
+    }
+});
+
+$('#plan_sel').change(function(){
+    if($("#plan_sel>option:selected").attr("value") ==="2"){
+        $("#drawings").attr('src','image/XS/XS.png');
+    }
+    else if($("#plan_sel>option:selected").attr("value") ==="3"){
+        $("#drawings").attr('src','image/XS/S.png');
+    }
+    else if($("#plan_sel>option:selected").attr("value") ==="4"){
+        $("#drawings").attr('src','image/XS/M.png');
+    }
+    else if($("#plan_sel>option:selected").attr("value") ==="5"){
+        $("#drawings").attr('src','image/XS/unit1.png');
+    }
+    else if($("#plan_sel>option:selected").attr("value") ==="6"){
+        $("#drawings").attr('src','image/XS/unit2.png');
     }
 });
