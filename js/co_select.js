@@ -22,18 +22,12 @@ $('#communStyle').change(function(){
 
 $('#plan_sel').change(function(){
     if($("#plan_sel>option:selected").attr("value") ==="2"){
-        $("#drawings").attr('src','image/XS/XS.png');
+        $("#drawings").attr('src','image/XS/plan.jpg');
     }
     else if($("#plan_sel>option:selected").attr("value") ==="3"){
-        $("#drawings").attr('src','image/XS/S.png');
+        $("#drawings").attr('src','image/XS/unit.png');
     }
-    else if($("#plan_sel>option:selected").attr("value") ==="4"){
-        $("#drawings").attr('src','image/XS/M.png');
-    }
-    else if($("#plan_sel>option:selected").attr("value") ==="5"){
-        $("#drawings").attr('src','image/XS/unit1.png');
-    }
-    else if($("#plan_sel>option:selected").attr("value") ==="6"){
-        $("#drawings").attr('src','image/XS/unit2.png');
+    else if($("#plan_sel>option:selected").attr("value") ==="3"){
+        $("#drawings").attr('src','image/XS/unit.png');
     }
 });
