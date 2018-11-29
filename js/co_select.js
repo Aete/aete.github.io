@@ -25,9 +25,6 @@ $('#plan_sel').change(function(){
         $("#drawings").attr('src','image/XS/plan.jpg');
     }
     else if($("#plan_sel>option:selected").attr("value") ==="3"){
-        $("#drawings").attr('src','image/XS/unit.png');
-    }
-    else if($("#plan_sel>option:selected").attr("value") ==="4"){
         $("#drawings").attr('src','image/XS/model.jpg');
     }
 });
