@@ -36,21 +36,18 @@ var gate = ' <h4 style = " margin-top : 0;">New Entrance from South-East Side</h
 
 $('#planStyle').change(function(){
     if($("#planStyle>option:selected").attr("value") ==="1"){
-        $("#plans").html("");
-    }
-    else if($("#planStyle>option:selected").attr("value") ==="2"){
         $("#plans").html(openLab);
     }
-    else if($("#planStyle>option:selected").attr("value") ==="3"){
+    else if($("#planStyle>option:selected").attr("value") ==="2"){
         $("#plans").html(Courtyard);
     }
-    else if($("#planStyle>option:selected").attr("value") ==="4"){
+    else if($("#planStyle>option:selected").attr("value") ==="3"){
         $("#plans").html(cafe);
     }
-    else if($("#planStyle>option:selected").attr("value") ==="5"){
+    else if($("#planStyle>option:selected").attr("value") ==="4"){
         $("#plans").html(sport);
     }
-    else if($("#planStyle>option:selected").attr("value") ==="6"){
+    else if($("#planStyle>option:selected").attr("value") ==="5"){
         $("#plans").html(eng3);
     }
     else{
