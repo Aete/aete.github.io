@@ -1,7 +1,7 @@
 var projectList = [
     {"title":"Plan Generator", "time" : 2018, "category" : "idea"},
-    {"title":"The Frame", "time" : 2017, "category" : "project"},
     {"title":"Dwelling by Walling", "time" : 2016, "category" : "project"},
+    {"title":"The Frame", "time" : 2016, "category" : "project"},
     {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"},
     {"title":"Collaboration", "time" : 2015, "category" : "project"},
     {"title":"QR City", "time" : 2013, "category" : "idea"},
