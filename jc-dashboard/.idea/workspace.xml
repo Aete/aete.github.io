@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/graph.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,11 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>park</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -206,6 +210,10 @@
       <workItem from="1575691482175" duration="6017000" />
       <workItem from="1575755888935" duration="663000" />
       <workItem from="1575756569578" duration="2000" />
+      <workItem from="1575763413490" duration="629000" />
+      <workItem from="1575912027885" duration="614000" />
+      <workItem from="1575914582767" duration="7667000" />
+      <workItem from="1575942382050" duration="4973000" />
     </task>
     <servers />
   </component>

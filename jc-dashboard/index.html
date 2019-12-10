@@ -31,12 +31,13 @@
                         <p>Green View Score</p>
                     </div>
                     <div id="legend">
-                        <div><h5><span>range1</span></h5></div>
-                        <div><h5><span>range2</span></h5></div>
-                        <div><h5><span>range3</span></h5></div>
-                        <div><h5><span>range4</span></h5></div>
-                        <div><h5><span>range5</span></h5></div>
-                        <a href='https://www.opentreemap.org/jctrees/map/' style="display:block; width:100%; color:#848484; margin-top:5px; font-size:12px; text-align: right;">How did we calculate? &nbsp &#9654;</a>
+                        <div style="display:flex; flex-direction:row; align-items:center;"><img src="images/overall/0.png" style="height:15px; margin-right:18px;"><h5><span class="score">0 &nbsp; (Bad...)</span><span class="percent">0</span></h5></div>
+                        <div style="display:flex; flex-direction:row; align-items:center;"><img src="images/overall/1.png" style="height:15px; margin-right:18px;"><h5><span class="score">1 &nbsp;</span><span class="percent">0</span></h5></div>
+                        <div style="display:flex; flex-direction:row; align-items:center;"><img src="images/overall/2.png" style="height:15px; margin-right:18px;"><h5><span class="score">2 &nbsp;</span><span class="percent">0</span></h5></div>
+                        <div style="display:flex; flex-direction:row; align-items:center;"><img src="images/overall/3.png" style="height:15px; margin-right:18px;"><h5><span class="score">3 &nbsp;</span><span class="percent">0</span></h5></div>
+                        <div style="display:flex; flex-direction:row; align-items:center;"><img src="images/overall/4.png" style="height:15px; margin-right:18px;"><h5><span class="score">4 &nbsp;</span><span class="percent">0</span></h5></div>
+                        <div style="display:flex; flex-direction:row; align-items:center;"><img src="images/overall/5.png" style="height:15px; margin-right:18px;"><h5><span class="score">5 &nbsp; (Good!)</span><span class="percent">90~100%</span></h5></div>
+                        <a href='https://www.opentreemap.org/jctrees/map/' style="display:none; width:100%; color:#848484; margin-top:5px; font-size:12px; text-align: right;">How did we calculate? &nbsp &#9654;</a>
 
                     </div>
 
@@ -105,15 +106,25 @@
                     <div id="action_content">
                         <div id="recommendation">
                             <h4 style = 'font-size:17px; padding-left: 15px; margin: 8px 0 8px 0;'>Recommended Green Infrastructure for your area</h4>
+                            <p id="Reason"> </p>
+                            <h3 id="recommended_GI"></h3>
+                            <p style="display:block; width:100%; color:#848484; margin-top:5px; font-size:12px; text-align: right;">It is a example of our suggestion because some data were not available.</p>
+
                         </div>
                         <div id="park_improve">
                             <h4 style = 'font-size:17px; padding-left: 15px; margin: 8px 0 8px 0;'>Park Improvement Invitation</h4>
                             <div id="geocoder2"></div>
                             <p style="padding-left:10px;">- The nearest park is <span id="nearest_park"> --- </span></p>
                             <p style="padding-left:10px;">- Distance from the park is <span id="distance"> --- </span> </p>
-                            <a href="http://jcparks.org/how-to-start-a-park-group/">
-                            <div style="display:flex; justify-content:center; width:100%"> <a style="width:30%;"><div style="border:1px solid #424242;" ><p style="text-align:center; margin:0 0 0 0;">Let's Improve</p></div></a></div>
+
+                            <a href="http://jcparks.org/how-to-start-a-park-group/" style="text-decoration: none; color:#212121;">
+                                <div style="display:flex; justify-content:center; width:100%">
+                                    <div id='improve_button' style="border:1px solid #424242; height:40px; width: 40%; display: flex; align-items: center; justify-content: center;" >
+                                            <p style="text-align:center; margin:0 0 0 0;">Let's Improve</p>
+                                    </div>
+                                </div>
                             </a>
+
                         </div>
                         <div id="buttons">
                             <a href="https://seeclickfix.com/web_portal/2k1ssvSpae6TaFxzH6eMTSUr/issues/map?device_os=Portal3-MapWidget&lat=40.7152660944628&lng=-74.068731&max_lat=40.7375024965684&max_lng=-74.01995658874513&min_lat=40.69300399738386&min_lng=-74.1174602508545&zoom=14",target="_blank">
@@ -122,15 +133,9 @@
                             </div>
                             </a>
 
-                            <a target="_blank">
+                            <a href="https://www.opentreemap.org/jctrees/map/" target="_blank">
                             <div id="map_trees">
                                 <h4 class='button' style = 'font-size:17px; margin: 8px 0 8px 0;'>Map Trees around your area</h4>
-                            </div>
-                            </a>
-
-                            <a href="https://www.opentreemap.org/jctrees/map/" target="_blank">
-                            <div id="opentreemap">
-                                <h4 class='button' style = 'font-size:17px; margin: 8px 0 8px 0;'>Jersey City Open Tree Map</h4>
                             </div>
                             </a>
 
