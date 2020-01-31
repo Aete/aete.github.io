@@ -1,4 +1,5 @@
 var projectList = [
+    {"title":'Make it Green Dashboard (prototype)', "time":2019, "category":"project"},
     {"title":"Plan Generator", "time" : 2018, "category" : "idea"},
     {"title":"Dwelling by Walling", "time" : 2016, "category" : "project"},
     {"title":"The Frame", "time" : 2016, "category" : "project"},
@@ -9,8 +10,8 @@ var projectList = [
     {"title":"Snowflake", "time" : null, "category" : "idea"},
     {"title":"Profile", "time" : null, "category" : "profile"},
     {"title":"Github", "time" : null, "category" : "profile"},
-    {"title":"Linkedin", "time" : null, "category" : "profile"}
-
+    {"title":"Linkedin", "time" : null, "category" : "profile"},
+    {"title":"Medium","time":null,"category":"profile"}
 
     ];
 
@@ -58,6 +59,12 @@ for (var i = 0; i<projectList.length;i++){
     }
     else if(projectList[i].title==='Snowflake'){
         projectList[i].imgsrc = "<image id = 'plan' src='image/snowflake.png' class='logo' style='width:60%;'>";
+    }
+    else if(projectList[i].title==='Make it Green Dashboard (prototype)'){
+        projectList[i].imgsrc = "<image id = 'plan' src='image/jc_dashboard.jpg' class='logo'>";
+    }
+    else if(projectList[i].title==='Medium'){
+        projectList[i].imgsrc = "<image id = 'plan' src='image/medium.png' class='logo'>";
     }
 }
 

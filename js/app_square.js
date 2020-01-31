@@ -11,8 +11,17 @@ var square_making = function(list){
         if(list[i].title === "Github"){
             $(".sub_container:last-child").attr('onclick', "window.open('https://github.com/aete','_blank')");
         }
-        else if(list[i].title === "Linkedin"){$(".sub_container:last-child").attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");}
-        else{$(".sub_container:last-child").attr('onclick','location.href= '+"'"+list[i].title+".html';");}
+        else if(list[i].title === "Medium"){$(".sub_container:last-child")
+            .attr('onclick', "window.open('https://medium.com/@seunggyunhan','_blank')");}
+
+        else if(list[i].title === "Make it Green Dashboard (prototype)"){$(".sub_container:last-child")
+            .attr('onclick', "window.open('han.codes/jc-dashboard','_blank')");}
+
+        else if(list[i].title === "Linkedin"){$(".sub_container:last-child")
+            .attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");}
+        else{$(".sub_container:last-child")
+            .attr('onclick','location.href= '+"'"+list[i].title+".html';");}
+
         $(".sub_container:last-child").append(square);
         $(".square:last-child").append(list[i].imgsrc );
         if(list[i].time != null){$(".sub_container:last-child").append(title.replace('%data',list[i].title+'<br>('+list[i].time+')'));}
