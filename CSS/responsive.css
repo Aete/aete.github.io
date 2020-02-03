@@ -111,6 +111,10 @@
         width : 50%;
     }
 
+    #jcdashboard{
+        width:95%;
+    }
+
     .square{
         width : 40vw;
         height : 40vw;

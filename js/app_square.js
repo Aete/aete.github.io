@@ -15,7 +15,7 @@ var square_making = function(list){
             .attr('onclick', "window.open('https://medium.com/@seunggyunhan','_blank')");}
 
         else if(list[i].title === "Make it Green Dashboard (prototype)"){$(".sub_container:last-child")
-            .attr('onclick', "window.open('han.codes/jc-dashboard','_blank')");}
+            .attr('onclick', "window.open('https://han.codes/jc-dashboard','_blank')");}
 
         else if(list[i].title === "Linkedin"){$(".sub_container:last-child")
             .attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");}

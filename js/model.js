@@ -58,13 +58,13 @@ for (var i = 0; i<projectList.length;i++){
         projectList[i].imgsrc = "<image id = 'plan' src='image/plan.gif' class='logo' style='width:95%;'>";
     }
     else if(projectList[i].title==='Snowflake'){
-        projectList[i].imgsrc = "<image id = 'plan' src='image/snowflake.png' class='logo' style='width:60%;'>";
+        projectList[i].imgsrc = "<image src='image/snowflake.png' class='logo' style='width:60%;'>";
     }
     else if(projectList[i].title==='Make it Green Dashboard (prototype)'){
-        projectList[i].imgsrc = "<image id = 'plan' src='image/jc_dashboard.jpg' class='logo'>";
+        projectList[i].imgsrc = "<image id = 'jcdashboard' src='image/jc_dashboard.jpg' class='logo'>";
     }
     else if(projectList[i].title==='Medium'){
-        projectList[i].imgsrc = "<image id = 'plan' src='image/medium.png' class='logo'>";
+        projectList[i].imgsrc = "<image id = 'medium' src='image/medium.png' class='logo'>";
     }
 }
 
