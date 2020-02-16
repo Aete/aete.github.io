@@ -1,5 +1,6 @@
 var projectList = [
-    {"title":'Make it Green Dashboard (prototype)', "time":2019, "category":"project"},
+    {"title":'Seoul Living-Pop Dashboard', "time":'on-going', "category":"project"},
+    {"title":'Make it Green Dashboard - prototype', "time":2019, "category":"project"},
     {"title":"Plan Generator", "time" : 2018, "category" : "idea"},
     {"title":"Dwelling by Walling", "time" : 2016, "category" : "project"},
     {"title":"The Frame", "time" : 2016, "category" : "project"},
@@ -60,11 +61,14 @@ for (var i = 0; i<projectList.length;i++){
     else if(projectList[i].title==='Snowflake'){
         projectList[i].imgsrc = "<image src='image/snowflake.png' class='logo' style='width:60%;'>";
     }
-    else if(projectList[i].title==='Make it Green Dashboard (prototype)'){
+    else if(projectList[i].title==='Make it Green Dashboard - prototype'){
         projectList[i].imgsrc = "<image id = 'jcdashboard' src='image/jc_dashboard.jpg' class='logo'>";
     }
     else if(projectList[i].title==='Medium'){
         projectList[i].imgsrc = "<image id = 'medium' src='image/medium.png' class='logo'>";
+    }
+    else if(projectList[i].title==='Seoul Living-Pop Dashboard'){
+        projectList[i].imgsrc = "<image id = 'medium' src='image/livingpop_dash.png' class='logo'>";
     }
 }
 
