@@ -14,7 +14,7 @@ var square_making = function(list){
         else if(list[i].title === "Medium"){$(".sub_container:last-child")
             .attr('onclick', "window.open('https://medium.com/@seunggyunhan','_blank')");}
 
-        else if(list[i].title === "Make it Green Dashboard (prototype)"){$(".sub_container:last-child")
+        else if(list[i].title === "Make it Green Dashboard - prototype"){$(".sub_container:last-child")
             .attr('onclick', "window.open('http://www.han.codes/jc-dashboard','_blank')");}
 
         else if(list[i].title === "Seoul Living-Pop Dashboard"){$(".sub_container:last-child")
