@@ -7,7 +7,7 @@ const palette = {
 // import mapboxgl to div container
 let map = new mapboxgl.Map({
     container: 'map',
-    style: palette['light']['mapStyle'],
+    style: palette['dark']['mapStyle'],
     center: [-74.070000, 40.722535],
     zoom: 12
 });
@@ -58,8 +58,8 @@ map.on('load', function () {
         "type": "circle",
         "paint": {
             "circle-color": "#F44336",
-            "circle-radius":3,
-            "circle-opacity":0.3
+            "circle-radius":4,
+            "circle-opacity":0.5
         }
     });
 
@@ -69,8 +69,8 @@ map.on('load', function () {
         "type": "circle",
         "paint": {
             "circle-color": "#2196f4",
-            "circle-radius":3,
-            "circle-opacity":0.3
+            "circle-radius":4,
+            "circle-opacity":0.5
         }
     });
 
