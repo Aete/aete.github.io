@@ -44,7 +44,7 @@ map.on('load', function () {
         },
         "paint": {
             "line-color": "#2196F4",
-            "line-width": 2,
+            "line-width": 5,
             'line-opacity': 0.75
         }
     });
@@ -59,10 +59,32 @@ map.on('load', function () {
         },
         "paint": {
             "line-color": "#F44336",
-            "line-width": 2,
+            "line-width": 5,
             'line-opacity': 0.75
         }
     });
 
+    map.on('click', 'matched', function(e) {
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        const shstGeoid = e.features[0].properties['shstGeometryId'];
+        const shstRefid = e.features[0].properties['shstReferenceId'];
+        const lionSegmentid = e.features[0].properties['pp_segmentid'];
+        const text = `<p><b>SharedStreet Geo ID</b>: ${shstGeoid}<br><b>SharedStreet Ref ID</b>: ${shstRefid}<br> <b>LION segment id</b>: ${lionSegmentid}</p>`;
+        const lat =  (coordinates[0][0] + coordinates[1][0])/2;
+        const lng =   (coordinates[0][1] + coordinates[1][1])/2;
+        new mapboxgl.Popup()
+            .setLngLat([lat,lng])
+            .setHTML(text)
+            .addTo(map);
+    });
 
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'matched', function() {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+// Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'matched', function() {
+        map.getCanvas().style.cursor = '';
+    });
 });
