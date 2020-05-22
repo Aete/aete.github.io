@@ -18,6 +18,8 @@ map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 // set variables for file addresses
 const urlmatched = 'data/sstreet_matched.geojson';
 const urlunmatched = 'data/sstreet_unmatched.geojson';
+const urlnode = 'data/sstreet_intersection.geojson';
+const urllionnode = 'data/lion_node_man.geojson';
 
 map.on('load', function () {
 
@@ -25,13 +27,16 @@ map.on('load', function () {
     window.setInterval(function() {
         map.getSource('matched').setData(urlmatched);
         map.getSource('unmatched').setData(urlunmatched);
+        map.getSource('node').setData(urlnode);
+        map.getSource('node').setData(urllionnode);
 
     }, 2000);
 
     // add sources to the Map
     map.addSource('matched', { type: 'geojson', data:urlmatched, 'generateId': false});
     map.addSource('unmatched', { type: 'geojson', data:urlunmatched, 'generateId': false});
-
+    map.addSource('node', { type: 'geojson', data:urlnode, 'generateId': false});
+    map.addSource('lionnode', { type: 'geojson', data:urllionnode, 'generateId': false});
     // add a layer and set properties
 
     map.addLayer({
@@ -44,7 +49,7 @@ map.on('load', function () {
         },
         "paint": {
             "line-color": "#2196F4",
-            "line-width": 5,
+            "line-width": 2,
             'line-opacity': 0.75
         }
     });
@@ -59,10 +64,21 @@ map.on('load', function () {
         },
         "paint": {
             "line-color": "#F44336",
-            "line-width": 5,
+            "line-width": 2,
             'line-opacity': 0.75
         }
     });
+
+    map.addLayer({
+        "id": "node",
+        "source": "node",
+        "type": "circle",
+        "paint": {
+            "circle-color": "#2196F3",
+        }
+    });
+
+
 
     map.on('click', 'matched', function(e) {
         const coordinates = e.features[0].geometry.coordinates.slice();

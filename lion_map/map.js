@@ -55,7 +55,7 @@ map.on('load', function () {
         "type": "circle",
         "paint": {
             "circle-color": "#FF9800",
-            "circle-radius":3
+            "circle-radius":5
         }
     });
 

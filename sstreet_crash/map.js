@@ -16,9 +16,10 @@ let map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
 // set variables for file addresses
-const urlCollision = 'data/crash.geojson';
-const urlMatched = 'data/matched.geojson';
-const urlSstreet = 'data/sstreet.geojson';
+const urlCollision = 'data/original_collision.geojson';
+const urlMatched = 'data/matched_collision.geojson';
+const urlUnmatched = 'data/unmatched_collision.geojson';
+const urlLink = 'data/track_mapping_collision.geojson';
 
 map.on('load', function () {
 
@@ -26,19 +27,21 @@ map.on('load', function () {
     window.setInterval(function() {
         map.getSource('collision').setData(urlCollision);
         map.getSource('matched').setData(urlMatched);
-        map.getSource('sstreet').setData(urlSstreet);
+        map.getSource('unmatched').setData(urlUnmatched);
+        map.getSource('link').setData(urlLink);
 
     }, 2000);
 
     // add sources to the Map
-    map.addSource('sstreet', { type: 'geojson', data:urlSstreet, 'generateId': false});
+    map.addSource('link', { type: 'geojson', data:urlLink, 'generateId': false});
     map.addSource('collision', { type: 'geojson', data:urlCollision, 'generateId': false});
     map.addSource('matched', { type: 'geojson', data:urlMatched, 'generateId': false});
+    map.addSource('unmatched', { type: 'geojson', data:urlUnmatched, 'generateId': false});
 
     // add a layer and set properties
     map.addLayer({
-        "id": 'sstreet',
-        "source": 'sstreet',
+        "id": 'link',
+        "source": 'link',
         "type": "line",
         "layout": {
             "line-join": "round",
@@ -46,7 +49,7 @@ map.on('load', function () {
 
         },
         "paint": {
-            "line-color": "#4CAF50",
+            "line-color": "#FFC107",
             "line-width": 2,
             'line-opacity': 0.75
         }
@@ -57,11 +60,12 @@ map.on('load', function () {
         "source": "collision",
         "type": "circle",
         "paint": {
-            "circle-color": "#F44336",
-            "circle-radius":4,
-            "circle-opacity":0.5
+            "circle-color": "#FFC107",
+            "circle-radius":4
         }
     });
+
+
 
     map.addLayer({
         "id": "matched",
@@ -69,9 +73,22 @@ map.on('load', function () {
         "type": "circle",
         "paint": {
             "circle-color": "#2196f4",
-            "circle-radius":4,
-            "circle-opacity":0.5
+            "circle-radius":4
         }
     });
+
+
+    map.addLayer({
+        "id": "unmatched",
+        "source": "unmatched",
+        "type": "circle",
+        "paint": {
+            "circle-color": "#F44336",
+            "circle-radius":4
+        }
+    });
+
+
+
 
 });
