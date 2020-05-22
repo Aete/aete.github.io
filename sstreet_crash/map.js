@@ -8,8 +8,8 @@ const palette = {
 let map = new mapboxgl.Map({
     container: 'map',
     style: palette['dark']['mapStyle'],
-    center: [-74.070000, 40.722535],
-    zoom: 12
+    center: [-73.979800, 40.760806],
+    zoom: 10
 });
 
 // add a controller (zoom and direction)
@@ -20,6 +20,7 @@ const urlCollision = 'data/original_collision.geojson';
 const urlMatched = 'data/matched_collision.geojson';
 const urlUnmatched = 'data/unmatched_collision.geojson';
 const urlLink = 'data/track_mapping_collision.geojson';
+const urlSstreet = 'data/ssnetwork.geojson';
 
 map.on('load', function () {
 
@@ -29,6 +30,7 @@ map.on('load', function () {
         map.getSource('matched').setData(urlMatched);
         map.getSource('unmatched').setData(urlUnmatched);
         map.getSource('link').setData(urlLink);
+        map.getSource('sstreet').setData(urlSstreet);
 
     }, 2000);
 
@@ -37,6 +39,7 @@ map.on('load', function () {
     map.addSource('collision', { type: 'geojson', data:urlCollision, 'generateId': false});
     map.addSource('matched', { type: 'geojson', data:urlMatched, 'generateId': false});
     map.addSource('unmatched', { type: 'geojson', data:urlUnmatched, 'generateId': false});
+    map.addSource('sstreet', { type: 'geojson', data:urlSstreet, 'generateId': false});
 
     // add a layer and set properties
     map.addLayer({
@@ -50,6 +53,22 @@ map.on('load', function () {
         },
         "paint": {
             "line-color": "#FFC107",
+            "line-width": 2,
+            'line-opacity': 0.75
+        }
+    });
+
+    map.addLayer({
+        "id": 'sstreet',
+        "source": 'sstreet',
+        "type": "line",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+
+        },
+        "paint": {
+            "line-color": "#2196F3",
             "line-width": 2,
             'line-opacity': 0.75
         }
