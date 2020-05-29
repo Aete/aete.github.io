@@ -16,70 +16,32 @@ let map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
 // set variables for file addresses
-const urlCollision = 'data/original_collision.geojson';
-const urlMatched = 'data/matched_collision.geojson';
+const urlMatchedIntersection = 'data/matched_intersection.geojson';
+const urlMatchedSegment = 'data/matched_segment.geojson';
 const urlUnmatched = 'data/unmatched_collision.geojson';
-const urlLink = 'data/track_mapping_collision.geojson';
-const urlSstreet = 'data/ssnetwork.geojson';
 
 map.on('load', function () {
-
     // get source from url
     window.setInterval(function() {
-        map.getSource('collision').setData(urlCollision);
-        map.getSource('matched').setData(urlMatched);
+        map.getSource('matchedIntersection').setData(urlMatchedIntersection);
+        map.getSource('matchedSegment').setData(urlMatchedSegment);
         map.getSource('unmatched').setData(urlUnmatched);
-        map.getSource('link').setData(urlLink);
-        map.getSource('sstreet').setData(urlSstreet);
 
     }, 2000);
 
     // add sources to the Map
-    map.addSource('link', { type: 'geojson', data:urlLink, 'generateId': false});
-    map.addSource('collision', { type: 'geojson', data:urlCollision, 'generateId': false});
-    map.addSource('matched', { type: 'geojson', data:urlMatched, 'generateId': false});
+    map.addSource('matchedIntersection', { type: 'geojson', data:urlMatchedIntersection, 'generateId': false});
+    map.addSource('matchedSegment', { type: 'geojson', data:urlMatchedSegment, 'generateId': false});
     map.addSource('unmatched', { type: 'geojson', data:urlUnmatched, 'generateId': false});
-    map.addSource('sstreet', { type: 'geojson', data:urlSstreet, 'generateId': false});
 
     // add a layer and set properties
-    map.addLayer({
-        "id": 'link',
-        "source": 'link',
-        "type": "line",
-        "layout": {
-            "line-join": "round",
-            "line-cap": "round"
-
-        },
-        "paint": {
-            "line-color": "#FFC107",
-            "line-width": 2,
-            'line-opacity': 0.75
-        }
-    });
 
     map.addLayer({
-        "id": 'sstreet',
-        "source": 'sstreet',
-        "type": "line",
-        "layout": {
-            "line-join": "round",
-            "line-cap": "round"
-
-        },
-        "paint": {
-            "line-color": "#2196F3",
-            "line-width": 2,
-            'line-opacity': 0.75
-        }
-    });
-
-    map.addLayer({
-        "id": "collision",
-        "source": "collision",
+        "id": "matchedIntersection",
+        "source": "matchedIntersection",
         "type": "circle",
         "paint": {
-            "circle-color": "#FFC107",
+            "circle-color": "#2196f4",
             "circle-radius":4
         }
     });
@@ -87,11 +49,11 @@ map.on('load', function () {
 
 
     map.addLayer({
-        "id": "matched",
-        "source": "matched",
+        "id": "matchedSegment",
+        "source": "matchedSegment",
         "type": "circle",
         "paint": {
-            "circle-color": "#2196f4",
+            "circle-color": "#009688",
             "circle-radius":4
         }
     });
