@@ -26,8 +26,8 @@ Promise.all([
     dropdownMSA(cases, d3.select('#msa-select'));
     dropdownMSA_download(cases,d3.select('#checkboxes'));
     const msa = 'New York-Newark-Jersey City, NY-NJ-PA';
-    lineChartDash(cases,casesDaily,msa,d3.select('#cases-dashboard'),'case',"2020-01-21","2020-05-19");
-    lineChartDash(deaths,deathsDaily,msa,d3.select('#deaths-dashboard'),'death',"2020-01-21","2020-05-14");
+    lineChartDash(cases,casesDaily,msa,d3.select('#cases-dashboard'),'case',"2020-05-19");
+    lineChartDash(deaths,deathsDaily,msa,d3.select('#deaths-dashboard'),'death',"2020-05-14");
     dataExtract();
 });
 

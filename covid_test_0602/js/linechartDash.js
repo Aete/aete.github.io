@@ -1,9 +1,8 @@
 let pasthoveredDate;
 
-function lineChartDash(data,dataDaily,msa,div,type,timeStartbyUser, timeEndbyUser){
- let timeStart = d3.timeParse('%Y-%m-%d')(timeStartbyUser);
+function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
  let timeEnd = d3.timeParse('%Y-%m-%d')(timeEndbyUser);
-
+ let timeStart = subtractDays(timeEnd,90);
  // store msa value that user selected
  store.msa = msa;
 
@@ -22,9 +21,9 @@ function lineChartDash(data,dataDaily,msa,div,type,timeStartbyUser, timeEndbyUse
  const maxDate = dataTransformedDaily.filter(d=>d.cases===maxCaseDaily)[0]['date'];
 
  // set the margin of the visualization
- const margin = {top:20, right: 250, bottom: 20, left: 50};
+ const margin = {top:50, right: 250, bottom: 20, left: 40};
  const visWidth =620 - margin.left - margin.right;
- const visHeight = 180 - margin.top - margin.bottom;
+ const visHeight = 200 - margin.top - margin.bottom;
 
  // create svg tag in the div (#cases) tag
  const svg = div.append('svg')
@@ -143,7 +142,7 @@ function lineChartDash(data,dataDaily,msa,div,type,timeStartbyUser, timeEndbyUse
  const newCase = Math.round(dataTransformedDaily.filter(d=>d.date.getTime()===d3.timeParse('%m/%d/%Y')(currentDateString).getTime())[0].cases).toLocaleString();
 
  const textInfo = svg.append('g')
-     .attr('transform','translate(430,30)')
+     .attr('transform','translate(470,50)')
      .style('font-size','13px');
 
  textInfo.append('text')
@@ -178,6 +177,39 @@ function lineChartDash(data,dataDaily,msa,div,type,timeStartbyUser, timeEndbyUse
  // create the title of the visualization with the number of confirmed cases or reported deaths
  hoveringDash(dataTransformed, dataTransformedDaily, xScale, yScaleDaily, visHeight, type, currentDateString, totalCase, newCase);
 
+ svg.append('text')
+     .text('Daily ')
+     .attr('x',5)
+     .attr('y',40)
+     .style('font-size','12px');
+
+
+ svg.append('line')
+     .attr('x1',42)
+     .attr('x2',70)
+     .attr('y1',36)
+     .attr('y2',36)
+     .attr('stroke',lineColor[type])
+     .style('stroke-width','2px');
+
+
+ svg.append('text')
+     .text('Total ')
+     .attr('x',330)
+     .attr('y',40)
+     .style('font-size','12px');
+
+
+ svg.append('line')
+     .attr('x1',367)
+     .attr('x2',395)
+     .attr('y1',36)
+     .attr('y2',36)
+     .attr('stroke',lineColor[type])
+     .style('stroke-width','2px')
+     .style('stroke-dasharray','4,2')
+     .style('stroke-opacity','0.5');
+
 
 }
 
@@ -190,8 +222,20 @@ function caseAxisDash(container,xScale,yScale, yScaleDaily, xAxis, yAxisTotal, y
      .attr('transform', `translate(0,${visHeight})`)
      .call(xAxis.ticks(5));
 
- grid.append('g')
+ const yAxisLeft = grid.append('g')
      .call(yAxisDaily.ticks(3));
+
+ yAxisLeft.select('g').select('line').remove();
+
+ const yAxisRight = grid.append('g')
+     .attr('transform',`translate(${visWidth},0)`)
+     .call(yAxisTotal.ticks(3));
+
+ yAxisRight.select('g').select('line').remove();
+
+ grid.selectAll('line')
+     .attr('stroke','#424242');
+
 
   grid.append('line')
      .attr('transform', `translate(0,${visHeight})`)
@@ -234,9 +278,6 @@ function caseAxisDash(container,xScale,yScale, yScaleDaily, xAxis, yAxisTotal, y
       .ticks(3)
  }
 
-
- grid.selectAll('.tick').select('line').remove();
-
  grid.append("g")
      .attr("class", "sub-grid-x")
      .attr("transform", "translate(0," + visHeight + ")")
@@ -259,9 +300,10 @@ function caseAxisDash(container,xScale,yScale, yScaleDaily, xAxis, yAxisTotal, y
      .attr('stroke','#BBBBBB')
      .style('stroke-dasharray','3 1');
 
+
+
  grid.selectAll('.domain').remove();
 }
-
 function hoveringDash(data, dataDaily, xScale, yScale, visHeight, type,currentDateString, totalCase, newCase){
  d3.select('#'+type+'-chart-dash')
      .on('mouseover',function(d){
@@ -300,10 +342,10 @@ function hoveringDash(data, dataDaily, xScale, yScale, visHeight, type,currentDa
           .text(`Date: ${date}`);
 
       d3.select('#'+type+'newCase')
-          .text(`New case: ${Math.round(dataFilteredDaily.cases).toLocaleString()}`);
+          .text(`New cases: ${Math.round(dataFilteredDaily.cases).toLocaleString()}`);
 
       d3.select('#'+type+'totalCase')
-          .text(`Total case: ${dataFiltered.cases.toLocaleString()}`);
+          .text(`Total cases: ${dataFiltered.cases.toLocaleString()}`);
      })
      .on('mouseout',function(d,i){
       if(pasthoveredDate !== undefined){
@@ -387,3 +429,14 @@ function updateCaseLineChart(){
 }
 
 
+function subtractDays(date, days) {
+ return new Date(
+     date.getFullYear(),
+     date.getMonth(),
+     date.getDate() - days,
+     date.getHours(),
+     date.getMinutes(),
+     date.getSeconds(),
+     date.getMilliseconds()
+ );
+}

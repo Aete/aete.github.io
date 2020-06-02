@@ -58,20 +58,30 @@
             <li>Total Number of Cases (E): The total number of cases by the reporting date, which corresponds to the area of the curve at the reporting date</li>
 
         </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis volutpat laoreet. Aliquam ante urna, sodales sit amet est nec, consequat iaculis sapien. Pellentesque luctus arcu lacus, et volutpat est pharetra nec. Nulla nec blandit quam. Cras sit amet risus egestas, condimentum ex et, hendrerit tortor. Cras posuere mauris in ante mollis, ac accumsan sapien venenatis. Suspendisse blandit volutpat justo, id condimentum nisi mattis in. Phasellus quis facilisis libero, at sodales lacus. Ut suscipit venenatis mauris eu venenatis. Nullam eu dui velit. Nulla posuere sapien eget suscipit pellentesque. Cras lobortis scelerisque placerat. Vestibulum sagittis ligula non justo tempor tincidunt.</p>
         <div id = 'linecharts-description'>
             <h3> USA vs MSA</h3>
             <div id="cases-description">
                 <h5> Cases</h5>
-                <p>On <span class="today"></span>, MSA/USA = <span id="case-percentage"></span> </p>
+                <p>On <span class ='today'></span>
+                    there were <span id="caseDailyMSA"></span> new cases in metropolitan areas and
+                    <span id="caseDailyNonMSA"></span> new cases outside metropolitan areas.
+                    Metropolitan areas represented <span id="caseDailyPercentage"></span> percent of new cases.</p>
+                <p> As of <span class ='today'></span>
+                    there were <span id="caseTotalMSA"></span> total cases in metropolitan areas and
+                    <span id="caseTotalNonMSA"></span> total cases outside metropolitan areas.</p>
 
             </div>
             <div id="deaths-description">
                 <h5>Deaths</h5>
-                <p>On <span class="today"></span>, MSA/USA = <span id="death-percentage"></span></p>
+                <p>On <span class ='today'></span>
+                    there were <span id="deathDailyMSA"></span> new deaths in metropolitan areas and
+                    <span id="deathDailyNonMSA"></span> new deaths outside metropolitan areas.
+                    Metropolitan areas represented <span id="deathDailyPercentage"></span> percent of new cases.</p>
+                <p> As of <span class ='today'></span>
+                    there were <span id="deathTotalMSA"></span> total deaths in metropolitan areas and
+                    <span id="deathTotalNonMSA"></span> total deaths outside metropolitan areas.</p>
 
             </div>
-
         </div>
     </div>
     <div class="dropdown">
@@ -90,6 +100,7 @@
 
         </div>
         <div id="linecharts-dashboard">
+
             <div id="cases-dashboard" style="margin-bottom:30px;">
                 <h5>Cases</h5>
             </div>

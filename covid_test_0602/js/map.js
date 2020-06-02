@@ -1,8 +1,8 @@
 function map(data,geoState,geoMSA, div,type){
     // set the margin of the visualization
-    const margin = {top:20, right: 20, bottom: 0, left: 20};
+    const margin = {top:0, right: 20, bottom: 40, left: 20};
     const visWidth =600 - margin.left - margin.right;
-    const visHeight = 450 - margin.top - margin.bottom;
+    const visHeight = 470 - margin.top - margin.bottom;
 
     const data_transformed = Array.from(data).map(function(d){
        if(d['Still increasing, but not doubling in 5 days']===1){d.category=1}
@@ -61,6 +61,7 @@ function map(data,geoState,geoMSA, div,type){
             const xPosition = coordinates[0]+20;
             const yPosition = coordinates[1]+20;
             console.log(d3.mouse(this));
+            /*
             const tooltip = d3.select('#'+type+'_map')
                 .append('g')
                 .attr('id', 'tooltipMap')
@@ -81,6 +82,8 @@ function map(data,geoState,geoMSA, div,type){
                 .style('font-size','11px')
                 .style('font-family','sans-serif')
                 .attr('text-anchor','start');
+
+             */
     })
         .on('mousemove',function(d){
             d3.select(this)
@@ -106,6 +109,50 @@ function map(data,geoState,geoMSA, div,type){
 
             updateCaseLineChart();
     });
+
+    const legend = svg.append('g')
+        .attr('transform','translate(240,395)');
+
+    legend.selectAll('rect')
+        .data([2,3,1])
+        .join('rect')
+        .attr('x',0)
+        .attr('y',(d,i)=>20*i+20)
+        .attr('width',10)
+        .attr('height',10)
+        .attr('fill', d=>cScale(d));
+
+    legend.selectAll('text')
+        .data(['Still increasing, but not doubling in 5 days',
+            'Doubles in less than 5 days, first peak',
+            'Doubles in less than 5 days, 2nd peak'])
+        .join('text')
+        .attr('x', 20)
+        .attr('y',(d,i)=>20*i+29)
+        .style('font-size','10px')
+        .text(d=>d);
+
+    const legend2 = svg.append('g')
+        .attr('transform','translate(470,395)');
+
+    legend2.selectAll('rect')
+        .data([4,5])
+        .join('rect')
+        .attr('x',0)
+        .attr('y',(d,i)=>20*i+20)
+        .attr('width',10)
+        .attr('height',10)
+        .attr('fill', d=>cScale(d));
+
+    legend2.selectAll('text')
+        .data(['Beyond peak',
+            'Clear, no cases ever'])
+        .join('text')
+        .attr('x', 20)
+        .attr('y',(d,i)=>20*i+29)
+        .style('font-size','10px')
+        .text(d=>d);
 }
+
 
 

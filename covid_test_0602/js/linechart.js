@@ -5,8 +5,8 @@ function lineChart(data, div, type, timeStartbyUser, timeEndbyUser){
     d3.selectAll('.today').text(`${timeEnd.getMonth()+1}/${timeEnd.getDate()}/${timeEnd.getFullYear()}`);
     const data_msa = data.filter(d=>d.category === 'MSA_daily')[0];
     const data_usa = data.filter(d=>d.category === 'USA_daily')[0];
-    const data_msa_total = data.filter(d=>d.category === 'USA_daily')[0];
-    const data_usa_total = data.filter(d=>d.category === 'USA_daily')[0];
+    const data_msa_total = data.filter(d=>d.category === 'MSA_cumulative')[0];
+    const data_usa_total = data.filter(d=>d.category === 'USA_cumulative')[0];
 
     // use caseDataPrep function in lineChartDash.js
     const dataTransformedMSA = caseDataPrep(data_msa, timeStart, timeEnd);
@@ -16,16 +16,40 @@ function lineChart(data, div, type, timeStartbyUser, timeEndbyUser){
 
     const MSA_new_case = dataTransformedMSA.filter(d=>d.date.getTime()===timeEnd.getTime())[0].cases;
     const USA_new_case = dataTransformedUSA.filter(d=>d.date.getTime()===timeEnd.getTime())[0].cases;
+    const MSA_total_case = dataTransformedMSATotal.filter(d=>d.date.getTime()===timeEnd.getTime())[0].cases;
+    const USA_total_case = dataTransformedUSATotal.filter(d=>d.date.getTime()===timeEnd.getTime())[0].cases;
 
-    d3.select('#'+type+'-percentage').text((Math.round((MSA_new_case/USA_new_case)*1000)/10)+'% (MSA: '+(MSA_new_case+'/USA:'+USA_new_case)+')');
+    d3.select('#'+type+'DailyMSA')
+        .text(Math.round(MSA_new_case).toLocaleString())
+        .style('font-weight','bold')
+        .style('font-size','17px');
+
+    d3.select('#'+type+'DailyNonMSA')
+        .text(Math.round(USA_new_case-MSA_new_case).toLocaleString())
+        .style('font-weight','bold')
+        .style('font-size','17px');
+
+    d3.select('#'+type+'DailyPercentage')
+        .text((Math.round((MSA_new_case/USA_new_case)*1000)/10)+'%')
+        .style('font-weight','bold')
+        .style('font-size','17px');
+
+    d3.select('#'+type+'TotalMSA')
+        .text(MSA_total_case.toLocaleString())
+        .style('font-weight','bold')
+        .style('font-size','17px');
+    d3.select('#'+type+'TotalNonMSA')
+        .text((USA_total_case-MSA_total_case).toLocaleString())
+        .style('font-weight','bold')
+        .style('font-size','17px');
 
     // calculate maximum of cases or deaths and date
     let maxCase = d3.max([d3.max(dataTransformedMSA.map(d=>d.cases)),d3.max(dataTransformedUSA.map(d=>d.cases))]);
 
     // set the margin of the visualization
-    const margin = {top:20, right: 20, bottom: 50, left: 50};
+    const margin = {top:50, right: 20, bottom: 50, left: 50};
     const visWidth =1280 - margin.left - margin.right;
-    const visHeight = 200 - margin.top - margin.bottom;
+    const visHeight = 250 - margin.top - margin.bottom;
 
     // create svg tag in the div (#cases) tag
     const svg = div.append('svg')
@@ -105,7 +129,43 @@ function lineChart(data, div, type, timeStartbyUser, timeEndbyUser){
         .attr('r',1);
 
     // create the title of the visualization with the number of confirmed cases or reported deaths
-    hovering(dataTransformedMSA, dataTransformedMSATotal, dataTransformedUSA, dataTransformedUSA, xScale, yScale, visHeight, type);
+    hovering(dataTransformedMSA, dataTransformedMSATotal, dataTransformedUSA, dataTransformedUSATotal, xScale, yScale, visHeight, type);
+
+    svg.append('text')
+        .text(type==='case'?'Number of new cases':'Number of new deaths')
+        .attr('x',10)
+        .attr('y',35)
+        .style('font-size','12px');
+
+    svg.append('line')
+        .attr('x1',1000)
+        .attr('x2',1030)
+        .attr('y1',30)
+        .attr('y2',30)
+        .attr('stroke-width','2px')
+        .attr('stroke',type==='case'?'#2196F3':'#F44336');
+
+    svg.append('text')
+        .text('Metropolitan Area')
+        .attr('x',1040)
+        .attr('y',35)
+        .style('font-size','12px');
+
+    svg.append('line')
+        .attr('x1',1190)
+        .attr('x2',1220)
+        .attr('y1',30)
+        .attr('y2',30)
+        .attr('stroke-width','2px')
+        .attr('stroke',type==='case'?'#009688':'#FF9800')
+        .style('stroke-dasharray','4,2')
+        .style('stroke-opacity','0.8');;
+
+    svg.append('text')
+        .text('USA')
+        .attr('x',1230)
+        .attr('y',35)
+        .style('font-size','12px');
 
 
 
@@ -229,17 +289,17 @@ function hovering(dataMSA, dataMSATotal, dataUSA, dataUSATotal,xScale, yScale, v
             tooltip.append('rect')
                 .attr('x', 0)
                 .attr('y',0)
-                .attr('width',200)
+                .attr('width',170)
                 .attr('height',110)
                 .attr('fill','#FFFFFF')
                 .attr('fill-opacity',0.8)
                 .attr('stroke','#636363');
 
             tooltip.selectAll('.tooltipTextMetric')
-                .data(['MSA Daily new '+ type + ': ' + dataMSADaily,
-                    'MSA Total '+ type + ': ' +dataMSACumulative,
-                    'USA Daily new '+ type + ': ' + dataUSADaily,
-                    'USA Total '+ type + ': '+dataUSACumulative])
+                .data(['MSA daily '+ type + 's: ' + dataMSADaily,
+                    'MSA total '+ type + 's: ' +dataMSACumulative,
+                    'USA daily '+ type + 's: ' + dataUSADaily,
+                    'USA total '+ type + 's: '+dataUSACumulative])
                 .join('text')
                 .attr('class','tooltipTextMetric')
                 .attr('x',10)
@@ -283,10 +343,10 @@ function hovering(dataMSA, dataMSATotal, dataUSA, dataUSATotal,xScale, yScale, v
                 .text(date);
 
             d3.selectAll('.tooltipTextMetric')
-                .data(['MSA Daily new '+ type + ': ' + dataMSADaily,
-                    'MSA Total '+ type + ': ' +dataMSACumulative,
-                    'USA Daily new '+ type + ': ' + dataUSADaily,
-                    'USA Total '+ type + ': '+dataUSACumulative])
+                .data(['MSA daily '+ type + 's: ' + dataMSADaily,
+                    'MSA total '+ type + 's: ' +dataMSACumulative,
+                    'USA daily '+ type + 's: ' + dataUSADaily,
+                    'USA total '+ type + 's: '+dataUSACumulative])
                 .text(d=>d);
         })
         .on('mouseout',function(d,i){
