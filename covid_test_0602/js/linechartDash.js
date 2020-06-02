@@ -16,16 +16,14 @@ function lineChartDash(data,dataDaily,msa,div,type,timeStartbyUser, timeEndbyUse
  let dataTransformed = caseDataPrep(dataFiltered, timeStart, timeEnd);
  let dataTransformedDaily = caseDataPrep(dataFilteredDaily,timeStart,timeEnd);
 
- console.log(dataTransformedDaily);
-
  // calculate maximum of cases or deaths and date
  let maxCase = d3.max(dataTransformed.map(d=>d.cases));
  let maxCaseDaily = d3.max(dataTransformedDaily.map(d=>d.cases));
  const maxDate = dataTransformedDaily.filter(d=>d.cases===maxCaseDaily)[0]['date'];
 
  // set the margin of the visualization
- const margin = {top:20, right: 80, bottom: 20, left: 50};
- const visWidth =500 - margin.left - margin.right;
+ const margin = {top:20, right: 250, bottom: 20, left: 50};
+ const visWidth =620 - margin.left - margin.right;
  const visHeight = 180 - margin.top - margin.bottom;
 
  // create svg tag in the div (#cases) tag
@@ -136,9 +134,50 @@ function lineChartDash(data,dataDaily,msa,div,type,timeStartbyUser, timeEndbyUse
      .style('display','none')
      .attr('r',1);
 
- // create the title of the visualization with the number of confirmed cases or reported deaths
- hoveringDash(dataTransformed, xScale, yScaleDaily, visHeight, type);
  // addLegend(svg, lineColor, type);
+
+ const currentDate = d3.max(dataTransformed.map(d=>d.date));
+ const currentDateString = (currentDate.getMonth()+1)+'/'+currentDate.getDate()+'/'+currentDate.getFullYear();
+
+ const totalCase = dataTransformed.filter(d=>d.date.getTime()===d3.timeParse('%m/%d/%Y')(currentDateString).getTime())[0].cases.toLocaleString();
+ const newCase = Math.round(dataTransformedDaily.filter(d=>d.date.getTime()===d3.timeParse('%m/%d/%Y')(currentDateString).getTime())[0].cases).toLocaleString();
+
+ const textInfo = svg.append('g')
+     .attr('transform','translate(430,30)')
+     .style('font-size','13px');
+
+ textInfo.append('text')
+     .text(`Date: ${currentDateString}`)
+     .attr('id',type+'date');
+
+ textInfo.append('text')
+     .text(`New cases: ${newCase}`)
+     .attr('id',type+'newCase')
+     .attr('y',25);
+
+ textInfo.append('text')
+     .text(`Total cases: ${totalCase}`)
+     .attr('id',type+'totalCase')
+     .attr('y',50);
+
+ textInfo.append('text')
+     .text(`Peak New Cases: -`)
+     .attr('id','peakCase')
+     .attr('y',75);
+
+ textInfo.append('text')
+     .text(`Days from Peak: -`)
+     .attr('id','daysFromPeak')
+     .attr('y',100);
+
+ textInfo.append('text')
+     .text(`Duration: -`)
+     .attr('id','duration')
+     .attr('y',125);
+
+ // create the title of the visualization with the number of confirmed cases or reported deaths
+ hoveringDash(dataTransformed, dataTransformedDaily, xScale, yScaleDaily, visHeight, type, currentDateString, totalCase, newCase);
+
 
 }
 
@@ -223,7 +262,7 @@ function caseAxisDash(container,xScale,yScale, yScaleDaily, xAxis, yAxisTotal, y
  grid.selectAll('.domain').remove();
 }
 
-function hoveringDash(data, xScale, yScale, visHeight, type){
+function hoveringDash(data, dataDaily, xScale, yScale, visHeight, type,currentDateString, totalCase, newCase){
  d3.select('#'+type+'-chart-dash')
      .on('mouseover',function(d){
       const coordinates= d3.mouse(this);
@@ -240,24 +279,45 @@ function hoveringDash(data, xScale, yScale, visHeight, type){
       const xPosition = coordinates[0];
       const time = xScale.invert(xPosition);
 
-      const date = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate();
+      const dateSelector = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate();
+      const date = (time.getMonth()+1)+'/'+time.getDate() + '/' + time.getFullYear();
+      const dataFiltered = data.filter(d=>d.date.getTime()===d3.timeParse('%Y-%m-%d')(dateSelector).getTime())[0];
+      const dataFilteredDaily = dataDaily.filter(d=>d.date.getTime()===d3.timeParse('%Y-%m-%d')(dateSelector).getTime())[0];
 
-      if((pasthoveredDate !== undefined)&&(pasthoveredDate!==date)){
+      if((pasthoveredDate !== undefined)&&(pasthoveredDate!==dateSelector)){
        d3.select('#'+type+'-'+pasthoveredDate+'-dash')
            .style('display','none')
       }
-      pasthoveredDate = date;
 
-      d3.select('#'+type+'-'+date+'-dash')
+      pasthoveredDate = dateSelector;
+
+      d3.select('#'+type+'-'+dateSelector+'-dash')
           .style('display','block')
           .attr('r','3')
           .transition();
+
+      d3.select('#'+type+'date')
+          .text(`Date: ${date}`);
+
+      d3.select('#'+type+'newCase')
+          .text(`New case: ${Math.round(dataFilteredDaily.cases).toLocaleString()}`);
+
+      d3.select('#'+type+'totalCase')
+          .text(`Total case: ${dataFiltered.cases.toLocaleString()}`);
      })
      .on('mouseout',function(d,i){
       if(pasthoveredDate !== undefined){
        d3.select('#'+type+'-'+pasthoveredDate+'-dash')
            .style('display','none');
       }
+      d3.select('#'+type+'date')
+          .text(`Date: ${currentDateString}`);
+
+      d3.select('#'+type+'newCase')
+          .text(`New case: ${newCase}`);
+
+      d3.select('#'+type+'totalCase')
+          .text(`Total case: ${totalCase}`);
 
      });
 }
@@ -312,7 +372,6 @@ function updateCaseLineChart(){
  const timeEnd = "2020-05-14";
  const cases_copied =Array.from(store.cases);
  const cases_copied_daily = Array.from(store.casesDaily);
- console.log(cases_copied_daily);
  const deaths_copied = Array.from(store.deaths);
  const deaths_copied_daily = Array.from(store.deathsDaily);
  d3.select('#svg-LineChart-case').remove();
