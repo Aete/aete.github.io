@@ -17,6 +17,7 @@ map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
 // set variables for file addresses
 const urlMatchedEventsAfter = 'data/511events_matched_after.geojson';
+const urlMatchedEventsSegment = 'data/511events_matched_segment.geojson';
 const urlMatchedEventsBefore = 'data/511events_matched_before.geojson';
 const urlTrackingLine = 'data/511events_matched_tracking_lines.geojson';
 const urlUnmatched = 'data/511events_unmatched.geojson';
@@ -25,6 +26,7 @@ map.on('load', function () {
     // get source from url
     window.setInterval(function() {
         map.getSource('matchedEventsAfter').setData(urlMatchedEventsAfter);
+        map.getSource('matchedEventsSegment').setData(urlMatchedEventsSegment);
         map.getSource('matchedEventsBefore').setData(urlMatchedEventsBefore);
         map.getSource('matchedEventsTracking').setData(urlTrackingLine);
         map.getSource('unmatched').setData(urlUnmatched);
@@ -33,6 +35,7 @@ map.on('load', function () {
 
     // add sources to the Map
     map.addSource('matchedEventsAfter', { type: 'geojson', data:urlMatchedEventsAfter, 'generateId': false});
+    map.addSource('matchedEventsSegment', { type: 'geojson', data:urlMatchedEventsSegment, 'generateId': false});
     map.addSource('matchedEventsBefore', { type: 'geojson', data: urlMatchedEventsBefore, 'generateId': false});
     map.addSource('matchedTrackingLine', { type: 'geojson', data: urlTrackingLine, 'generateId': false});
     map.addSource('unmatched', { type: 'geojson', data:urlUnmatched, 'generateId': false});
@@ -57,6 +60,22 @@ map.on('load', function () {
         "paint": {
             "circle-color": "#009688",
             "circle-radius":4
+        }
+    });
+
+    map.addLayer({
+        "id": 'matchedEventsSegment',
+        "source": 'matchedEventsSegment',
+        "type": "line",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#2196F3",
+            "line-opacity":0.5,
+            "line-width": 2,
+
         }
     });
 
