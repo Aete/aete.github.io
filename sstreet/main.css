@@ -1,0 +1,14 @@
+h3{
+    color:#FFFFFF;
+    padding-left:10px;
+}
+
+#legend{
+    position:absolute;
+    z-index:2;
+    top:10px;
+    right:10px;
+    width:300px;
+    height:150px;
+    background-color: #424242;
+}
