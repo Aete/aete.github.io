@@ -1,19 +1,44 @@
 let pasthoveredDate;
 
-function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
- let timeEnd = d3.timeParse('%Y-%m-%d')(timeEndbyUser);
- let timeStart = subtractDays(timeEnd,90);
+const monthToString = {
+  1 : 'January',
+  2 : 'February',
+  3 : 'March',
+  4 : 'April',
+  5 : 'May',
+  6 : 'June',
+  7 : 'July',
+  8 : 'August',
+  9 : 'September',
+  10: 'October',
+  11: 'November',
+  12: 'December'
+};
+
+function lineChartDash(data,dataDaily,msa,div,type){
+
  // store msa value that user selected
  store.msa = msa;
 
  // filter dataset by selected msa area
- const dataFiltered = data.filter(d=>d['MSA']===msa)[0];
- const dataFilteredDaily = dataDaily.filter(d=>d['MSA']===msa)[0];
-
+ const dataFiltered = data.filter(d=>d['msas']===msa)[0];
+ const dataFilteredDaily = dataDaily.filter(d=>d['msas']===msa)[0];
 
  // transform the dataset for d3 visualization
- let dataTransformed = caseDataPrep(dataFiltered, timeStart, timeEnd);
- let dataTransformedDaily = caseDataPrep(dataFilteredDaily,timeStart,timeEnd);
+ let dataTransformed = caseDataPrepDash(dataFiltered);
+ let dataTransformedDaily = caseDataPrepDash(dataFilteredDaily);
+
+ const timeStart = d3.min(dataTransformed.map(d=>d.date));
+ const timeEndDaily = d3.max(dataTransformedDaily.map(d=>d.date));
+ const timeEndTotal = d3.max(dataTransformed.map(d=>d.date));
+ const timeEnd = d3.min([timeEndDaily,timeEndTotal]);
+
+ dataTransformed = dataTransformed.filter(d=>d.date<=timeEnd);
+ dataTransformedDaily = dataTransformedDaily.filter(d=>d.date<=timeEnd);
+
+ store.date = timeEnd;
+ store[msa+'-'+type+'-total'] = dataTransformed;
+ store[msa+'-'+type+'-daily'] = dataTransformedDaily;
 
  // calculate maximum of cases or deaths and date
  let maxCase = d3.max(dataTransformed.map(d=>d.cases));
@@ -21,9 +46,9 @@ function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
  const maxDate = dataTransformedDaily.filter(d=>d.cases===maxCaseDaily)[0]['date'];
 
  // set the margin of the visualization
- const margin = {top:140, right: 60, bottom: 120, left: 60};
+ const margin = {top:160, right: 60, bottom: 140, left: 60};
  const visWidth =440 - margin.left - margin.right;
- const visHeight = 400 - margin.top - margin.bottom;
+ const visHeight = 440 - margin.top - margin.bottom;
 
  // create svg tag in the div (#cases) tag
  const svg = div.append('svg')
@@ -96,8 +121,8 @@ function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
      .y(d=>yScaleDaily(d.cases));
 
  // set the line color
- const lineColor = {'case':'#2196F3',
-                    'death':'#F44336' };
+ const lineColor = {'case':'#37474F',
+                    'death':'#37474F' };
 
  // draw the line graph
  container.append('g')
@@ -109,7 +134,7 @@ function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
      .attr('stroke-width', 2)
      .attr('d', line)
      .style('stroke-dasharray','4,2')
-     .style('stroke-opacity','0.5');
+     .style('stroke-opacity','0.7');
 
  container.append('g')
      .attr('class','path-lineChart-daily')
@@ -120,27 +145,66 @@ function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
      .attr('stroke-width', 2)
      .attr('d', lineDaily);
 
- const circles = container.append('g')
-     .attr('id','pointsOnLineChart');
+ const circlesDaily = container.append('g')
+     .attr('class','pointsDaily');
 
- circles.selectAll('circle')
+ circlesDaily.selectAll('circle')
      .data(dataTransformedDaily)
      .join('circle')
      .attr('cx',d=>xScale(d.date))
      .attr('cy',d=>yScaleDaily(d.cases))
-     .attr('class','pointsNotDisplay')
-     .attr('id', d=>type+'-'+d.date.getFullYear()+'-'+(d.date.getMonth()+1)+'-'+d.date.getDate()+'-dash')
-     .style('display','none')
-     .attr('r',1);
+     .attr('class','circles_'+type)
+     .attr('id', d=>type+'-daily-'+d.date.getFullYear()+'-'+(d.date.getMonth()+1)+'-'+d.date.getDate())
+     .attr('fill','#EF5350')
+     .attr('r',0);
 
- const currentDate = d3.max(dataTransformed.map(d=>d.date));
- const currentDateString = (currentDate.getMonth()+1)+'/'+currentDate.getDate()+'/'+currentDate.getFullYear();
+ circlesDaily.select('#'+type+'-daily-'+timeEnd.getFullYear()+'-'+(timeEnd.getMonth()+1)+'-'+timeEnd.getDate())
+     .transition()
+     .attr('r',5);
 
- const totalCase = dataTransformed.filter(d=>d.date.getTime()===d3.timeParse('%m/%d/%Y')(currentDateString).getTime())[0].cases.toLocaleString();
- const newCase = Math.round(dataTransformedDaily.filter(d=>d.date.getTime()===d3.timeParse('%m/%d/%Y')(currentDateString).getTime())[0].cases).toLocaleString();
+const circlesTotal = container.append('g')
+        .attr('class','pointsTotal');
 
- createTitle(svg,msa);
- addLegend(svg, lineColor, type);
+    circlesTotal.selectAll('circle')
+        .data(dataTransformed)
+        .join('circle')
+        .attr('cx',d=>xScale(d.date))
+        .attr('cy',d=>yScale(d.cases))
+        .attr('class','circles_'+type)
+        .attr('id', d=>type+'-total-'+d.date.getFullYear()+'-'+(d.date.getMonth()+1)+'-'+d.date.getDate())
+        .attr('fill','#FFFFFF')
+        .attr('stroke','#EF7373')
+        .attr('r',0);
+
+    circlesTotal.select('#'+type+'-total-'+timeEnd.getFullYear()+'-'+(timeEnd.getMonth()+1)+'-'+timeEnd.getDate())
+        .transition()
+        .attr('r',5);
+
+ createTitle(svg,msa,type, dateToString(timeEnd));
+ createLegend(svg, lineColor, type);
+ createFigure(svg);
+}
+
+function caseDataPrepDash(data){
+
+    // extract dates of the dataset
+    const dateArray = Object.keys(data).filter(d=>(d!=='msas')&(d!=='category'));
+    // transform the dataset for the d3 visualization
+    let dataTransformed = dateArray.map(function(d){
+        let obj = {};
+        obj.date = d3.timeParse('%Y-%m-%d')(d);
+        obj.cases = data[d];
+        return obj
+    });
+
+    const timeEnd = d3.max(dataTransformed.map(d=>d.date));
+    const timeStart = subtractDays(timeEnd,90);
+
+    dataTransformed = dataTransformed.sort((a,b)=>d3.ascending(a,b));
+
+    dataTransformed = dataTransformed.filter(d=>d.date>=timeStart);
+
+    return dataTransformed;
 }
 
 function caseAxisDash(container,xScale,yScale, yScaleDaily, xAxis, yAxisTotal, yAxisDaily, timeEnd, visWidth, visHeight){
@@ -230,91 +294,34 @@ function caseAxisDash(container,xScale,yScale, yScaleDaily, xAxis, yAxisTotal, y
      .attr('stroke','#BBBBBB')
      .style('stroke-dasharray','3 1');
 
-
-
  grid.selectAll('.domain').remove();
 }
-function hoveringDash(data, dataDaily, xScale, yScale, visHeight, type,currentDateString, totalCase, newCase){
- d3.select('#'+type+'-chart-dash')
-     .on('mouseover',function(d){
-      const coordinates= d3.mouse(this);
-      const xPosition = coordinates[0];
-      const time = xScale.invert(xPosition);
 
-      const date = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate();
-      const xPositionTooltip = xScale(d3.timeParse('%Y-%m-%d')(date));
-      const data_filtered = data.filter(d=>d.date.getTime()===d3.timeParse('%Y-%m-%d')(date).getTime())[0];
-
-     })
-     .on('mousemove',function(d,i){
-      const coordinates= d3.mouse(this);
-      const xPosition = coordinates[0];
-      const time = xScale.invert(xPosition);
-
-      const dateSelector = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate();
-      const date = (time.getMonth()+1)+'/'+time.getDate() + '/' + time.getFullYear();
-      const dataFiltered = data.filter(d=>d.date.getTime()===d3.timeParse('%Y-%m-%d')(dateSelector).getTime())[0];
-      const dataFilteredDaily = dataDaily.filter(d=>d.date.getTime()===d3.timeParse('%Y-%m-%d')(dateSelector).getTime())[0];
-
-      if((pasthoveredDate !== undefined)&&(pasthoveredDate!==dateSelector)){
-       d3.select('#'+type+'-'+pasthoveredDate+'-dash')
-           .style('display','none')
-      }
-
-      pasthoveredDate = dateSelector;
-
-      d3.select('#'+type+'-'+dateSelector+'-dash')
-          .style('display','block')
-          .attr('r','3')
-          .transition();
-
-      d3.select('#'+type+'date')
-          .text(`Date: ${date}`);
-
-      d3.select('#'+type+'newCase')
-          .text(`New cases: ${Math.round(dataFilteredDaily.cases).toLocaleString()}`);
-
-      d3.select('#'+type+'totalCase')
-          .text(`Total cases: ${dataFiltered.cases.toLocaleString()}`);
-     })
-     .on('mouseout',function(d,i){
-      if(pasthoveredDate !== undefined){
-       d3.select('#'+type+'-'+pasthoveredDate+'-dash')
-           .style('display','none');
-      }
-      d3.select('#'+type+'date')
-          .text(`Date: ${currentDateString}`);
-
-      d3.select('#'+type+'newCase')
-          .text(`New case: ${newCase}`);
-
-      d3.select('#'+type+'totalCase')
-          .text(`Total case: ${totalCase}`);
-
-     });
+function dateToString(date){
+    return monthToString[(date.getMonth()+1)]+' '+date.getDate() +', '+date.getFullYear();
 }
 
-function addLegend(svg,lineColor, type){
+function createLegend(svg,lineColor, type){
    const legend = svg.append('g')
-       .attr('transform', 'translate(0,315)')
+       .attr('transform', 'translate(200,125)')
        .style('font-size','12px');
 
    legend.append('line')
-       .attr('x1',100)
-       .attr('x2',130)
+       .attr('x1',0)
+       .attr('x2',30)
        .attr('y1',0)
        .attr('y2',0)
        .attr('stroke',lineColor[type])
        .style('stroke-width','2px');
 
    legend.append('text')
-       .attr('x',135)
+       .attr('x',35)
        .attr('y',4)
        .text('New cases');
 
    legend.append('line')
-         .attr('x1',230)
-         .attr('x2',260)
+         .attr('x1',130)
+         .attr('x2',160)
          .attr('y1',0)
          .attr('y2',0)
          .attr('stroke',lineColor[type])
@@ -323,17 +330,18 @@ function addLegend(svg,lineColor, type){
          .style('stroke-opacity','0.5');
 
    legend.append('text')
-       .attr('x',265)
+       .attr('x',165)
        .attr('y',4)
        .text('Total cases');
 }
 
-function createTitle(svg,msa){
+function createTitle(svg,msa,type,date){
  const title = svg.append('g')
      .attr('transform','translate(15,60)');
 
  title.append('text')
-     .text('April 5, 2020')
+     .attr('id','linechart-'+type+'__Date')
+     .text(date)
      .attr('x',0)
      .attr('y',0)
      .style('font-size', '18px');
@@ -351,17 +359,27 @@ function createTitle(svg,msa){
      .style('font-size', '14px');
 }
 
+function createFigure(svg){
+    const figureList = ['New cases',
+    'Days from peak',
+    'Total cases',
+    'Share of peak value',
+    'Duration',
+    'Five day change (%)'];
 
-function subtractDays(date, days) {
- return new Date(
-     date.getFullYear(),
-     date.getMonth(),
-     date.getDate() - days,
-     date.getHours(),
-     date.getMinutes(),
-     date.getSeconds(),
-     date.getMilliseconds()
- );
+    const figure = svg.append('g')
+        .attr('id','figure')
+        .attr('transform','translate(15,330)');
+
+    figure.selectAll('.figure')
+        .data(figureList)
+        .join('text')
+        .attr('class','.figure')
+        .attr('x', (d,i)=>(i%2)*180)
+        .attr('y',(d,i) => Math.round((i+1)/2)*30)
+        .text(d=>d)
+        .style('font-size', '14px');
+
 }
 
 function updateCaseLineChart(source){
@@ -378,8 +396,6 @@ function updateCaseLineChart(source){
       .style('stroke-width','2px')
       .attr('class','clicked');
 
-  const timeStart = "2020-01-21";
-  const timeEnd = "2020-05-14";
   const cases_copied =Array.from(store.cases);
   const cases_copied_daily = Array.from(store.casesDaily);
   const deaths_copied = Array.from(store.deaths);
@@ -387,11 +403,42 @@ function updateCaseLineChart(source){
   d3.select('#svg-LineChart-case').remove();
   d3.select('#svg-LineChart-death').remove();
   if(msa!=='Select MSA'){
-    lineChartDash(cases_copied,cases_copied_daily,msa,d3.select('#cases-dashboard'),'case', timeEnd);
-    lineChartDash(deaths_copied,deaths_copied_daily,msa,d3.select('#deaths-dashboard'),'death', timeEnd);
+    lineChartDash(cases_copied,cases_copied_daily,msa,d3.select('#cases-dashboard'),'case');
+    lineChartDash(deaths_copied,deaths_copied_daily,msa,d3.select('#deaths-dashboard'),'death');
   }
   else{
-    lineChartDash(cases_copied,cases_copied_daily,store.msa,d3.select('#cases-dashboard'),'case',timeEnd);
-    lineChartDash(deaths_copied,deaths_copied_daily,store.msa,d3.select('#deaths-dashboard'),'death', timeEnd);
+    lineChartDash(cases_copied,cases_copied_daily,store.msa,d3.select('#cases-dashboard'),'case');
+    lineChartDash(deaths_copied,deaths_copied_daily,store.msa,d3.select('#deaths-dashboard'),'death');
   }
+}
+
+function updateCaseDate(source){
+    const date = subtractDays(store.date,90-source.value);
+
+    d3.select('#linechart-case__Date').text(dateToString(date));
+
+    d3.selectAll('.circles_case')
+        .attr('r',0);
+
+    d3.select('#case-daily-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
+        .attr('r',5);
+
+    d3.select('#case-total-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
+        .attr('r',5);
+
+}
+
+function updateDeathDate(source){
+    const date = subtractDays(store.date,90-source.value);
+    d3.select('#linechart-death__Date').text(dateToString(date));
+
+    d3.selectAll('.circles_death')
+        .attr('r',0);
+
+    d3.select('#death-daily-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
+        .attr('r',5);
+
+    d3.select('#death-total-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
+        .attr('r',5);
+
 }

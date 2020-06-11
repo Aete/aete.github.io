@@ -1,7 +1,7 @@
 function dropdownMSA(data,menu){
     menu.append('option')
         .text('New York-Newark-Jersey City, NY-NJ-PA');
-    const msaArray = data.map(d=>d['MSA']);
+    const msaArray = data.map(d=>d['msas']);
     for(let i=0; i<msaArray.length;i++){
         menu.append('option')
             .text(msaArray[i])
@@ -21,5 +21,4 @@ function expandContents(node){
         node.firstElementChild.querySelector('h3').classList.remove('section__title-active');
         node.lastElementChild.querySelector('p').innerText = 'Click to expand ▼';
     }
-
 }

@@ -1,7 +1,6 @@
 
 function dropdownMSA_download(data,menu){
-    const msaArray = data.map(d=>d['MSA']);
-    console.log(data);
+    const msaArray = data.map(d=>d['msas']);
     menu.append('label')
         .attr('for','selectAll')
         .html(`<input type="checkbox" onclick="checkAll(this)" /> Select All`);
@@ -18,18 +17,6 @@ function checkAll(source){
     for(let i=0, n=checkboxes.length;i<n;i++) {
         checkboxes[i].checked = source.checked;
     }
-}
-
-
-function downloadPanel(){
-    const button = document.getElementById('download-button');
-    const panel = document.getElementById('download-panel');
-    if(button.style.display !== 'none'){
-        button.style.display = 'none';
-        panel.style.display = 'flex';
-    }
-    else{button.style.display = 'block';
-        panel.style.display = 'none';   }
 }
 
 function dataExtract(){

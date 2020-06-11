@@ -171,11 +171,10 @@ function lineChart(data, div, type, timeStartbyUser, timeEndbyUser){
 
 }
 
-function caseDataPrep(data, timeStart, timeEnd){
+function caseDataPrep(data){
 
     // extract dates of the dataset
-    const dateArray = Object.keys(data).filter(d=>(d!=='MSA')&(d!=='category'));
-    console.log(data);
+    const dateArray = Object.keys(data).filter(d=>(d!=='msas')&(d!=='category'));
     // transform the dataset for the d3 visualization
     let dataTransformed = dateArray.map(function(d){
         let obj = {};
@@ -184,13 +183,27 @@ function caseDataPrep(data, timeStart, timeEnd){
         return obj
     });
 
-    dataTransformed = dataTransformed.sort((a,b)=>d3.ascending(a,b));
+    const timeEnd = d3.max(dataTransformed.map(d=>d.date));
+    const timeStart = subtractDays(timeEnd,90);
 
-    dataTransformed = dataTransformed.filter(d=>d.date<=timeEnd);
+    dataTransformed = dataTransformed.sort((a,b)=>d3.ascending(a,b));
 
     dataTransformed = dataTransformed.filter(d=>d.date>=timeStart);
 
     return dataTransformed;
+}
+
+
+function subtractDays(date, days) {
+    return new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate() - days,
+        date.getHours(),
+        date.getMinutes(),
+        date.getSeconds(),
+        date.getMilliseconds()
+    );
 }
 
 function caseAxis(container,xScale,yScale,xAxis, yAxis, timeEnd, visWidth, visHeight){

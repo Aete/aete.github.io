@@ -118,10 +118,11 @@
     justify-content: center;
 }
 
-.Dashboard_chart{
+.Dashboard__chart{
     width:45%;
     display:flex;
     justify-content: center;
+    padding-top:18px;
 }
 
 .Dashboard__death{

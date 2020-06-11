@@ -164,7 +164,7 @@
                         </div>
                         <div class="menu_slider">
                             <h5>Date: </h5>
-                            <input class="menu_slider__slider" type="range" min="1" max="90" value="90">
+                            <input class="menu_slider__slider" type="range" min="1" max="90" value="90" oninput="updateCaseDate(this)">
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                     <div id='map_case' class="Dashboard__map">
 
                     </div>
-                    <div id="cases-dashboard" class="Dashboard_chart">
+                    <div id="cases-dashboard" class="Dashboard__chart">
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
                         </div>
                         <div class="menu_slider">
                             <h5>Date: </h5>
-                            <input class="menu_slider__slider" type="range" min="1" max="90" value="90">
+                            <input class="menu_slider__slider" type="range" min="1" max="90" value="90" oninput="updateDeathDate(this)">
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                     <div id='map_death' class="Dashboard__map">
 
                     </div>
-                    <div id="deaths-dashboard" class="Dashboard_chart">
+                    <div id="deaths-dashboard"  class="Dashboard__chart">
                     </div>
                 </div>
             </div>
