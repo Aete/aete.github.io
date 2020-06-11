@@ -21,9 +21,9 @@ function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
  const maxDate = dataTransformedDaily.filter(d=>d.cases===maxCaseDaily)[0]['date'];
 
  // set the margin of the visualization
- const margin = {top:140, right: 60, bottom: 50, left: 60};
+ const margin = {top:140, right: 60, bottom: 120, left: 60};
  const visWidth =440 - margin.left - margin.right;
- const visHeight = 350 - margin.top - margin.bottom;
+ const visHeight = 400 - margin.top - margin.bottom;
 
  // create svg tag in the div (#cases) tag
  const svg = div.append('svg')
@@ -133,106 +133,14 @@ function lineChartDash(data,dataDaily,msa,div,type, timeEndbyUser){
      .style('display','none')
      .attr('r',1);
 
- // addLegend(svg, lineColor, type);
-
  const currentDate = d3.max(dataTransformed.map(d=>d.date));
  const currentDateString = (currentDate.getMonth()+1)+'/'+currentDate.getDate()+'/'+currentDate.getFullYear();
 
  const totalCase = dataTransformed.filter(d=>d.date.getTime()===d3.timeParse('%m/%d/%Y')(currentDateString).getTime())[0].cases.toLocaleString();
  const newCase = Math.round(dataTransformedDaily.filter(d=>d.date.getTime()===d3.timeParse('%m/%d/%Y')(currentDateString).getTime())[0].cases).toLocaleString();
 
- svg.append('text')
-     .text('April 5, 2020')
-     .attr('x',15)
-     .attr('y',60)
-     .style('font-size', '18px');
-
- svg.append('text')
-     .text(msa)
-     .attr('x',15)
-     .attr('y',85)
-     .style('font-size', '14px');
-
- svg.append('text')
-     .text('Population: '+ (19979477).toLocaleString())
-     .attr('x',15)
-     .attr('y',105)
-     .style('font-size', '14px');
-
-
- /*
- const textInfo = svg.append('g')
-     .attr('transform','translate(470,50)')
-     .style('font-size','13px');
-
- textInfo.append('text')
-     .text(`Date: ${currentDateString}`)
-     .attr('id',type+'date');
-
- textInfo.append('text')
-     .text(`New cases: ${newCase}`)
-     .attr('id',type+'newCase')
-     .attr('y',25);
-
- textInfo.append('text')
-     .text(`Total cases: ${totalCase}`)
-     .attr('id',type+'totalCase')
-     .attr('y',50);
-
- textInfo.append('text')
-     .text(`Peak New Cases: -`)
-     .attr('id','peakCase')
-     .attr('y',75);
-
- textInfo.append('text')
-     .text(`Days from Peak: -`)
-     .attr('id','daysFromPeak')
-     .attr('y',100);
-
- textInfo.append('text')
-     .text(`Duration: -`)
-     .attr('id','duration')
-     .attr('y',125);
-
- // create the title of the visualization with the number of confirmed cases or reported deaths
- hoveringDash(dataTransformed, dataTransformedDaily, xScale, yScaleDaily, visHeight, type, currentDateString, totalCase, newCase);
-
- svg.append('text')
-     .text('Daily ')
-     .attr('x',5)
-     .attr('y',40)
-     .style('font-size','12px');
-
-
- svg.append('line')
-     .attr('x1',42)
-     .attr('x2',70)
-     .attr('y1',36)
-     .attr('y2',36)
-     .attr('stroke',lineColor[type])
-     .style('stroke-width','2px');
-
-
- svg.append('text')
-     .text('Total ')
-     .attr('x',330)
-     .attr('y',40)
-     .style('font-size','12px');
-
-
- svg.append('line')
-     .attr('x1',367)
-     .attr('x2',395)
-     .attr('y1',36)
-     .attr('y2',36)
-     .attr('stroke',lineColor[type])
-     .style('stroke-width','2px')
-     .style('stroke-dasharray','4,2')
-     .style('stroke-opacity','0.5');
-
-
-  */
-
+ createTitle(svg,msa);
+ addLegend(svg, lineColor, type);
 }
 
 function caseAxisDash(container,xScale,yScale, yScaleDaily, xAxis, yAxisTotal, yAxisDaily, timeEnd, visWidth, visHeight){
@@ -387,67 +295,60 @@ function hoveringDash(data, dataDaily, xScale, yScale, visHeight, type,currentDa
 }
 
 function addLegend(svg,lineColor, type){
-   svg.append('line')
-       .attr('stroke', lineColor[type])
-       .attr('x1',340)
-       .attr('x2', 370)
-       .attr('y1',45)
-       .attr('y2',45)
+   const legend = svg.append('g')
+       .attr('transform', 'translate(0,315)')
+       .style('font-size','12px');
+
+   legend.append('line')
+       .attr('x1',100)
+       .attr('x2',130)
+       .attr('y1',0)
+       .attr('y2',0)
+       .attr('stroke',lineColor[type])
        .style('stroke-width','2px');
 
- svg.append('text')
-     .text(': cumulative')
-     .attr('x',375)
-     .attr('y',48)
-     .style('font-size','12px');
+   legend.append('text')
+       .attr('x',135)
+       .attr('y',4)
+       .text('New cases');
 
- svg.append('line')
-     .attr('stroke', lineColor[type])
-     .attr('x1',475)
-     .attr('x2', 505)
-     .attr('y1',45)
-     .attr('y2',45)
-     .style('stroke-width','2px')
-     .style('stroke-dasharray','3,3');
+   legend.append('line')
+         .attr('x1',230)
+         .attr('x2',260)
+         .attr('y1',0)
+         .attr('y2',0)
+         .attr('stroke',lineColor[type])
+         .style('stroke-width','2px')
+         .style('stroke-dasharray','4,2')
+         .style('stroke-opacity','0.5');
 
- svg.append('text')
-     .text(': daily')
-     .attr('x',510)
-     .attr('y',48)
-     .style('font-size','12px');
+   legend.append('text')
+       .attr('x',265)
+       .attr('y',4)
+       .text('Total cases');
 }
 
+function createTitle(svg,msa){
+ const title = svg.append('g')
+     .attr('transform','translate(15,60)');
 
-function updateCaseLineChart(){
- const msa = document.getElementById("msa-select").value;
+ title.append('text')
+     .text('April 5, 2020')
+     .attr('x',0)
+     .attr('y',0)
+     .style('font-size', '18px');
 
- if(d3.select('.clicked')._groups[0][0]!==null){
-  d3.select('.clicked').attr('class','')
-      .attr('stroke','#969696')
-      .style('stroke-width','1px');
- }
- 
- d3.select('#'+msa.replace(/\s/g, '').replace(/,/g, ""))
-     .attr('stroke','#212121')
-     .style('stroke-width','2px')
-     .attr('class','clicked');
+ title.append('text')
+     .text(msa)
+     .attr('x',0)
+     .attr('y',25)
+     .style('font-size', '14px');
 
- const timeStart = "2020-01-21";
- const timeEnd = "2020-05-14";
- const cases_copied =Array.from(store.cases);
- const cases_copied_daily = Array.from(store.casesDaily);
- const deaths_copied = Array.from(store.deaths);
- const deaths_copied_daily = Array.from(store.deathsDaily);
- d3.select('#svg-LineChart-case').remove();
- d3.select('#svg-LineChart-death').remove();
- if(msa!=='Select MSA'){
-   lineChartDash(cases_copied,cases_copied_daily,msa,d3.select('#cases-dashboard'),'case', timeStart,timeEnd);
-   lineChartDash(deaths_copied,deaths_copied_daily,msa,d3.select('#deaths-dashboard'),'death', timeStart, timeEnd);
- }
- else{
-  lineChartDash(cases_copied,cases_copied_daily,store.msa,d3.select('#cases-dashboard'),'case', timeStart,timeEnd);
-  lineChartDash(deaths_copied,deaths_copied_daily,store.msa,d3.select('#deaths-dashboard'),'death', timeStart, timeEnd);
- }
+ title.append('text')
+     .text('Population: '+ (19979477).toLocaleString())
+     .attr('x',0)
+     .attr('y',45)
+     .style('font-size', '14px');
 }
 
 
@@ -461,4 +362,36 @@ function subtractDays(date, days) {
      date.getSeconds(),
      date.getMilliseconds()
  );
+}
+
+function updateCaseLineChart(source){
+  const msa = source.value;
+
+  if(d3.select('.clicked')._groups[0][0]!==null){
+   d3.select('.clicked').attr('class','')
+       .attr('stroke','#969696')
+       .style('stroke-width','1px');
+  }
+
+  d3.select('#'+msa.replace(/\s/g, '').replace(/,/g, ""))
+      .attr('stroke','#212121')
+      .style('stroke-width','2px')
+      .attr('class','clicked');
+
+  const timeStart = "2020-01-21";
+  const timeEnd = "2020-05-14";
+  const cases_copied =Array.from(store.cases);
+  const cases_copied_daily = Array.from(store.casesDaily);
+  const deaths_copied = Array.from(store.deaths);
+  const deaths_copied_daily = Array.from(store.deathsDaily);
+  d3.select('#svg-LineChart-case').remove();
+  d3.select('#svg-LineChart-death').remove();
+  if(msa!=='Select MSA'){
+    lineChartDash(cases_copied,cases_copied_daily,msa,d3.select('#cases-dashboard'),'case', timeEnd);
+    lineChartDash(deaths_copied,deaths_copied_daily,msa,d3.select('#deaths-dashboard'),'death', timeEnd);
+  }
+  else{
+    lineChartDash(cases_copied,cases_copied_daily,store.msa,d3.select('#cases-dashboard'),'case',timeEnd);
+    lineChartDash(deaths_copied,deaths_copied_daily,store.msa,d3.select('#deaths-dashboard'),'death', timeEnd);
+  }
 }

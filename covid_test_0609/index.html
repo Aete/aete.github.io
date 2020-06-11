@@ -17,41 +17,6 @@
     </div>
     <h1 id="header__title">Where are U.S. Cities on their ‘Curve’?</h1>
     <h2 id="header__subtitle">Monitoring COVID-19 in US Metropolitan Areas</h2>
-
-<!--    <button id="download-button" onclick="downloadPanel()">Download data</button>-->
-<!--    <div id="download-panel" >-->
-<!--            <p id="close-panel" onclick="downloadPanel()">X</p>-->
-<!--            <div>-->
-<!--                <h5>Data: </h5>-->
-<!--                <select name="type" id="data-select">-->
-<!--                    <option value = 'case'>Cases</option>-->
-<!--                    <option value = 'death'>Deaths</option>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--            <div id="msa-select-download">-->
-<!--                <h5>MSA: </h5>-->
-<!--                <div>-->
-<!--                    <div class="selectBox" onclick="showCheckboxes()">-->
-<!--                        <select>-->
-<!--                            <option>Select MSA</option>-->
-<!--                        </select>-->
-<!--                        <div class="overSelect"></div>-->
-<!--                    </div>-->
-<!--                    <div id="checkboxes">-->
-
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <h5>Start date: </h5>-->
-<!--                <input type="date" id='timeStart-download' value="2020-01-21" min="2020-01-21" max="2020-05-14">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <h5>End date: </h5>-->
-<!--                <input type="date" id="timeEnd-download" value="2020-05-14" min="2020-01-21" max="2020-05-14">-->
-<!--            </div>-->
-
-<!--            <button onclick="download_csv()">Download</button>-->
 </header>
 <main>
     <section id="About" class="section">
@@ -132,6 +97,40 @@
                 <p>Click to expand ▼</p>
             </div>
         </div>
+
+        <div id="Download__content" class="section__content hidden">
+            <div class="content__row">
+                <h5>Type:</h5>
+                <button>Case</button>
+                <button>Death</button>
+            </div>
+            <div class="content__row">
+                <h5>MSA: </h5>
+                <div class="download__MSA-selectbox">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select>
+                            <option>Select MSA</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes">
+
+                    </div>
+                </div>
+            </div>
+            <div class="content__row">
+                <div class="content__column">
+                    <h5>Start date:</h5>
+                    <input type="date" id='download_time-start' value="2020-01-21" min="2020-01-21" max="2020-05-14">
+                </div>
+                <div class="content__column">
+                    <h5>End date:</h5>
+                    <input type="date" id='download-time-end' value="2020-01-21" min="2020-01-21" max="2020-05-14">
+                </div>
+            </div>
+            <button onclick="download_csv()">Download</button>
+        </div>
+
     </section>
     <section id="Dashboard" class="section">
         <div class="section__title activate" onclick="expandContents(this)">
@@ -161,7 +160,7 @@
                     <div class="menu__row">
                         <div class="menu__MSA">
                             <h5>MSA: </h5>
-                            <select name="msa" class="menu__MSA-select" onchange="updateCaseLineChart()"></select>
+                            <select name="msa" class="menu__MSA-select" id="MSA-select-case" onchange="updateCaseLineChart(this)"></select>
                         </div>
                         <div class="menu_slider">
                             <h5>Date: </h5>
@@ -177,7 +176,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div  class="Dashboard__death">
                 <div class="Dashboard__menu">
                     <h4>Deaths</h4>
                     <div class="menu__row">
@@ -219,5 +218,6 @@
     <script src="js/menu.js" defer></script>
     <script src="js/linechartDash.js" defer></script>
     <script src="js/map.js" defer></script>
+    <script src="js/download.js" defer></script>
     <script src="js/main.js"  defer></script>
 </html>
