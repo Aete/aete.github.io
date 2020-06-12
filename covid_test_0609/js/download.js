@@ -5,7 +5,6 @@ function dropdownMSA_download(data,menu){
         .attr('for','selectAll')
         .html(`<input type="checkbox" onclick="checkAll(this)" /> Select All`);
     for(let i=0; i<msaArray.length;i++){
-        console.log(msaArray[i]);
         menu.append('label')
             .attr('for',msaArray[i])
             .html(`<input type="checkbox" name="MSA_check" id=${msaArray[i].replace(/\s/g, '').replace(/\./g, '')} /> ${msaArray[i]}`);

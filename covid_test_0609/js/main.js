@@ -16,8 +16,10 @@ Promise.all([
     d3.csv('https://raw.githubusercontent.com/NYUMarron/covid_msa/master/data/all_msas_cases.csv', d3.autoType),
     d3.csv('https://raw.githubusercontent.com/NYUMarron/covid_msa/master/data/all_msas_deaths.csv', d3.autoType),
     d3.csv('https://raw.githubusercontent.com/NYUMarron/covid_msa/master/data/7day_avg_cases.csv', d3.autoType),
-    d3.csv('https://raw.githubusercontent.com/NYUMarron/covid_msa/master/data/7day_avg_deaths.csv', d3.autoType)
-]).then(([cases, deaths,casesDaily, deathsDaily]) => {
+    d3.csv('https://raw.githubusercontent.com/NYUMarron/covid_msa/master/data/7day_avg_deaths.csv', d3.autoType),
+    d3.json('data/state_simplified.geojson'),
+    d3.json('data/msa_simplified_filtered.geojson')
+]).then(([cases, deaths,casesDaily, deathsDaily,  geoState, geoMSA]) => {
     store.cases=cases;
     store.casesDaily=casesDaily;
     store.deaths=deaths;
@@ -27,15 +29,6 @@ Promise.all([
     const msa = 'New York-Newark-Jersey City, NY-NJ-PA';
     lineChartDash(cases,casesDaily,msa,d3.select('#cases-dashboard'),'case');
     lineChartDash(deaths,deathsDaily,msa,d3.select('#deaths-dashboard'),'death');
-});
-
-// this is for a map in dashboard
-Promise.all([
-    d3.csv('data/MSAdataformaps_case.csv', d3.autoType),
-    d3.csv('data/MSAdataformaps_death.csv',d3.autoType),
-    d3.json('data/state_simplified.geojson'),
-    d3.json('data/msa_simplified_filtered.geojson')
-]).then(([caseMap, deathMap, geoState, geoMSA]) => {
-    map(caseMap,geoState,geoMSA, d3.select('#map_case'),'case');
-    map(caseMap,geoState,geoMSA, d3.select('#map_death'),'case');
+    map(casesDaily,geoState,geoMSA, d3.select('#map_case'),'case');
+    map(deathsDaily,geoState,geoMSA, d3.select('#map_death'),'death');
 });

@@ -37,8 +37,6 @@ function lineChartDash(data,dataDaily,msa,div,type){
  dataTransformedDaily = dataTransformedDaily.filter(d=>d.date<=timeEnd);
 
  store.date = timeEnd;
- store[msa+'-'+type+'-total'] = dataTransformed;
- store[msa+'-'+type+'-daily'] = dataTransformedDaily;
 
  // calculate maximum of cases or deaths and date
  let maxCase = d3.max(dataTransformed.map(d=>d.cases));
@@ -160,7 +158,7 @@ function lineChartDash(data,dataDaily,msa,div,type){
 
  circlesDaily.select('#'+type+'-daily-'+timeEnd.getFullYear()+'-'+(timeEnd.getMonth()+1)+'-'+timeEnd.getDate())
      .transition()
-     .attr('r',5);
+     .attr('r',3);
 
 const circlesTotal = container.append('g')
         .attr('class','pointsTotal');
@@ -178,7 +176,7 @@ const circlesTotal = container.append('g')
 
     circlesTotal.select('#'+type+'-total-'+timeEnd.getFullYear()+'-'+(timeEnd.getMonth()+1)+'-'+timeEnd.getDate())
         .transition()
-        .attr('r',5);
+        .attr('r',3);
 
  createTitle(svg,msa,type, dateToString(timeEnd));
  createLegend(svg, lineColor, type);
@@ -186,7 +184,6 @@ const circlesTotal = container.append('g')
 }
 
 function caseDataPrepDash(data){
-
     // extract dates of the dataset
     const dateArray = Object.keys(data).filter(d=>(d!=='msas')&(d!=='category'));
     // transform the dataset for the d3 visualization
@@ -421,11 +418,12 @@ function updateCaseDate(source){
         .attr('r',0);
 
     d3.select('#case-daily-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
-        .attr('r',5);
+        .attr('r',3);
 
     d3.select('#case-total-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
-        .attr('r',5);
+        .attr('r',3);
 
+    updateMap(date,'case');
 }
 
 function updateDeathDate(source){
@@ -436,9 +434,11 @@ function updateDeathDate(source){
         .attr('r',0);
 
     d3.select('#death-daily-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
-        .attr('r',5);
+        .attr('r',3);
 
     d3.select('#death-total-'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate())
-        .attr('r',5);
+        .attr('r',3);
+
+    updateMap(date,'death');
 
 }
