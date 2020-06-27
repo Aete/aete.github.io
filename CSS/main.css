@@ -246,6 +246,11 @@
         flex-wrap: wrap;
 
     }
+    .row{
+        disply:flex;
+        flex-direction:column;
+    }
+
     .row > h4{
         margin-top : 1.3em;
         margin-left : 10px;
@@ -264,6 +269,7 @@
         align-items : center;
         display : flex;
         max-width : 100%;
+        justify-content: center;
     }
 
     .row>.half{
@@ -271,6 +277,10 @@
         align-items : center;
         display : flex;
         width : 49%;
+    }
+
+    select{
+        border-bottom:1px solid #212121;
     }
 
 /* relate to the squares*/

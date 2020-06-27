@@ -1,13 +1,12 @@
 var projectList = [
     {"title":'Seoul Living-Pop Dashboard', "time":'on-going', "category":"project"},
-    {"title":'Make it Green Dashboard - prototype', "time":2019, "category":"project"},
+    {"title":'Make it Green Dashboard', "time":2019, "category":"project"},
     {"title":"Plan Generator", "time" : 2018, "category" : "idea"},
     {"title":"Dwelling by Walling", "time" : 2016, "category" : "project"},
     {"title":"The Frame", "time" : 2016, "category" : "project"},
     {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"},
     {"title":"Collaboration", "time" : 2015, "category" : "project"},
     {"title":"QR City", "time" : 2013, "category" : "idea"},
-    {"title":"Maps", "time" : null, "category" : "idea"},
     {"title":"Snowflake", "time" : null, "category" : "idea"},
     {"title":"Profile", "time" : null, "category" : "profile"},
     {"title":"Github", "time" : null, "category" : "profile"},
@@ -15,17 +14,6 @@ var projectList = [
     {"title":"Medium","time":null,"category":"profile"}
 
     ];
-
-
-/*var info_list=[
-    {"title":"Maps",  "script" : null, "person" : "Han Seung Gyun"},
-    {"title":"The Frame", "script" : "Graduation work in SKKU", "person" : "Design excellence award (1st prize) in SKKU spring semester, 2017"},
-    {"title":"QR City", "script" : "Final Project at SKKU Design Modeling Class(Spring Semester, 2013)", "person" : "Han Seung Gyun, Jung Tae Jung, Jae Jun Hyung and Bang Jun Gyu(Department of Architecture, SKKU)"},
-    {"title":"Collaboration", "script" : "10th East Asia Urban Architecture Joint Studio 2015", "person" : "Han Seung Gyun, Lee Dong Yeong, Akira Ooka, Yuna Kinoshita"},
-    //{"title":"Writing", "script" : null, "person" : null},
-    {"title":"Dwelling by Walling", "script" : "Bronze Prize in Gyeonggi Architecture Fair", "person" : "Han Seung Gyun, Choi Tae Won, Kim Ji Soo"},
-    {"title":"XS, S, M, L, XL", "script" : "SKKU Design Studio(Fall Semester, 2015)", "person" : "Han Seung Gyun"}
-]; */
 
 for (var i = 0; i<projectList.length;i++){
     if(projectList[i].title==='QR City'){
@@ -38,9 +26,6 @@ for (var i = 0; i<projectList.length;i++){
         projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".png' class='logo' style='width:95%;'>";
     }
     else if(projectList[i].title==='Collaboration'){
-        projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".png' class='logo' style='width:95%;'>";
-    }
-    else if(projectList[i].title==='Maps'){
         projectList[i].imgsrc = "<image src='image/"+projectList[i].title+".png' class='logo' style='width:95%;'>";
     }
     else if(projectList[i].title==='Profile'){
@@ -61,7 +46,7 @@ for (var i = 0; i<projectList.length;i++){
     else if(projectList[i].title==='Snowflake'){
         projectList[i].imgsrc = "<image src='image/snowflake.png' class='logo' style='width:60%;'>";
     }
-    else if(projectList[i].title==='Make it Green Dashboard - prototype'){
+    else if(projectList[i].title==='Make it Green Dashboard'){
         projectList[i].imgsrc = "<image id = 'jcdashboard' src='image/jc_dashboard.jpg' class='logo'>";
     }
     else if(projectList[i].title==='Medium'){
