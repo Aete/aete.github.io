@@ -26,7 +26,7 @@ $(".nav_menu_box").click(function () {
 
 
 /* this is related to square selection*/
-var category1 = 0 ;
+let category1 = 0 ;
 $(".nav_content").click(function(){
     if($(this).attr('id')==='project'){
         category1 = "project";
@@ -67,7 +67,7 @@ $("#category").change(function(){
 
 
 
-var squareSelector = function(){
+const squareSelector = function(){
     if(category1==="project"){
         $(".sub_container").css("display","none");
         $(".project").css("display","flex");
@@ -87,7 +87,7 @@ var squareSelector = function(){
 };
 
 
-var subSelector = function(){
+const subSelector = function(){
     if(category1==="project") {
         $("#category_sub").html("<option value = 'all'>All</option>" +
             "<option value = 'competition'>Architecture</option>" +
