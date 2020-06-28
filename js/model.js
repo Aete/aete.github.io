@@ -51,7 +51,7 @@ for (let i = 0; i < projectList.length; i++) {
         projectList[i].imgsrc = "<image id = 'momentum' src='image/momentum.png' class='logo'>";
     } else if (projectList[i].title === "Monitoring COVID-19 in <br> US Metropolitan Areas") {
         console.log('test');
-        projectList[i].imgsrc = "<image id = 'COVID' src='image/covid-19.png' class='logo'>";
+        projectList[i].imgsrc = "<image id = 'COVID' src='image/covid.png' class='logo'>";
     }
 }
 
