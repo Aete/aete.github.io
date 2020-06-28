@@ -2,43 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Seunggyun Han</title>
-    <meta name="description" content="Seunggyun Han's portfolio : Project, Idea, Profile">
+    <meta content="Seunggyun Han's portfolio : Project, Idea, Profile" name="description">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/responsive.css">
-    <link rel="stylesheet" href="CSS/font/css/fontello.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="CSS/main.css" rel="stylesheet">
+    <link href="CSS/responsive.css" rel="stylesheet">
+    <link href="CSS/font/css/fontello.css" rel="stylesheet">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
 </head>
 <body>
-<div class = "container" id = "header">
-        <div id="top">
-            <a id="home" >Seunggyun Han</a>
+<div class="container" id="header">
+    <div id="top">
+        <a id="home">Seunggyun Han</a>
+    </div>
+    <nav>
+        <select id="category">
+            <option value="all">All</option>
+            <option value="project">Project</option>
+            <option value="idea">Idea</option>
+            <option value="profile">Profile</option>
+        </select>
+        <a id="nav_button">&#xf0c9</a>
+        <div class="nav_menu">
+            <a>&#xe801&nbsp;</a>
+            <a class="nav_menu_box" id="project_nav">Project</a>
+            <a class="nav_menu_box" id="idea_nav">Idea</a>
+            <a class="nav_menu_box" id="profile_nav">Profile</a>
         </div>
-        <nav>
-            <select id="category">
-                <option value = "all">All</option>
-                <option value="project">Project</option>
-                <option value="idea">Idea</option>
-                <option value="profile">Profile</option>
-            </select>
-            <a id="nav_button">&#xf0c9</a>
-            <div class="nav_menu">
-                <a>&#xe801&nbsp;</a>
-                <a id="project_nav" class = "nav_menu_box">Project</a>
-                <a id="idea_nav" class = "nav_menu_box">Idea</a>
-                <a id="profile_nav" class= "nav_menu_box">Profile</a>
-            </div>
-        </nav>
+    </nav>
 </div>
-<div class = "container" id="main">
+<div class="container" id="main">
     <div class="text">
-        <p style = "font-size : 1rem; margin-bottom : 0; margin-top : 0;"> <strong>Seunggyun Han</strong> is a researcher who is interested in analyzing urban environments with data.
-        Now, he is a graduate student in NYU Center for Urban Science + Progress. Before he came to NYU, He had studied architecture and urban design for several years in Sungkyunkwan University. In SKKU, he had participated in several
-        research projects about urban design and smart city policy & strategy. He got a master's degree at SKKU in 2019 with 
-        thesis about the changes in the neighborhood planning for the adoption of the autonomous vehicle. 
+        <p style="font-size : 1rem; margin-bottom : 0; margin-top : 0;"><strong>Seunggyun Han</strong> is a researcher
+            who is interested in visualizing urban environments & phenomenas with data.
+            Now, he is a graduate student in NYU Center for Urban Science + Progress. Before he came to NYU, He had
+            studied architecture and urban design for several years in Sungkyunkwan University. In SKKU, he had
+            participated in several
+            research projects about urban design and smart city policy & strategy. He got a master's degree at SKKU in
+            2019 with
+            thesis about the changes in the neighborhood planning for the adoption of the autonomous vehicle.
         </p>
     </div>
     <div class="container" id="main_body">
@@ -47,13 +51,13 @@
 </div>
 <footer>
     <div class="container" id="foot">
-            <p>Copyright © All rights reserved.</p>
+        <p>Copyright © All rights reserved.</p>
     </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
-<script src="js/model.js" ></script>
-<script src="js/template.js" ></script>
-<script src="js/menu.js" async defer></script>
-<script src="js/box.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/model.js"></script>
+<script src="js/template.js"></script>
+<script async defer src="js/menu.js"></script>
+<script async defer src="js/box.js"></script>
 </body>
 </html>

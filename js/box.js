@@ -23,6 +23,13 @@ var square_making = function(list){
 
         else if(list[i].title === "Linkedin"){$(".sub_container:last-child")
             .attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");}
+
+        else if(list[i].title === "KakaoTalk-Clone"){$(".sub_container:last-child")
+            .attr('onclick', "window.open('https://www.han.codes/Kakaotalk-clone/','_blank')");}
+
+        else if(list[i].title === "Momentum-Clone"){$(".sub_container:last-child")
+            .attr('onclick', "window.open('https://www.han.codes/Momentum_clone/','_blank')");}
+
         else{$(".sub_container:last-child")
             .attr('onclick','location.href= '+"'"+list[i].title+".html';");}
 

@@ -7,6 +7,8 @@ var projectList = [
     {"title":"XS, S, M, L, XL", "time" : 2015, "category" : "project"},
     {"title":"Collaboration", "time" : 2015, "category" : "project"},
     {"title":"QR City", "time" : 2013, "category" : "idea"},
+    {"title":"KakaoTalk-Clone", "time" : 2020, "category" : "project"},
+    {"title":"Momentum-Clone", "time" : 2020, "category" : "project"},
     {"title":"Snowflake", "time" : null, "category" : "idea"},
     {"title":"Profile", "time" : null, "category" : "profile"},
     {"title":"Github", "time" : null, "category" : "profile"},
@@ -53,7 +55,13 @@ for (var i = 0; i<projectList.length;i++){
         projectList[i].imgsrc = "<image id = 'medium' src='image/medium.png' class='logo'>";
     }
     else if(projectList[i].title==='Seoul Living-Pop Dashboard'){
-        projectList[i].imgsrc = "<image id = 'medium' src='image/livingpop_dash.png' class='logo'>";
+        projectList[i].imgsrc = "<image id = 'living' src='image/livingpop_dash.png' class='logo'>";
+    }
+    else if(projectList[i].title==='KakaoTalk-Clone'){
+        projectList[i].imgsrc = "<image id = 'kakao' src='image/kakao.png' class='logo' style='width:70%;'>";
+    }
+    else if(projectList[i].title==='Momentum-Clone'){
+        projectList[i].imgsrc = "<image id = 'momentum' src='image/momentum.png' class='logo'>";
     }
 }
 
