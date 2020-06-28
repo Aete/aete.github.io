@@ -19,7 +19,7 @@ var square_making = function(list){
             .attr('onclick', "window.open('http://www.han.codes/jc-dashboard','_blank')");}
 
         else if(list[i].title === "Seoul Living-Pop Dashboard"){$(".sub_container:last-child")
-            .attr('onclick', "window.open('http://www.han.codes/seoul-pop-dashboard','_blank')");}
+            .attr('onclick', "window.open('http://www.han.codes/Data-in-Seoul/livingpop/','_blank')");}
 
         else if(list[i].title === "Linkedin"){$(".sub_container:last-child")
             .attr('onclick', "window.open('https://www.linkedin.com/in/seunggyunhancodes/','_blank')");}
