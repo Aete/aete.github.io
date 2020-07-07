@@ -16,23 +16,31 @@ let map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
 // set variables for file addresses
-const urlMatchedIntersection = 'data/matched_intersection.geojson';
-const urlMatchedSegment = 'data/matched_segment.geojson';
-const urlUnmatched = 'data/unmatched_collision.geojson';
+const urlMatchedIntersection = 'data/case2.geojson';
+const urlMatchedShortSeg =  'data/case1.geojson';
+const urlMatchedSegment = 'data/segment.geojson';
+const urlError1 = 'data/error1.geojson'
+const urlError2 = 'data/error2.geojson';
+
 
 map.on('load', function () {
     // get source from url
     window.setInterval(function() {
         map.getSource('matchedIntersection').setData(urlMatchedIntersection);
+        map.getSource('matchedShortSeg').setData(urlMatchedShortSeg);
         map.getSource('matchedSegment').setData(urlMatchedSegment);
-        map.getSource('unmatched').setData(urlUnmatched);
+        map.getSource('matchedError1').setData(urlError1);
+        map.getSource('matchedError2').setData(urlError2);
+
 
     }, 2000);
 
     // add sources to the Map
     map.addSource('matchedIntersection', { type: 'geojson', data:urlMatchedIntersection, 'generateId': false});
     map.addSource('matchedSegment', { type: 'geojson', data:urlMatchedSegment, 'generateId': false});
-    map.addSource('unmatched', { type: 'geojson', data:urlUnmatched, 'generateId': false});
+    map.addSource('matchedShortSeg', { type: 'geojson', data:urlMatchedShortSeg, 'generateId': false});
+    map.addSource('matchedError1', { type: 'geojson', data:urlError1, 'generateId': false});
+    map.addSource('matchedError2', { type: 'geojson', data:urlError2, 'generateId': false});
 
     // add a layer and set properties
 
@@ -53,6 +61,17 @@ map.on('load', function () {
         "source": "matchedSegment",
         "type": "circle",
         "paint": {
+            "circle-color": "#F44336",
+            "circle-radius":4
+        }
+    });
+
+
+    map.addLayer({
+        "id": "matchedShortSeg",
+        "source": "matchedShortSeg",
+        "type": "circle",
+        "paint": {
             "circle-color": "#009688",
             "circle-radius":4
         }
@@ -60,14 +79,25 @@ map.on('load', function () {
 
 
     map.addLayer({
-        "id": "unmatched",
-        "source": "unmatched",
+        "id": "error1",
+        "source": "matchedError1",
         "type": "circle",
         "paint": {
-            "circle-color": "#F44336",
+            "circle-color": "#FFC107",
             "circle-radius":4
         }
     });
+
+    map.addLayer({
+        "id": "error2",
+        "source": "matchedError2",
+        "type": "circle",
+        "paint": {
+            "circle-color": "#FF9800",
+            "circle-radius":4
+        }
+    });
+
 
 
 
