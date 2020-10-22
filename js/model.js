@@ -52,7 +52,7 @@ for (let i = 0; i < projectList.length; i++) {
     } else if (projectList[i].title === "Monitoring COVID-19 in <br> US Metropolitan Areas") {
         projectList[i].imgsrc = "<image id = 'COVID' src='image/covid.jpg' class='logo' style='width:90%;'>";
     } else if (projectList[i].title === "Interagency work zone<br>traffic data modeling and analysis") {
-        projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone.png' class='logo' style='width:95%;'>";
+        projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone.PNG' class='logo' style='width:95%;'>";
     }
 }
 
