@@ -10,7 +10,7 @@ const square_making = function (list) {
     $('.sub_container:last-child').addClass(list[i].category);
     $('.sub_container:last-child').attr('id', list[i].title);
     switch (list[i].title) {
-      case 'Public Transportation<br>Accessibility Score':
+      case 'Transportation<br>Accessibility Dashboard':
         $('.sub_container:last-child').attr(
           'onclick',
           "window.open('http://www.han.codes/transport-accessibility/','_blank')"
