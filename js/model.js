@@ -28,7 +28,7 @@ const projectList = [
 for (let i = 0; i < projectList.length; i++) {
   switch(projectList[i].title){
     case 'Transportation<br>Accessibility Dashboard':
-      projectList[i].imgsrc = `<image src='image/transportation_accessiblity.png' class='logo' style='width:90%;'>`;
+      projectList[i].imgsrc = `<image src='image/transportation_accessiblity.png' class='logo' style='width:95%;'>`;
       break;
     case 'QR City':
       projectList[i].imgsrc = `<image src='image/${projectList[i].title}.gif' class='logo' style='width:90%;'>`;
