@@ -1,4 +1,7 @@
 /* this is related to navigation bar*/
+
+let category;
+
 $('#nav_button').click(function () {
   $('.nav_menu').css('left', 'calc(100vw - 230px)');
 });
@@ -9,8 +12,6 @@ $('.nav_menu')
     $('.nav_menu').css('left', '800px');
     $('.nav_menu a').css('animation', 'moveback 0.7s');
   });
-
-let category = 0;
 
 $('.nav_menu_box').click(function () {
   if ($(this).attr('id') === 'project_nav') {

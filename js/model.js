@@ -5,7 +5,7 @@ const projectList = [
     category: 'project',
   },
   {
-    title: 'Interagency work zone<br>traffic data modeling and analysis',
+    title: 'Interagency work zone<br>traffic data analysis',
     time: '2020',
     category: 'project',
   },
@@ -17,11 +17,8 @@ const projectList = [
   { title: 'QR City', time: 2013, category: 'idea' },
   { title: 'KakaoTalk-Clone', time: 2020, category: 'project' },
   { title: 'Momentum-Clone', time: 2020, category: 'project' },
-  { title: 'Snowflake', time: null, category: 'idea' },
-  { title: 'Profile', time: null, category: 'profile' },
   { title: 'Github', time: null, category: 'profile' },
   { title: 'Linkedin', time: null, category: 'profile' },
-  { title: 'Medium', time: null, category: 'profile' },
 ];
 
 //prettier-ignore
@@ -46,12 +43,12 @@ for (let i = 0; i < projectList.length; i++) {
       projectList[i].imgsrc = "<image id = 'plan' src='image/plan.gif' class='logo' style='width:95%;'>";
       break;
     case 'Make it Green<br>Dashboard':
-      projectList[i].imgsrc = "<image id = 'jcdashboard' src='image/jc_dashboard.jpg' class='logo'>";
+      projectList[i].imgsrc = "<image id = 'jcdashboard' src='image/jc_dashboard.jpg' style='width:95%;' class='logo'>";
       break;
     case 'Seoul Living-Pop<br>Dashboard':
       projectList[i].imgsrc = "<image id = 'living' src='image/livingpop_dash.png' class='logo' style='width:90%;'>";
       break;
-    case 'Interagency work zone<br>traffic data modeling and analysis':
+    case 'Interagency work zone<br>traffic data analysis':
       projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone.PNG' class='logo' style='width:95%;'>";
       break;
     default: 

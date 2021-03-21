@@ -1,152 +1,93 @@
-@media screen and (min-width : 900px){
-    body{
-        max-width : 900px;
-        margin-left : auto;
-        margin-right: auto;
-    }
+@media screen and (min-width: 900px) {
+  body {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media screen and (min-width : 749px){
-    #main{
-        height : calc(100vh - 110px);
-    }
+@media screen and (max-width: 750px) {
+  nav {
+    padding: 6px 0;
+    margin-top: 0;
+  }
 
+  .square {
+    width: 28vw;
+    height: 28vw;
+    margin: 15px 0 0;
+  }
 }
 
-@media screen and (max-width : 900px) {
-    img{
-
-    }
-}
-@media screen and (max-width : 750px) {
-    #home {
-        font-size: 1.5em;
-    }
-
-    nav {
-        padding: 0.5vh 0 0.5vh 0;
-        margin-top: 0;
-    }
-
-    #header {
-        width: 100%;
-        overflow: hidden;
-    }
-
-
-    #main_body{
-        overflow-scrolling: touch
-    }
-
-    .square{
-        max-width: none;
-        width : 28vw;
-        height : 28vw;
-        margin : 15px 0.5vw 0 0.5vw;
-    }
+@media screen and (max-width: 600px) {
+  .square {
+    width: 42vw;
+    height: 42vw;
+  }
 }
 
-@media screen and (max-width : 600px ) {
-    .square{
-        width : 42vw;
-        height : 42vw;
-        margin : 15px 0.4vw 0 0.4vw;
-    }
+@media screen and (max-width: 570px) {
+  select {
+    display: none;
+  }
+  #nav_button {
+    font-family: fontello;
+    font-size: 35px;
+    display: block;
+    text-align: right;
+    padding-right: 9px;
+  }
+
+  .nav_menu {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.98);
+    top: 0;
+    left: 800px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s linear;
+    padding-right: 15px;
+    padding-left: 15px;
+    z-index: 5;
+  }
+
+  .nav_menu a {
+    padding-top: 10px;
+    height: 30px;
+    border-bottom: 1px solid dimgray;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .nav_menu a:first-child {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: fontello;
+    font-size: 24px;
+    text-align: right;
+  }
 }
 
-@media screen and (max-width : 570px ) {
-
-    select{
-        display : none;
-    }
-    #nav_button {
-        font-family: fontello;
-        font-size: 2em;
-        display: block;
-        text-align : right;
-        padding-right:0.5rem;
-    }
-
-    .nav_menu{
-        width : 200px;
-        height : 100vh;
-        position : fixed;
-        background-color : rgba(255,255,255,0.98);
-        top: 1vh;
-        left: 800px;
-        display : flex;
-        flex-direction: column;
-        transition :all 0.5s linear;
-        padding-right : 15px;
-        padding-left: 15px;
-        z-index : 5;
-    }
-
-    .nav_menu a{
-        padding-top: 10px;
-        height : 30px;
-        border-bottom: 1px solid dimgray;
-        color : black;
-        font-size : 1em;
-        font-weight : 400;
-        text-align: center;
-    }
-
-    .nav_menu a:first-child{
-        padding-top : 0.2em;
-        padding-bottom: 0.4em;
-        font-family : fontello;
-        font-size : 1.5em;
-        text-align: right;
-    }
-
-
+@media screen and (max-width: 320px) {
+  .square {
+    width: 80vw;
+    height: 80vw;
+  }
+  #header {
+    height: 40px;
+  }
+  #home {
+    width: 150px;
+    font-size: 1.2em;
+  }
+  #nav_button {
+    font-size: 1.6em;
+  }
+  #quote {
+    display: none;
+  }
 }
-
-@media screen and (max-width : 500px){
-    #main_body > a{
-        width : 40vw;
-    }
-    .logo{
-        width : 50%;
-    }
-
-    #jcdashboard{
-        width:95%;
-    }
-
-    .square{
-        width : 40vw;
-        height : 40vw;
-    }
-
-    #main_header{
-        display : none;
-    }
-}
-
-@media screen and (max-width : 400px){
-    .profile{
-        font-size : 4rem;
-    }
-}
-
-
-
-@media screen and (max-width : 320px){
-    #header{
-        height : 40px;
-    }
-    #home{
-        width : 150px;
-        font-size : 1.2em;
-    }
-    #nav_button{
-        font-size : 1.6em;
-    }
-    #quote{
-        display : none;
-    }
-
-}
-
