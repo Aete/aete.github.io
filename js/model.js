@@ -10,6 +10,11 @@ const projectList = [
     category: 'idea',
   },
   {
+    title: 'Interagency work zone<br>traffic data analysis (dashboard)',
+    time: '2020',
+    category: 'project',
+  },
+  {
     title: 'Interagency work zone<br>traffic data analysis',
     time: '2020',
     category: 'project',
@@ -56,6 +61,9 @@ for (let i = 0; i < projectList.length; i++) {
     case 'Interagency work zone<br>traffic data analysis':
       projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone.PNG' class='logo' style='width:95%;'>";
       break;
+    case 'Interagency work zone<br>traffic data analysis (dashboard)':
+        projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone2.PNG' class='logo' style='width:95%;'>";
+        break;
     default: 
       projectList[i].imgsrc = `<image src='image/${projectList[i].title}.png' class='logo' style='width:95%;'>`;
       break;

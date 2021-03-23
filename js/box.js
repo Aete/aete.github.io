@@ -70,6 +70,12 @@ const square_making = function (list) {
           "window.open('https://workzone-collision-analysis.github.io/','_blank')"
         );
         break;
+      case 'Interagency work zone<br>traffic data analysis (dashboard)':
+        $('.sub_container:last-child').attr(
+          'onclick',
+          "window.open('https://workzone-collision-analysis.github.io/capstone/dashboard/','_blank')"
+        );
+        break;
       case 'D3 practice':
         $('.sub_container:last-child').attr(
           'onclick',
