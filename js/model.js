@@ -5,6 +5,11 @@ const projectList = [
     category: 'project',
   },
   {
+    title: 'D3 practice',
+    time: '2021',
+    category: 'idea',
+  },
+  {
     title: 'Interagency work zone<br>traffic data analysis',
     time: '2020',
     category: 'project',

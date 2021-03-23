@@ -70,6 +70,12 @@ const square_making = function (list) {
           "window.open('https://workzone-collision-analysis.github.io/','_blank')"
         );
         break;
+      case 'D3 practice':
+        $('.sub_container:last-child').attr(
+          'onclick',
+          "window.open('https://hancodesd3.netlify.app/','_blank')"
+        );
+        break;
       default:
         $('.sub_container:last-child').attr(
           'onclick',
