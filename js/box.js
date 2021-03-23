@@ -64,7 +64,7 @@ const square_making = function (list) {
           "window.open('https://nyumarron.github.io/covid_msa/','_blank')"
         );
         break;
-      case 'Interagency work zone<br>traffic data modeling and analysis':
+      case 'Interagency work zone<br>traffic data analysis':
         $('.sub_container:last-child').attr(
           'onclick',
           "window.open('https://workzone-collision-analysis.github.io/','_blank')"
