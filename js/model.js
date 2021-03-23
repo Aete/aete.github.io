@@ -62,7 +62,7 @@ for (let i = 0; i < projectList.length; i++) {
       projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone.PNG' class='logo' style='width:95%;'>";
       break;
     case 'Interagency work zone<br>traffic data analysis (dashboard)':
-        projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone2.PNG' class='logo' style='width:95%;'>";
+        projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone2.png' class='logo' style='width:95%;'>";
         break;
     default: 
       projectList[i].imgsrc = `<image src='image/${projectList[i].title}.png' class='logo' style='width:95%;'>`;
