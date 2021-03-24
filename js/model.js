@@ -19,6 +19,11 @@ const projectList = [
     time: '2020',
     category: 'project',
   },
+  {
+    title: 'Mini projects <br> InfoViz, Spring 2020',
+    time: '2020',
+    category: 'project',
+  },
   { title: 'Seoul Living-Pop<br>Dashboard', time: '2020', category: 'project' },
   { title: 'Make it Green<br>Dashboard', time: 2019, category: 'project' },
   { title: 'Plan Generator', time: 2018, category: 'idea' },
@@ -63,6 +68,9 @@ for (let i = 0; i < projectList.length; i++) {
       break;
     case 'Interagency work zone<br>traffic data analysis (dashboard)':
         projectList[i].imgsrc = "<image id = 'workzone' src='image/workzone2.png' class='logo' style='width:95%;'>";
+        break;
+    case 'Mini projects <br> InfoViz, Spring 2020':
+        projectList[i].imgsrc = "<image id = 'workzone' src='image/infoviz.png' class='logo' style='width:95%;'>";
         break;
     default: 
       projectList[i].imgsrc = `<image src='image/${projectList[i].title}.png' class='logo' style='width:95%;'>`;

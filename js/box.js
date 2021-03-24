@@ -82,6 +82,12 @@ const square_making = function (list) {
           "window.open('https://hancodesd3.netlify.app/','_blank')"
         );
         break;
+      case 'Mini projects <br> InfoViz, Spring 2020':
+        $('.sub_container:last-child').attr(
+          'onclick',
+          "window.open('https://hancodesinfoviz.netlify.app/','_blank')"
+        );
+        break;
       default:
         $('.sub_container:last-child').attr(
           'onclick',
