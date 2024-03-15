@@ -25,7 +25,6 @@ const projectList = [
   { title: "Dwelling by Walling", time: 2016, category: "project" },
   { title: "The Frame", time: 2016, category: "project" },
   { title: "QR City", time: 2013, category: "idea" },
-  { title: "Momentum-Clone", time: "^_^", category: "project" },
   { title: "Github", time: null, category: "profile" },
   { title: "Linkedin", time: null, category: "profile" },
 ];
