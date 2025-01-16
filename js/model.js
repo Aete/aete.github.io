@@ -1,5 +1,10 @@
 const projectList = [
   {
+    title: "Population Garden",
+    time: "2023",
+    category: "project",
+  },
+  {
     title: "Transportation<br>Accessibility Dashboard",
     time: "2021",
     category: "project",
@@ -32,6 +37,9 @@ const projectList = [
 //prettier-ignore
 for (let i = 0; i < projectList.length; i++) {
   switch(projectList[i].title){
+    case 'Population Garden':
+      projectList[i].imgsrc = `<image src='image/pop.gif' class='logo' style='width:95%;'>`;
+      break;
     case 'Transportation<br>Accessibility Dashboard':
       projectList[i].imgsrc = `<image src='image/transportation_accessiblity.png' class='logo' style='width:95%;'>`;
       break;
