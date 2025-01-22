@@ -1,4 +1,4 @@
-import { Project } from "../interface/project";
+import { Project } from "../types/project";
 
 export const projectData: Project[] = [
   {
@@ -7,6 +7,7 @@ export const projectData: Project[] = [
     tag: 0,
     image: "image/pop.gif",
     url: "https://seoul-pop-garden.netlify.app/",
+    imagedark: true,
   },
   {
     title: "Accessibility Dashboard",
@@ -32,7 +33,7 @@ export const projectData: Project[] = [
   {
     title: "Mini projects InfoViz, Spring `20",
     year: 2020,
-    tag: 1,
+    tag: 0,
     image: "image/infoviz.png",
     url: "https://hancodesinfoviz.netlify.app/",
   },
@@ -53,42 +54,39 @@ export const projectData: Project[] = [
   {
     title: "Plan Generator",
     year: 2018,
-    tag: 4,
+    tag: 3,
     image: "image/plan.gif",
-    url: "https://seoul-pop-garden.netlify.app/",
   },
   {
     title: "Dwelling by Walling",
     year: 2016,
-    tag: 3,
+    tag: 2,
     image: "image/dwelling.png",
-    url: "https://seoul-pop-garden.netlify.app/",
   },
   {
     title: "The Frame",
     year: 2016,
-    tag: 3,
+    tag: 2,
     image: "image/theframe.jpg",
-    url: "https://seoul-pop-garden.netlify.app/",
+    imagedark: true,
   },
   {
     title: "QR City",
     year: 2013,
-    tag: 4,
+    tag: 3,
     image: "image/qrcity.gif",
-    url: "https://seoul-pop-garden.netlify.app/",
   },
   {
     title: "Github",
     year: -1,
-    tag: 5,
+    tag: 4,
     image: "image/github.jpg",
     url: "https://github.com/aete",
   },
   {
     title: "Linkedin",
     year: -1,
-    tag: 5,
+    tag: 4,
     image: "image/linkedin.png",
     url: "https://www.linkedin.com/in/seunggyunhancodes/",
   },

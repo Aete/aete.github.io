@@ -6,8 +6,10 @@ const introduceTextStyle = css`
   font-size: 20px;
   line-height: 180%;
   color: ${textColor};
+  margin-bottom: 12px;
   @media (max-width: 960px) {
     font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -18,12 +20,16 @@ const introduceBoldStyle = css`
 const introduceHighlightStyle = css`
   color: ${highlightColor};
   @media (max-width: 960px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 
-export const $introduceText = document.createElement("p");
-$introduceText.className = introduceTextStyle;
-$introduceText.innerHTML = `<span class="${introduceHighlightStyle}">Data visualization specialist <br/></span>
-Interested in <span class="${introduceBoldStyle}">visualizing urban data through interactive interface and storytelling.</span> <br/>
-Majored applied urban informatics and architecture.   <br/>`;
+export default function introduceText(): Element {
+  const $introduceText = document.createElement("div");
+  $introduceText.className = introduceTextStyle;
+  $introduceText.innerHTML = `<p class="${introduceHighlightStyle} ${introduceTextStyle}">Data visualization specialist <br/></p>
+<p class="${introduceTextStyle}">Interested in <span class="${introduceBoldStyle}">visualizing urban data through interactive interface and storytelling.</span></p>
+<p class="${introduceTextStyle}">Majored applied urban informatics and architecture.</p>`;
+
+  return $introduceText;
+}

@@ -1,7 +1,7 @@
 import { css } from "goober";
-import { $title } from "./components/title";
+import Title from "./components/title";
 import { bgColor } from "./utils/colors";
-import { $introduceText } from "./components/introduceText";
+import introduceText from "./components/introduceText";
 import { initGrid } from "./components/grid/grid";
 
 const appStyle = css`
@@ -12,6 +12,7 @@ const appStyle = css`
   display: flex;
   flex-direction: column;
   background-color: ${bgColor};
+  position: relative;
 
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -26,8 +27,13 @@ const appStyle = css`
 function initApp(app: Element): void {
   app.innerHTML = "";
   app.className = appStyle;
+
+  const $intro = introduceText();
+  const $title = Title();
+
   app.appendChild($title);
-  app.appendChild($introduceText);
+  app.appendChild($intro);
+
   const $grid = initGrid("year");
   app.appendChild($grid);
 }
