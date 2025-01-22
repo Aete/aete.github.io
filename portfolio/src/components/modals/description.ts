@@ -25,6 +25,15 @@ const modalDescriptionStyle = css`
   img {
     width: 100%;
   }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
 `;
 
 export function modalDescription(description: string): Element {
