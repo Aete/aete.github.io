@@ -26,7 +26,7 @@ const modalStyle = css`
   border-radius: 10px;
   width: 80%;
   max-width: 700px;
-  max-height: 80%;
+  max-height: 85%;
   color: ${textColor};
   overflow-y: auto;
 `;
