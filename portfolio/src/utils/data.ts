@@ -1,6 +1,6 @@
-import { Project } from "../types/project";
+import { ProjectInterface } from "../types/project";
 
-export const projectData: Project[] = [
+export const projectData: ProjectInterface[] = [
   {
     title: "Population Garden",
     year: 2023,
@@ -15,6 +15,13 @@ export const projectData: Project[] = [
     tag: 0,
     image: "image/transportation_accessiblity.png",
     url: "https://www.han.codes/transport-accessibility/",
+  },
+  {
+    title: "D3 Practice",
+    year: 2021,
+    tag: 1,
+    image: "image/d3Practice.png",
+    url: "https://hancodesd3.netlify.app/",
   },
   {
     title: "Work zone traffic<br/>dashboard",
@@ -33,7 +40,7 @@ export const projectData: Project[] = [
   {
     title: "Mini projects InfoViz, Spring `20",
     year: 2020,
-    tag: 0,
+    tag: 1,
     image: "image/infoviz.png",
     url: "https://hancodesinfoviz.netlify.app/",
   },

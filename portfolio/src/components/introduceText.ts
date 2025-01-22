@@ -6,10 +6,10 @@ const introduceTextStyle = css`
   font-size: 20px;
   line-height: 180%;
   color: ${textColor};
-  margin-bottom: 12px;
   @media (max-width: 960px) {
     font-size: 18px;
     font-size: 16px;
+    margin-bottom: 10px;
   }
 `;
 

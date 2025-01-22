@@ -3,7 +3,12 @@ import { Legend } from "./legend";
 import { initRow } from "./row";
 import { css } from "goober";
 
-const gridStyle = css``;
+const gridStyle = css`
+  margin-top: 20px;
+  @media (max-width: 960px) {
+    margin-top: 0;
+  }
+`;
 
 export function initGrid(header: "year" | "tag") {
   const sortedProject = [...projectData];

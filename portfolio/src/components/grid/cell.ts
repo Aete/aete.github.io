@@ -1,5 +1,5 @@
 import { css } from "goober";
-import { LegendShape, Project } from "../../types/project";
+import { LegendShape, ProjectInterface } from "../../types/project";
 import { gridColor, textColor } from "../../utils/colors";
 import Modal from "../modals/modal";
 
@@ -91,7 +91,7 @@ export const CellHeader = (text: number | string) => {
   return $cellHeader;
 };
 
-export const CellBody = (projects: Project[]) => {
+export const CellBody = (projects: ProjectInterface[]) => {
   const $cellBody = document.createElement("div");
   $cellBody.className = cellBodyStyle;
   projects.forEach((project) => {
@@ -100,7 +100,7 @@ export const CellBody = (projects: Project[]) => {
   return $cellBody;
 };
 
-const Cell = (project: Project) => {
+const Cell = (project: ProjectInterface) => {
   const $cell = document.createElement("a");
   $cell.className = cellStyle;
   if (project.url) {
@@ -109,7 +109,7 @@ const Cell = (project: Project) => {
   } else {
     $cell.addEventListener("click", () => {
       console.log(project.title);
-      const $modal = Modal();
+      const $modal = Modal(project.title);
       document.getElementById("app")?.appendChild($modal);
       return;
     });
