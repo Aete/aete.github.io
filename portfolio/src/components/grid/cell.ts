@@ -49,7 +49,7 @@ const cellContainerStyle = css`
   box-sizing: border-box;
 
   width: 125px;
-  height: 150px;
+  height: 175px;
 
   margin: 12px 4px;
 
@@ -66,6 +66,12 @@ const cellImageContainerStyle = css`
 
 const cellImageStyle = css`
   width: 100%;
+`;
+
+const cellTextContainerStyle = css`
+  display: flex;
+  height: 34px;
+  align-items: center; /* Center the text vertically */
 `;
 
 const cellTextStyle = css`
@@ -103,12 +109,12 @@ export const CellBody = (projects: ProjectInterface[]) => {
 const Cell = (project: ProjectInterface) => {
   const $cell = document.createElement("a");
   $cell.className = cellStyle;
+
   if (project.url) {
     $cell.href = project.url;
     $cell.target = "_blank";
   } else {
     $cell.addEventListener("click", () => {
-      console.log(project.title);
       const $modal = Modal(project.title);
       document.getElementById("app")?.appendChild($modal);
       return;
@@ -136,12 +142,15 @@ const Cell = (project: ProjectInterface) => {
   $imageContainer.appendChild($image);
   $imageContainer.appendChild($legend);
 
+  const $textContainer = document.createElement("div");
+  $textContainer.className = cellTextContainerStyle;
   const $text = document.createElement("p");
   $text.className = cellTextStyle;
   $text.innerHTML = project.title;
+  $textContainer.appendChild($text);
 
   $container.appendChild($imageContainer);
-  $container.appendChild($text);
+  $container.appendChild($textContainer);
 
   $cell.appendChild($container);
   return $cell;

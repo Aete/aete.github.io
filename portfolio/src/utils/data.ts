@@ -2,11 +2,27 @@ import { ProjectInterface } from "../types/project";
 
 export const projectData: ProjectInterface[] = [
   {
-    title: "Population Garden",
+    title: "Population Garden <br/>",
     year: 2023,
     tag: 0,
     image: "image/pop.gif",
     url: "https://seoul-pop-garden.netlify.app/",
+    imagedark: true,
+  },
+  {
+    title: "TinyBike <br/>",
+    year: 2023,
+    tag: 3,
+    image: "image/tinybike.gif",
+    url: "https://seoul-pop-garden.netlify.app/",
+    imagedark: true,
+  },
+  {
+    title: "Restaurant Survival Prediction",
+    year: 2023,
+    tag: 0,
+    image: "image/restaurant.png",
+    url: "https://teamgigo.netlify.app/",
     imagedark: true,
   },
   {
@@ -17,7 +33,7 @@ export const projectData: ProjectInterface[] = [
     url: "https://www.han.codes/transport-accessibility/",
   },
   {
-    title: "D3 Practice",
+    title: "D3 Practice <br/>",
     year: 2021,
     tag: 1,
     image: "image/d3Practice.png",
