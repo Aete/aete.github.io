@@ -1,6 +1,6 @@
-import { Project } from "../types/project";
+import { ProjectInterface } from "../types/project";
 
-export const projectData: Project[] = [
+export const projectData: ProjectInterface[] = [
   {
     title: "Population Garden",
     year: 2023,
@@ -33,7 +33,7 @@ export const projectData: Project[] = [
   {
     title: "Mini projects InfoViz, Spring `20",
     year: 2020,
-    tag: 0,
+    tag: 1,
     image: "image/infoviz.png",
     url: "https://hancodesinfoviz.netlify.app/",
   },
