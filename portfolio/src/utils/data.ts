@@ -17,6 +17,13 @@ export const projectData: ProjectInterface[] = [
     url: "https://www.han.codes/transport-accessibility/",
   },
   {
+    title: "D3 Practice",
+    year: 2021,
+    tag: 1,
+    image: "image/d3Practice.png",
+    url: "https://hancodesd3.netlify.app/",
+  },
+  {
     title: "Work zone traffic<br/>dashboard",
     year: 2020,
     tag: 0,
