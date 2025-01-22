@@ -11,5 +11,9 @@
   "devDependencies": {
     "typescript": "~5.6.2",
     "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "goober": "^2.1.16",
+    "p5": "^1.11.2"
   }
 }
