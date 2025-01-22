@@ -98,6 +98,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 /* HTML5 display-role reset for older browsers */

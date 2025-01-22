@@ -1,10 +1,9 @@
 import { projectData } from "../../utils/data";
+import { Legend } from "./legend";
 import { initRow } from "./row";
 import { css } from "goober";
 
-const gridStyle = css`
-  margin-top: 50px;
-`;
+const gridStyle = css``;
 
 export function initGrid(header: "year" | "tag") {
   const sortedProject = [...projectData];
@@ -19,6 +18,10 @@ export function initGrid(header: "year" | "tag") {
 
   const $grid = document.createElement("div");
   $grid.className = gridStyle;
+
+  const $legend = Legend();
+  $grid.appendChild($legend);
+
   headers.forEach((value) => {
     const $row = initRow(sortedProject, header, value);
     $grid.appendChild($row);

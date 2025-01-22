@@ -1,6 +1,6 @@
 import { css } from "goober";
-import { Project } from "../../interface/project";
-import { cell, cellHeader } from "./cell";
+import { Project } from "../../types/project";
+import { CellHeader, CellBody } from "./cell";
 
 const rowStyle = css`
   width: 100%;
@@ -21,13 +21,11 @@ export function initRow(
   const $row = document.createElement("div");
   $row.className = rowStyle;
 
-  const $header = cellHeader(value);
+  const $header = CellHeader(value);
   $row.appendChild($header);
 
-  filteredProjects.forEach((project) => {
-    const $cell = cell(project);
-    $row.appendChild($cell);
-  });
+  const $cellBody = CellBody(filteredProjects);
+  $row.appendChild($cellBody);
 
   return $row;
 }
