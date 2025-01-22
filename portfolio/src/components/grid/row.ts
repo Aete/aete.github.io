@@ -1,5 +1,5 @@
 import { css } from "goober";
-import { Project } from "../../types/project";
+import { ProjectInterface } from "../../types/project";
 import { CellHeader, CellBody } from "./cell";
 
 const rowStyle = css`
