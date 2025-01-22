@@ -140,15 +140,12 @@ export const modalData: ModalInterface[] = [
     similar programs and sizes<br/>
     - Also, we can find several types of patterns like wall, room, unit, etc
 </p>
-
 <h3>Object</h3>
 <p>Design a deep learning model which generates small sized housing plans</p>
 <p>By doing experiment with small dataset, we want to check if there is any
     possibility of producing realistic drawings with better computing power and larger datasets</p>
-
 <h3>Process</h3>
 <img src="image/plan/4.jpg">
-
 <h3>Model Architecture</h3>
 <p>Model architecture is based on DCGANs Structure</p>
 <p>- Consist with two adversarial nets, ①
@@ -163,9 +160,7 @@ export const modalData: ModalInterface[] = [
 <p style="margin-top:0;">Dropout layer is added after the final fully connected layer (Keep_prob :
     0.3)</p>
 <img src="image/plan/5.jpg">
-
 <h3>Data Pre-processing and Augmentation</h3>
-
 <img src="image/plan/8.png">
 <p>This study used small housing plans as input dataset. To decrease complexity of input data, we
     selected plans of one or two bedrooms houses. To solve the memory problem, all data was processed in
@@ -175,7 +170,6 @@ export const modalData: ModalInterface[] = [
 <p>Because the dataset was too small, we used data augmentation concept in data pre-processing. Every
     image was rotated by 90, 180, and 270 degrees. In addition to this, we resized every image by
     95%,90%, and 85%. </p>
-
 <h3>Result</h3>
 <p>As learning progressed, the neural network began to draw thick lines (which could be thought of as
     walls), and in several attempts, they also drew several squares like rooms. However, in most of
@@ -185,7 +179,6 @@ export const modalData: ModalInterface[] = [
     effect after 70th epoch.
 </p>
 <img src="image/plan/8.jpg">
-
 <h3>Problems and Possibility</h3>
 <p>The main problem in training process was the size of dataset. Architectural plan dataset was
     consisted with only 128 images even if it has more complex patterns and characteristics than celeb
@@ -197,9 +190,7 @@ export const modalData: ModalInterface[] = [
     drawn in the same style.</p>
 <p>To utilize this model to design process, We suggest advanced model that creates plans by receiving
     not only noise but also information from a diagram or sketch drawn by an architect. </p>
-
 <img src="image/plan/9.jpg">
-
 <h3>Reference</h3>
 <ul class='reference'>
 <li>Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi
@@ -225,9 +216,56 @@ export const modalData: ModalInterface[] = [
     https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/an-executives-guide-to-ai</liss=>
 <li>Othman Sbai, Mohamed Elhoseiny, Antoine Bordes,
     Yann Lecun(2018), Design Inspiration from Generative Networks, arXiv:1804.00921v2</li>
-</ul>
-            
-        
+</ul>                
+    `,
+  },
+  {
+    title: "QR City",
+    people: [
+      "Seunggyun Han",
+      "Tae Jung Jung ",
+      "Jun Hyung Jae ",
+      "Jun Gyu Bang",
+    ],
+    awarded:
+      "Final Project at SKKU Design Modeling Class(Spring Semester, 2013)",
+    description: `
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="315"
+    src="https://www.youtube.com/embed/SgDSiHKZPd0"
+    width="560" ></iframe>
+    <h3>Objective</h3>
+    <p>In this project, we wanted to make urban design tool that gives designer not only digital experience,
+        but also analogue(sense of touch, tactile) experience.</p>
+    <p>In design process, we do not communicate with each other through the mouse. People usually
+        communicate with moving, turning, and tearing things with a pencil, pen, and hand. It is very
+        inspiring way.</p>
+    <p>On the other hand, for urban design (or large-scale buildings), it is essential to understand contact
+        as well as appearance. Sometimes the physical, social and economic contexts determine most of the
+        design of the site and buildings. </p>
+    <p>What we wanted to create was a digital tool that could show the various contexts of cities and a
+        platform in which many participants could evolve esign by doing things with their hands. Using AR
+        technology, User checks entire shape and context of urban environment in digital display, and
+        modifies by moving and changing QR markers </p>
+    <img src="image/qrcity/qrcity0.jpg">
+    <h3>Process</h3>
+    <p>Programming Language : Processing</p>
+    <p>QR City is simple program that detects QR markers in given image and creates buildings according to
+        makers' position and pattern.
+        Programming code was written in Processing, and we used OpenGL, NYAR4PSG, and GSvideo processing
+        libraries</p>
+    <p>We set every marker(1-100) has its own building information(usage, height, and etc.). Different
+        color(red, yellow and etc.) means different usage.</p>
+    <img src="image/qrcity/qrcity1.jpg">
+    <p> The program detects the markers on the webcam and displays the unique building by calculation. Users
+        can erase QR-markers and background when they finish.</p>
+    <img src="image/qrcity/qrcity2.jpg">
+    <h3>Possibility</h3>
+    <p>We thought that ‘QR City’ could be developed as sustainable urban design tool, if there were any
+        related data to use. For example, it could be developed for 'zero energy neighborhood' design tool
+        with information about energy consumption of buildings and amount of sunshine. </p>
+    <p>If we use data such as water, waste, and traffic, program can be developed as powerful tool for
+        designing sustainable urban environment.</p>
+    <img src="image/qrcity/qrcity3.jpg">
     `,
   },
 ];

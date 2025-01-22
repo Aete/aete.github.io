@@ -1,5 +1,5 @@
 import { css } from "goober";
-import { bgColor, textColor } from "../../utils/colors";
+import { textColor } from "../../utils/colors";
 import { modalData } from "../../utils/modalData";
 import { ModalInterface } from "../../types/modals";
 import { ModalHeader, ModalCredit } from "./header";
@@ -54,6 +54,11 @@ export default function Modal(title: string): Element {
   $modal.appendChild($modalDescription);
 
   $modalContainer.appendChild($modal);
+
+  $modal.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
   $modalContainer.addEventListener("click", () => {
     $modalContainer.remove();
   });
