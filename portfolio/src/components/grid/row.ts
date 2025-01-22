@@ -10,7 +10,7 @@ const rowStyle = css`
 `;
 
 export function initRow(
-  projects: Project[],
+  projects: ProjectInterface[],
   header: "year" | "tag",
   value: string | number
 ) {
