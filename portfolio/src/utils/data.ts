@@ -11,15 +11,15 @@ export const projectData: ProjectInterface[] = [
   },
   {
     title: "TinyBike <br/>",
-    year: 2023,
+    year: 2024,
     tag: 3,
     image: "image/tinybike.gif",
-    url: "https://seoul-pop-garden.netlify.app/",
+    url: "https://www.youtube.com/shorts/H4ftANam198",
     imagedark: true,
   },
   {
     title: "Restaurant Survival Prediction",
-    year: 2023,
+    year: 2024,
     tag: 0,
     image: "image/restaurant.png",
     url: "https://teamgigo.netlify.app/",
