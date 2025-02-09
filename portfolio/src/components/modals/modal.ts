@@ -33,7 +33,7 @@ const modalStyle = css`
 
 export default function Modal(title: string): Element {
   const selectedModal = modalData.find(
-    (modal) => modal.title === title
+    (modal) => modal.title === title.replace(" <br/>", "")
   ) as ModalInterface;
   const $modalContainer = document.createElement("div");
   $modalContainer.className = modalBgStyle;
@@ -41,7 +41,7 @@ export default function Modal(title: string): Element {
   const $modal = document.createElement("div");
   $modal.className = modalStyle;
 
-  const $modalHeader = ModalHeader(title);
+  const $modalHeader = ModalHeader(selectedModal.title);
   $modal.appendChild($modalHeader);
 
   const $modalCredit = ModalCredit(

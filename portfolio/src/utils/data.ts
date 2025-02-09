@@ -14,7 +14,6 @@ export const projectData: ProjectInterface[] = [
     year: 2024,
     tag: 3,
     image: "image/tinybike.gif",
-    url: "https://www.youtube.com/shorts/H4ftANam198",
     imagedark: true,
   },
   {
