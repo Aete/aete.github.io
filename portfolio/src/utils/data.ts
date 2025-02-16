@@ -2,6 +2,14 @@ import { ProjectInterface } from "../types/project";
 
 export const projectData: ProjectInterface[] = [
   {
+    title: "MicroFlow <br/>",
+    year: 2024,
+    tag: 0,
+    image: "image/pop.gif",
+    url: "https://bike-micro-flow-seoul.netlify.app/",
+    imagedark: true,
+  },
+  {
     title: "Population Garden <br/>",
     year: 2023,
     tag: 0,
@@ -29,7 +37,7 @@ export const projectData: ProjectInterface[] = [
     year: 2021,
     tag: 0,
     image: "image/transportation_accessiblity.png",
-    url: "https://www.han.codes/transport-accessibility/",
+    url: "https://aete.github.io/transport-accessibility/",
   },
   {
     title: "D3 Practice <br/>",
@@ -71,7 +79,7 @@ export const projectData: ProjectInterface[] = [
     year: 2019,
     tag: 0,
     image: "image/jc_dashboard.png",
-    url: "https://seoul-pop-garden.netlify.app/",
+    url: "https://aete.github.io/jc_datadashboard_prototype/",
   },
   {
     title: "Plan Generator",
