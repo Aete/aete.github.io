@@ -5,7 +5,7 @@ export const projectData: ProjectInterface[] = [
     title: "MicroFlow <br/>",
     year: 2024,
     tag: 0,
-    image: "image/microflow.png",
+    image: "image/microflow.gif",
     url: "https://bike-micro-flow-seoul.netlify.app/",
     imagedark: true,
   },
