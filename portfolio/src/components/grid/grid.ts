@@ -1,5 +1,6 @@
 import { projectData } from "../../utils/data";
 import { Legend } from "./legend";
+import Please from "./please";
 import { initRow } from "./row";
 import { css } from "goober";
 
@@ -23,7 +24,8 @@ export function initGrid(header: "year" | "tag") {
 
   const $grid = document.createElement("div");
   $grid.className = gridStyle;
-
+  const $please = Please();
+  $grid.appendChild($please);
   const $legend = Legend();
   $grid.appendChild($legend);
 

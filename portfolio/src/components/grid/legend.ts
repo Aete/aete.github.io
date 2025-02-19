@@ -5,13 +5,13 @@ import { textColor } from "../../utils/colors";
 const legendStyle = css`
   font-size: 15px;
   color: ${textColor};
-  margin: 40px 0;
+  margin: 20px 0 30px 0;
 
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    margin: 20px 0;
+    margin: 20px 0 20px 0;
   }
 `;
 
