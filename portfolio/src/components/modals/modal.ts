@@ -13,11 +13,12 @@ const modalBgStyle = css`
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   overflow-x: hidden;
+  z-index: 10;
 `;
 
 const modalStyle = css`
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

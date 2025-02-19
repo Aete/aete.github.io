@@ -137,7 +137,7 @@ const Cell = (project: ProjectInterface) => {
     $cell.target = "_blank";
   } else {
     $cell.addEventListener("click", () => {
-      const $modal = Modal(project.title);
+      const $modal = Modal(project.title) as HTMLDivElement;
       document.getElementById("app")?.appendChild($modal);
       return;
     });
