@@ -17,7 +17,7 @@ const modalBgStyle = css`
 
 const modalStyle = css`
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
