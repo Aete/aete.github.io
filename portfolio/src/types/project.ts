@@ -6,6 +6,8 @@ export interface ProjectInterface {
   url?: string;
   tag: ProjectTag;
   modal?: boolean;
+  summary?: string;
+  tool?: string;
 }
 
 export enum ProjectTag {

@@ -8,6 +8,8 @@ export const projectData: ProjectInterface[] = [
     image: "image/microflow.gif",
     url: "https://bike-micro-flow-seoul.netlify.app/",
     imagedark: true,
+    summary: "Visualization of public bike usage in Magok district, Seoul.",
+    tool: "deck.gl",
   },
   {
     title: "Population Garden <br/>",
@@ -16,6 +18,8 @@ export const projectData: ProjectInterface[] = [
     image: "image/pop.gif",
     url: "https://seoul-pop-garden.netlify.app/",
     imagedark: true,
+    summary: "Data-driven art with Seoul living population dataset.",
+    tool: "p5.js, d3.js",
   },
   {
     title: "TinyBike <br/>",
@@ -23,6 +27,8 @@ export const projectData: ProjectInterface[] = [
     tag: 3,
     image: "image/tinybike.gif",
     imagedark: true,
+    summary: "ExciteBike style mini game for a tiny device",
+    tool: "MicroPython",
   },
   {
     title: "Restaurant Survival Prediction",
@@ -31,6 +37,9 @@ export const projectData: ProjectInterface[] = [
     image: "image/restaurant.png",
     url: "https://teamgigo.netlify.app/",
     imagedark: true,
+    summary:
+      "Dashboard for one year restaurant survival prediction in Manhattan.",
+    tool: "mapboxgl, d3.js",
   },
   {
     title: "Accessibility Dashboard",
@@ -38,6 +47,9 @@ export const projectData: ProjectInterface[] = [
     tag: 0,
     image: "image/transportation_accessiblity.png",
     url: "https://aete.github.io/transport-accessibility/",
+    summary:
+      "Visualization of transportation accessibility in Gangnam district.",
+    tool: "mapboxgl, d3.js",
   },
   {
     title: "D3 Practice <br/>",
@@ -45,6 +57,8 @@ export const projectData: ProjectInterface[] = [
     tag: 1,
     image: "image/d3Practice.png",
     url: "https://hancodesd3.netlify.app/",
+    summary: "Personal practice of D3.js with various graphs.",
+    tool: "d3.js",
   },
   {
     title: "Work zone traffic<br/>dashboard",
@@ -52,6 +66,9 @@ export const projectData: ProjectInterface[] = [
     tag: 0,
     image: "image/workzone2.png",
     url: "https://workzone-collision-analysis.github.io/capstone/dashboard/",
+    summary:
+      "Dashboard for traffic accidents and 511 events. Capstone in spring 2020, NYU.",
+    tool: "mapboxgl, chart.js",
   },
   {
     title: "Work zone traffic analysis",
@@ -59,6 +76,9 @@ export const projectData: ProjectInterface[] = [
     tag: 2,
     image: "image/workzone.png",
     url: "https://workzone-collision-analysis.github.io/",
+    summary:
+      "Analysis of traffic accidents and 511 events. Capstone in spring 2020, NYU.",
+    tool: "geopandas, sklearn",
   },
   {
     title: "Mini projects InfoViz, Spring `20",
@@ -66,6 +86,8 @@ export const projectData: ProjectInterface[] = [
     tag: 1,
     image: "image/infoviz.png",
     url: "https://hancodesinfoviz.netlify.app/",
+    summary: "Mini projects of Info viz class in Spring 2020, NYU.",
+    tool: "d3.js",
   },
   {
     title: "Seoul Living-Pop<br>Dashboard",
@@ -73,6 +95,8 @@ export const projectData: ProjectInterface[] = [
     tag: 0,
     image: "image/livingpop_dash.png",
     url: "https://seoul-pop-garden.netlify.app/",
+    summary: "Dashboard for Seoul living population data.",
+    tool: "d3.js",
   },
   {
     title: "Make it Green<br>Dashboard",
@@ -80,18 +104,24 @@ export const projectData: ProjectInterface[] = [
     tag: 0,
     image: "image/jc_dashboard.png",
     url: "https://aete.github.io/jc_datadashboard_prototype/",
+    summary:
+      "Dashboard for Jersey City's CSO problem. Civic Analytics class in fall 2019, NYU.",
+    tool: "mapboxgl, d3.js",
   },
   {
     title: "Plan Generator",
     year: 2018,
     tag: 3,
     image: "image/plan.gif",
+    summary: "Experiment of generating small house plans with deep learning.",
+    tool: "tensorflow",
   },
   {
     title: "Dwelling by Walling",
     year: 2016,
     tag: 2,
     image: "image/dwelling.png",
+    summary: "Co-living residential building design with flexible wall system.",
   },
   {
     title: "The Frame",
@@ -99,12 +129,16 @@ export const projectData: ProjectInterface[] = [
     tag: 2,
     image: "image/theframe.jpg",
     imagedark: true,
+    summary:
+      "Waterfront culture complex building design. Graduation project in spring 2016, SKKU",
   },
   {
     title: "QR City",
     year: 2013,
     tag: 3,
     image: "image/qrcity.gif",
+    summary: "Interactive urban planning tool with QR code.",
+    tool: "processing",
   },
   {
     title: "Github",

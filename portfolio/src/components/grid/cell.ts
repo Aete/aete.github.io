@@ -1,6 +1,6 @@
 import { css } from "goober";
 import { LegendShape, ProjectInterface } from "../../types/project";
-import { gridColor, textColor } from "../../utils/colors";
+import { bgColor, gridColor, textColor } from "../../utils/colors";
 import Modal from "../modals/modal";
 
 const cellStyle = css`
@@ -84,10 +84,32 @@ const cellTextStyle = css`
 
 const legendShapeStyle = css`
   position: absolute;
+  z-index: 1;
   top: 5px;
   left: 3px;
   font-size: 12px;
   color: ${textColor};
+`;
+
+const cellHoverStyle = css`
+  background-color: ${bgColor};
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  display: none;
+  padding: 5px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  background-color: #212121;
+`;
+
+const cellHoverTextStyle = css`
+  font-size: 13px;
+  line-height: 1.5;
 `;
 
 export const CellHeader = (text: number | string) => {
@@ -135,12 +157,41 @@ const Cell = (project: ProjectInterface) => {
   const $legend = document.createElement("span");
   $legend.className = legendShapeStyle;
   $legend.innerHTML = project.tag < 4 ? LegendShape[project.tag] : "";
+
+  const $hover = document.createElement("div");
+  if (project.tag !== 4) {
+    $hover.className = cellHoverStyle;
+  }
+
+  if (project.summary !== undefined) {
+    const $hoverText = document.createElement("p");
+    $hoverText.className = cellHoverTextStyle;
+    $hoverText.style.color = "#fff";
+    $hoverText.innerHTML = project.summary;
+    $hover.appendChild($hoverText);
+
+    const $hoverToolText = document.createElement("p");
+    $hoverToolText.className = cellHoverTextStyle;
+    $hoverToolText.style.color = "#fff";
+    $hoverToolText.innerHTML = project.tool ? `- ${project.tool}` : "";
+    $hover.appendChild($hoverToolText);
+  }
+
   if (project.imagedark === true) {
     $legend.style.color = "#fff";
   }
 
   $imageContainer.appendChild($image);
   $imageContainer.appendChild($legend);
+  $imageContainer.appendChild($hover);
+
+  $imageContainer.addEventListener("mouseenter", () => {
+    $hover.style.display = "flex";
+  });
+
+  $imageContainer.addEventListener("mouseleave", () => {
+    $hover.style.display = "none";
+  });
 
   const $textContainer = document.createElement("div");
   $textContainer.className = cellTextContainerStyle;
