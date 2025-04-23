@@ -22,15 +22,6 @@ export const projectData: ProjectInterface[] = [
     tool: "p5.js, d3.js",
   },
   {
-    title: "TinyBike <br/>",
-    year: 2024,
-    tag: 3,
-    image: "image/tinybike.gif",
-    imagedark: true,
-    summary: "ExciteBike style mini game for a tiny device",
-    tool: "MicroPython",
-  },
-  {
     title: "Restaurant Survival Prediction",
     year: 2024,
     tag: 0,
