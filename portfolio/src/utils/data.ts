@@ -2,6 +2,16 @@ import { ProjectInterface } from "../types/project";
 
 export const projectData: ProjectInterface[] = [
   {
+    title: "Data Terrain",
+    year: 2025,
+    tag: 0,
+    image: "image/dataterrain.png",
+    url: "https://github.com/Aete/dataTerrain",
+    imagedark: true,
+    summary: "Visualization Interface between public and the open data portal.",
+    tool: "three.js, deck.gl",
+  },
+  {
     title: "MicroFlow <br/>",
     year: 2024,
     tag: 0,
