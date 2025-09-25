@@ -1,6 +1,15 @@
 import { ProjectInterface } from "../types/project";
 
 export const projectData: ProjectInterface[] = [
+  // {
+  //   title: "Watermelon Dice",
+  //   year: 2025,
+  //   tag: 3,
+  //   image: "image/watermelon_dice.png",
+  //   imagedark: false,
+  //   summary: "Generative art drawings.",
+  //   tool: "p5.js",
+  // },
   {
     title: "Data Terrain",
     year: 2025,
@@ -30,17 +39,6 @@ export const projectData: ProjectInterface[] = [
     imagedark: true,
     summary: "Data-driven art with Seoul living population dataset.",
     tool: "p5.js, d3.js",
-  },
-  {
-    title: "Restaurant Survival Prediction",
-    year: 2024,
-    tag: 0,
-    image: "image/restaurant.png",
-    url: "https://teamgigo.netlify.app/",
-    imagedark: true,
-    summary:
-      "Dashboard for one year restaurant survival prediction in Manhattan.",
-    tool: "mapboxgl, d3.js",
   },
   {
     title: "Accessibility Dashboard",
