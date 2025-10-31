@@ -1,15 +1,24 @@
 import { ProjectInterface } from "../types/project";
 
 export const projectData: ProjectInterface[] = [
-  // {
-  //   title: "Watermelon Dice",
-  //   year: 2025,
-  //   tag: 3,
-  //   image: "image/watermelon_dice.png",
-  //   imagedark: false,
-  //   summary: "Generative art drawings.",
-  //   tool: "p5.js",
-  // },
+  {
+    title: "No Kill Colorado",
+    year: 2025,
+    tag: 1,
+    image: "image/nkc.png",
+    url: "https://dcm-nkc-seunggyun.netlify.app/",
+    summary: "Data analysis and visualization for animal shelter outcomes.",
+    tool: "D3.js",
+  },
+  {
+    title: "Watermelon Dice",
+    year: 2025,
+    tag: 3,
+    image: "image/watermelon_dice.png",
+    imagedark: false,
+    summary: "Generative art drawings.",
+    tool: "p5.js",
+  },
   {
     title: "Data Terrain",
     year: 2025,
