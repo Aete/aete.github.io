@@ -29,6 +29,13 @@ export const projectData: ProjectInterface[] = [
     summary: "Visualization Interface between public and the open data portal.",
     tool: "three.js, deck.gl",
   },
+  {title: "TinyBike",
+   year: 2024,
+   tag: 3,
+   image: "image/tinybike.gif",
+   summary: "Mini bike game for Thumby",
+   tool: "Python", 
+  },
   {
     title: "MicroFlow <br/>",
     year: 2024,
