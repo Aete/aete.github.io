@@ -1,6 +1,15 @@
 import { ProjectInterface } from "../types/project";
 
 export const projectData: ProjectInterface[] = [
+    {
+    title: "Koi",
+    year: 2026,
+    tag: 3,
+    image: "image/koi.gif",
+    url: "https://koi-fish-animation.vercel.app/",
+    summary: "Procedural Koi Fish Animation",
+    tool: "p5.js",
+  },
   {
     title: "No Kill Colorado",
     year: 2025,
