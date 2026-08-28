@@ -1,6 +1,16 @@
 import { ProjectInterface } from "../types/project";
 
 export const projectData: ProjectInterface[] = [
+      {
+    title: "Urban Flow",
+    year: 2026,
+    tag: 0,
+    image: "image/urbanflow.gif",
+    imagedark: true,
+    url: "https://urban-flow-seoul.vercel.app/",
+    summary: "Visualizing Urban Movement and Flows on a Data-Driven Terrain",
+    tool: "deck.gl",
+  },
     {
     title: "Koi",
     year: 2026,
